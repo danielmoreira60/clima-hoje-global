@@ -37,16 +37,23 @@ All colors MUST be HSL.
     --input: 210 20% 92%;
     --ring: 210 100% 50%;
 
-    /* Weather gradients */
+    /* Enhanced weather gradients */
+    --primary-glow: 210 100% 70%;
     --gradient-sky: linear-gradient(135deg, hsl(200 100% 85%) 0%, hsl(210 100% 70%) 100%);
     --gradient-sunset: linear-gradient(135deg, hsl(30 100% 75%) 0%, hsl(340 100% 75%) 100%);
     --gradient-rain: linear-gradient(135deg, hsl(220 40% 60%) 0%, hsl(210 50% 40%) 100%);
     --gradient-night: linear-gradient(135deg, hsl(240 40% 20%) 0%, hsl(260 50% 10%) 100%);
+    --gradient-weather: linear-gradient(135deg, hsl(220 60% 98%) 0%, hsl(210 100% 95%) 100%);
     
-    /* Shadows and effects */
-    --shadow-weather: 0 10px 40px -10px hsl(210 100% 50% / 0.2);
+    /* Enhanced shadows and effects */
+    --shadow-weather: 0 10px 30px -10px hsl(var(--primary) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(210 50% 50% / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    --shadow-glass: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     --glow-primary: 0 0 30px hsl(210 100% 70% / 0.4);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-glass: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.75rem;
 
@@ -96,11 +103,13 @@ All colors MUST be HSL.
     --input: 220 15% 18%;
     --ring: 210 100% 60%;
 
-    /* Dark mode weather gradients */
+    /* Enhanced dark mode weather gradients */
+    --primary-glow: 210 100% 70%;
     --gradient-sky: linear-gradient(135deg, hsl(220 40% 20%) 0%, hsl(240 60% 15%) 100%);
     --gradient-sunset: linear-gradient(135deg, hsl(20 80% 30%) 0%, hsl(320 60% 25%) 100%);
     --gradient-rain: linear-gradient(135deg, hsl(220 50% 15%) 0%, hsl(210 60% 10%) 100%);
     --gradient-night: linear-gradient(135deg, hsl(240 60% 8%) 0%, hsl(260 70% 5%) 100%);
+    --gradient-weather: linear-gradient(135deg, hsl(220 40% 8%) 0%, hsl(240 50% 10%) 100%);
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -119,5 +128,67 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Weather-specific utilities */
+  .bg-gradient-weather {
+    background: var(--gradient-weather);
+  }
+
+  .shadow-weather {
+    box-shadow: var(--shadow-weather);
+  }
+
+  .shadow-glass {
+    box-shadow: var(--shadow-glass);
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce 2s infinite;
+  }
+  
+  .animate-bounce-gentle:hover {
+    animation-play-state: paused;
+  }
+
+  /* Glass morphism effects */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-glass);
+  }
+
+  .glass-card-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-glass);
+  }
+
+  /* Enhanced hover effects */
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-weather);
+  }
+
+  .hover-scale {
+    transition: var(--transition-smooth);
+  }
+
+  .hover-scale:hover {
+    transform: scale(1.02);
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 }
