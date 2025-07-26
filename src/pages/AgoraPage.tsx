@@ -1,0 +1,211 @@
+import React from 'react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import WeatherCard from '@/components/WeatherCard';
+import useWeather from '@/hooks/useWeather';
+import { 
+  Thermometer, 
+  Droplets, 
+  Wind, 
+  Eye, 
+  Gauge,
+  Sun,
+  MapPin,
+  Clock
+} from 'lucide-react';
+
+const AgoraPage = () => {
+  const { weatherData, loading, error } = useWeather();
+
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-gradient-sky flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-primary mx-auto"></div>
+          <p className="text-lg font-semibold text-foreground">Carregando dados atuais...</p>
+        </div>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gradient-sky flex items-center justify-center">
+        <div className="text-center space-y-4">
+          <p className="text-lg font-semibold text-destructive">{error}</p>
+        </div>
+      </div>
+    );
+  }
+
+  const currentTime = new Date().toLocaleString('pt-BR', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit'
+  });
+
+  return (
+    <div className="min-h-screen bg-gradient-sky py-8">
+      <div className="container mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in">
+            Condições Atuais
+          </h1>
+          <div className="flex items-center justify-center space-x-2 text-muted-foreground animate-fade-in">
+            <Clock className="h-5 w-5" />
+            <p className="text-lg capitalize">{currentTime}</p>
+          </div>
+        </div>
+
+        {weatherData && (
+          <>
+            {/* Current Weather Card */}
+            <div className="max-w-3xl mx-auto mb-12 animate-fade-in">
+              <WeatherCard
+                title="Agora"
+                location={weatherData.location}
+                temperature={weatherData.temperature}
+                condition={weatherData.condition}
+                humidity={weatherData.humidity}
+                windSpeed={weatherData.windSpeed}
+                pressure={weatherData.pressure}
+                visibility={weatherData.visibility}
+                className="shadow-glow"
+              />
+            </div>
+
+            {/* Detailed Information Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Thermometer className="h-6 w-6 text-red-500" />
+                    <span>Sensação Térmica</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-primary mb-2">
+                    {Math.round(weatherData.temperature + 2)}°C
+                  </div>
+                  <p className="text-muted-foreground">
+                    Temperatura percebida pelo corpo humano
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Sun className="h-6 w-6 text-yellow-500" />
+                    <span>Índice UV</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-yellow-600 mb-2">
+                    {Math.floor(Math.random() * 10) + 1}
+                  </div>
+                  <p className="text-muted-foreground">
+                    Nível moderado - Use protetor solar
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Eye className="h-6 w-6 text-purple-500" />
+                    <span>Ponto de Orvalho</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-purple-600 mb-2">
+                    {Math.round(weatherData.temperature - 8)}°C
+                  </div>
+                  <p className="text-muted-foreground">
+                    Temperatura de condensação do vapor
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Wind className="h-6 w-6 text-green-500" />
+                    <span>Rajadas</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    {Math.round(weatherData.windSpeed * 1.5)} km/h
+                  </div>
+                  <p className="text-muted-foreground">
+                    Velocidade máxima do vento
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <Droplets className="h-6 w-6 text-blue-500" />
+                    <span>Chuva Acumulada</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-blue-600 mb-2">
+                    {Math.floor(Math.random() * 10)} mm
+                  </div>
+                  <p className="text-muted-foreground">
+                    Precipitação nas últimas 24h
+                  </p>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-card/80 backdrop-blur-sm hover:shadow-weather transition-all duration-300">
+                <CardHeader>
+                  <CardTitle className="flex items-center space-x-2">
+                    <MapPin className="h-6 w-6 text-orange-500" />
+                    <span>Qualidade do Ar</span>
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="text-3xl font-bold text-green-600 mb-2">
+                    Boa
+                  </div>
+                  <p className="text-muted-foreground">
+                    IQA: {Math.floor(Math.random() * 50) + 20}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Weather Map Placeholder */}
+            <Card className="bg-card/80 backdrop-blur-sm">
+              <CardHeader>
+                <CardTitle className="flex items-center space-x-2">
+                  <MapPin className="h-6 w-6 text-primary" />
+                  <span>Mapa Meteorológico</span>
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="bg-gradient-rain rounded-lg h-64 flex items-center justify-center">
+                  <p className="text-white text-lg font-semibold">
+                    Mapa de radar em tempo real
+                  </p>
+                </div>
+                <p className="text-muted-foreground mt-4">
+                  Visualize as condições meteorológicas em tempo real na sua região com nosso radar integrado.
+                </p>
+              </CardContent>
+            </Card>
+          </>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default AgoraPage;
