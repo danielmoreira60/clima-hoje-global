@@ -75,7 +75,22 @@ const useWeather = () => {
         body: params
       });
 
-      if (error) throw error;
+      if (error) {
+        // If Supabase isn't connected, use mock data
+        if (error.message?.includes('Supabase not connected')) {
+          console.warn('Using mock weather data - Supabase not connected');
+          const mockData = generateMockWeatherData(params);
+          setWeatherData(mockData);
+          setError(null);
+          toast({
+            title: "Modo Demonstração",
+            description: `Exibindo dados simulados para ${mockData.location}. Conecte o Supabase para dados reais.`,
+            variant: "default",
+          });
+          return;
+        }
+        throw error;
+      }
 
       setWeatherData(data);
       setError(null);
@@ -86,15 +101,68 @@ const useWeather = () => {
       });
     } catch (err: any) {
       console.error('Erro ao buscar dados meteorológicos:', err);
-      setError(err.message || 'Erro ao carregar dados meteorológicos');
+      
+      // Fallback to mock data on any error
+      const mockData = generateMockWeatherData(params);
+      setWeatherData(mockData);
+      setError(null);
+      
       toast({
-        title: "Erro",
-        description: "Não foi possível carregar os dados meteorológicos. Tente novamente.",
-        variant: "destructive",
+        title: "Modo Demonstração",
+        description: "Exibindo dados simulados. Para dados reais, conecte uma API de clima.",
+        variant: "default",
       });
     } finally {
       setLoading(false);
     }
+  };
+
+  const generateMockWeatherData = (params: { lat?: number; lon?: number; city?: string }): WeatherData => {
+    const cities = {
+      'são paulo': 'São Paulo, BR',
+      'rio de janeiro': 'Rio de Janeiro, BR', 
+      'brasília': 'Brasília, BR',
+      'salvador': 'Salvador, BR',
+      'fortaleza': 'Fortaleza, BR',
+      'belo horizonte': 'Belo Horizonte, BR',
+      'manaus': 'Manaus, BR',
+      'curitiba': 'Curitiba, BR',
+      'recife': 'Recife, BR',
+      'porto alegre': 'Porto Alegre, BR'
+    };
+    
+    const cityName = params.city ? 
+      cities[params.city.toLowerCase() as keyof typeof cities] || `${params.city}, BR` : 
+      'São Paulo, BR';
+
+    return {
+      location: cityName,
+      temperature: Math.round(18 + Math.random() * 15), // 18-33°C
+      condition: ['Ensolarado', 'Parcialmente nublado', 'Nublado', 'Chuva leve'][Math.floor(Math.random() * 4)],
+      humidity: Math.round(45 + Math.random() * 40), // 45-85%
+      windSpeed: Math.round(5 + Math.random() * 20), // 5-25 km/h
+      pressure: Math.round(1005 + Math.random() * 20), // 1005-1025 hPa
+      visibility: Math.round(8 + Math.random() * 7), // 8-15 km
+      icon: ['01d', '02d', '03d', '10d'][Math.floor(Math.random() * 4)],
+      feelsLike: Math.round(16 + Math.random() * 18), // 16-34°C
+      uvIndex: Math.round(1 + Math.random() * 10), // 1-11
+      coords: {
+        lat: params.lat || -23.5505,
+        lon: params.lon || -46.6333
+      },
+      forecast: Array.from({ length: 40 }, (_, i) => ({
+        date: new Date(Date.now() + i * 3 * 60 * 60 * 1000).toISOString().split('T')[0], // every 3 hours
+        time: new Date(Date.now() + i * 3 * 60 * 60 * 1000).toISOString().split('T')[1].slice(0, 5),
+        temperature: Math.round(16 + Math.random() * 18),
+        minTemp: Math.round(12 + Math.random() * 8),
+        maxTemp: Math.round(25 + Math.random() * 12),
+        condition: ['Ensolarado', 'Parcialmente nublado', 'Nublado', 'Chuva leve', 'Tempestade'][Math.floor(Math.random() * 5)],
+        humidity: Math.round(40 + Math.random() * 50),
+        windSpeed: Math.round(3 + Math.random() * 25),
+        icon: ['01d', '02d', '03d', '10d', '11d'][Math.floor(Math.random() * 5)],
+        pop: Math.round(Math.random() * 100) // 0-100% chance of precipitation
+      }))
+    };
   };
 
   const searchWeatherByCity = useCallback(async (city: string) => {
