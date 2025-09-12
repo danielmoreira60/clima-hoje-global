@@ -81,7 +81,7 @@ const Index = () => {
             <Thermometer className="h-6 w-6 text-primary" />
             Condições Meteorológicas Detalhadas
           </h2>
-          <WeatherDashboard data={weatherData} />
+          <WeatherDashboard />
         </section>
 
         {/* Weather Notifications */}

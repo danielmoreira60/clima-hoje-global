@@ -8,11 +8,18 @@ interface WeatherData {
   condition: string;
   humidity: number;
   windSpeed: number;
+  windDirection?: number;
+  windGust?: number | null;
   pressure: number;
   visibility: number;
   icon: string;
   feelsLike: number;
   uvIndex: number;
+  airQuality?: number;
+  cloudiness?: number;
+  sunrise?: number;
+  sunset?: number;
+  dewPoint?: number;
   coords: LocationCoords;
   forecast: ForecastDay[];
 }
@@ -76,19 +83,6 @@ const useWeather = () => {
       });
 
       if (error) {
-        // If Supabase isn't connected, use mock data
-        if (error.message?.includes('Supabase not connected')) {
-          console.warn('Using mock weather data - Supabase not connected');
-          const mockData = generateMockWeatherData(params);
-          setWeatherData(mockData);
-          setError(null);
-          toast({
-            title: "Modo Demonstração",
-            description: `Exibindo dados simulados para ${mockData.location}. Conecte o Supabase para dados reais.`,
-            variant: "default",
-          });
-          return;
-        }
         throw error;
       }
 
@@ -96,21 +90,17 @@ const useWeather = () => {
       setError(null);
       
       toast({
-        title: "Dados Atualizados",
-        description: `Previsão para ${data.location}`,
+        title: "Dados Atualizados ✅",
+        description: `Previsão atualizada para ${data.location}`,
       });
     } catch (err: any) {
       console.error('Erro ao buscar dados meteorológicos:', err);
-      
-      // Fallback to mock data on any error
-      const mockData = generateMockWeatherData(params);
-      setWeatherData(mockData);
-      setError(null);
+      setError(err.message || 'Erro ao carregar dados do clima');
       
       toast({
-        title: "Modo Demonstração",
-        description: "Exibindo dados simulados. Para dados reais, conecte uma API de clima.",
-        variant: "default",
+        title: "Erro ao carregar dados ❌",
+        description: "Verifique sua conexão e tente novamente.",
+        variant: "destructive",
       });
     } finally {
       setLoading(false);
@@ -197,6 +187,18 @@ const useWeather = () => {
 
   useEffect(() => {
     initializeWeather();
+    
+    // Auto-refresh a cada 10 minutos para dados em tempo real
+    const interval = setInterval(() => {
+      if (weatherData) {
+        fetchWeatherData({ 
+          lat: weatherData.coords.lat, 
+          lon: weatherData.coords.lon 
+        });
+      }
+    }, 10 * 60 * 1000); // 10 minutos
+    
+    return () => clearInterval(interval);
   }, []);
 
   return {

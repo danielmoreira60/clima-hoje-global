@@ -88,7 +88,7 @@ const AgoraPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-primary mb-2">
-                    {Math.round(weatherData.temperature + 2)}°C
+                    {weatherData.feelsLike}°C
                   </div>
                   <p className="text-muted-foreground">
                     Temperatura percebida pelo corpo humano
@@ -105,10 +105,12 @@ const AgoraPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-yellow-600 mb-2">
-                    {Math.floor(Math.random() * 10) + 1}
+                    {weatherData.uvIndex}
                   </div>
                   <p className="text-muted-foreground">
-                    Nível moderado - Use protetor solar
+                    {weatherData.uvIndex <= 2 ? 'Baixo' : 
+                     weatherData.uvIndex <= 5 ? 'Moderado' :
+                     weatherData.uvIndex <= 7 ? 'Alto' : 'Muito Alto'} - Use protetor solar
                   </p>
                 </CardContent>
               </Card>
@@ -122,7 +124,7 @@ const AgoraPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-purple-600 mb-2">
-                    {Math.round(weatherData.temperature - 8)}°C
+                    {Math.round(weatherData.dewPoint || (weatherData.temperature - 8))}°C
                   </div>
                   <p className="text-muted-foreground">
                     Temperatura de condensação do vapor
@@ -139,7 +141,7 @@ const AgoraPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-green-600 mb-2">
-                    {Math.round(weatherData.windSpeed * 1.5)} km/h
+                    {weatherData.windGust || Math.round(weatherData.windSpeed * 1.5)} km/h
                   </div>
                   <p className="text-muted-foreground">
                     Velocidade máxima do vento
@@ -151,15 +153,15 @@ const AgoraPage = () => {
                 <CardHeader>
                   <CardTitle className="flex items-center space-x-2">
                     <Droplets className="h-6 w-6 text-blue-500" />
-                    <span>Chuva Acumulada</span>
+                    <span>Nebulosidade</span>
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-blue-600 mb-2">
-                    {Math.floor(Math.random() * 10)} mm
+                    {weatherData.cloudiness || 0}%
                   </div>
                   <p className="text-muted-foreground">
-                    Precipitação nas últimas 24h
+                    Cobertura de nuvens
                   </p>
                 </CardContent>
               </Card>
@@ -173,10 +175,13 @@ const AgoraPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="text-3xl font-bold text-green-600 mb-2">
-                    Boa
+                    {weatherData.airQuality === 1 ? 'Excelente' :
+                     weatherData.airQuality === 2 ? 'Boa' :
+                     weatherData.airQuality === 3 ? 'Moderada' :
+                     weatherData.airQuality === 4 ? 'Ruim' : 'Muito Ruim'}
                   </div>
                   <p className="text-muted-foreground">
-                    IQA: {Math.floor(Math.random() * 50) + 20}
+                    IQA: {weatherData.airQuality || 3}
                   </p>
                 </CardContent>
               </Card>

@@ -27,6 +27,8 @@ serve(async (req) => {
 
     let weatherUrl = `https://api.openweathermap.org/data/2.5/weather?appid=${apiKey}&units=metric&lang=${lang}`
     let forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?appid=${apiKey}&units=metric&lang=${lang}`
+    let airPollutionUrl = `https://api.openweathermap.org/data/2.5/air_pollution?appid=${apiKey}`
+    let uvUrl = `https://api.openweathermap.org/data/2.5/uvi?appid=${apiKey}`
 
     if (city) {
       weatherUrl += `&q=${encodeURIComponent(city)}`
@@ -34,15 +36,21 @@ serve(async (req) => {
     } else if (lat && lon) {
       weatherUrl += `&lat=${lat}&lon=${lon}`
       forecastUrl += `&lat=${lat}&lon=${lon}`
+      airPollutionUrl += `&lat=${lat}&lon=${lon}`
+      uvUrl += `&lat=${lat}&lon=${lon}`
     } else {
       throw new Error('Localização ou cidade deve ser fornecida')
     }
 
-    // Buscar dados atuais e previsão
-    const [weatherResponse, forecastResponse] = await Promise.all([
+    // Buscar dados atuais, previsão, qualidade do ar e UV
+    const responses = await Promise.all([
       fetch(weatherUrl),
-      fetch(forecastUrl)
+      fetch(forecastUrl),
+      lat && lon ? fetch(airPollutionUrl) : Promise.resolve(null),
+      lat && lon ? fetch(uvUrl) : Promise.resolve(null)
     ])
+
+    const [weatherResponse, forecastResponse, airResponse, uvResponse] = responses
 
     if (!weatherResponse.ok || !forecastResponse.ok) {
       throw new Error('Erro ao buscar dados meteorológicos')
@@ -50,6 +58,8 @@ serve(async (req) => {
 
     const weatherData = await weatherResponse.json()
     const forecastData = await forecastResponse.json()
+    const airData = airResponse?.ok ? await airResponse.json() : null
+    const uvData = uvResponse?.ok ? await uvResponse.json() : null
 
     // Processar dados para o formato esperado
     const processedData = {
@@ -58,11 +68,18 @@ serve(async (req) => {
       condition: weatherData.weather[0].description,
       humidity: weatherData.main.humidity,
       windSpeed: Math.round(weatherData.wind.speed * 3.6), // converter m/s para km/h
+      windDirection: weatherData.wind.deg || 0,
+      windGust: weatherData.wind.gust ? Math.round(weatherData.wind.gust * 3.6) : null,
       pressure: weatherData.main.pressure,
       visibility: weatherData.visibility ? Math.round(weatherData.visibility / 1000) : 10,
       icon: weatherData.weather[0].icon,
       feelsLike: Math.round(weatherData.main.feels_like),
-      uvIndex: 5, // OpenWeatherMap UV requer endpoint separado
+      uvIndex: uvData?.value ? Math.round(uvData.value) : 5,
+      airQuality: airData?.list?.[0]?.main?.aqi || 3,
+      cloudiness: weatherData.clouds.all,
+      sunrise: weatherData.sys.sunrise,
+      sunset: weatherData.sys.sunset,
+      dewPoint: weatherData.main.temp - ((100 - weatherData.main.humidity) / 5),
       coords: {
         lat: weatherData.coord.lat,
         lon: weatherData.coord.lon
