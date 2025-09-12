@@ -54,16 +54,26 @@ const Index = () => {
             <MapPin className="h-4 w-4" />
             <span>{weatherData?.location || 'Carregando localização...'}</span>
           </div>
-          {!loading && (
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            {!loading && (
+              <Button 
+                onClick={refetch} 
+                variant="outline" 
+                className="gap-2 hover-scale"
+              >
+                <RefreshCw className="h-4 w-4" />
+                Atualizar Dados
+              </Button>
+            )}
             <Button 
               onClick={refetch} 
-              variant="outline" 
-              className="gap-2 hover-scale"
+              variant="default" 
+              className="gap-2 hover-scale bg-primary hover:bg-primary/90"
             >
-              <RefreshCw className="h-4 w-4" />
-              Atualizar Dados
+              <MapPin className="h-4 w-4" />
+              Usar Minha Localização
             </Button>
-          )}
+          </div>
         </section>
 
         {/* City Search */}
