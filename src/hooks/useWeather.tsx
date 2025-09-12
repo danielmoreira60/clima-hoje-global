@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 
 interface WeatherData {
   location: string;
@@ -10,11 +11,15 @@ interface WeatherData {
   pressure: number;
   visibility: number;
   icon: string;
+  feelsLike: number;
+  uvIndex: number;
+  coords: LocationCoords;
   forecast: ForecastDay[];
 }
 
 interface ForecastDay {
   date: string;
+  time: string;
   temperature: number;
   minTemp: number;
   maxTemp: number;
@@ -22,6 +27,7 @@ interface ForecastDay {
   humidity: number;
   windSpeed: number;
   icon: string;
+  pop: number; // probabilidade de precipitação
 }
 
 interface LocationCoords {
@@ -33,9 +39,8 @@ const useWeather = () => {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [searchCity, setSearchCity] = useState<string>('');
   const { toast } = useToast();
-
-  const API_KEY = 'YOUR_OPENWEATHER_API_KEY'; // Temporário - usuário deve inserir sua chave
 
   const getCurrentLocation = (): Promise<LocationCoords> => {
     return new Promise((resolve, reject) => {
@@ -52,47 +57,39 @@ const useWeather = () => {
           });
         },
         (error) => {
-          reject(new Error('Erro ao obter localização'));
+          console.error('Erro de geolocalização:', error);
+          reject(new Error('Erro ao obter localização. Verifique se você permitiu o acesso à localização.'));
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 300000 // 5 minutos
         }
       );
     });
   };
 
-  const fetchWeatherData = async (coords: LocationCoords) => {
+  const fetchWeatherData = async (params: { lat?: number; lon?: number; city?: string }) => {
     try {
-      // Usando dados simulados para demonstração
-      // Em produção, usar: 
-      // const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&appid=${API_KEY}&units=metric&lang=pt_br`);
-      
-      // Dados simulados para demonstração
-      const mockData: WeatherData = {
-        location: 'São Paulo, SP',
-        temperature: 24,
-        condition: 'Parcialmente nublado',
-        humidity: 65,
-        windSpeed: 12,
-        pressure: 1013,
-        visibility: 10,
-        icon: '02d',
-        forecast: Array.from({ length: 15 }, (_, i) => ({
-          date: new Date(Date.now() + i * 24 * 60 * 60 * 1000).toISOString().split('T')[0],
-          temperature: Math.round(20 + Math.random() * 10),
-          minTemp: Math.round(15 + Math.random() * 5),
-          maxTemp: Math.round(25 + Math.random() * 10),
-          condition: ['Ensolarado', 'Parcialmente nublado', 'Nublado', 'Chuva leve'][Math.floor(Math.random() * 4)],
-          humidity: Math.round(50 + Math.random() * 30),
-          windSpeed: Math.round(5 + Math.random() * 15),
-          icon: ['01d', '02d', '03d', '10d'][Math.floor(Math.random() * 4)]
-        }))
-      };
+      const { data, error } = await supabase.functions.invoke('weather', {
+        body: params
+      });
 
-      setWeatherData(mockData);
+      if (error) throw error;
+
+      setWeatherData(data);
       setError(null);
-    } catch (err) {
-      setError('Erro ao carregar dados meteorológicos');
+      
+      toast({
+        title: "Dados Atualizados",
+        description: `Previsão para ${data.location}`,
+      });
+    } catch (err: any) {
+      console.error('Erro ao buscar dados meteorológicos:', err);
+      setError(err.message || 'Erro ao carregar dados meteorológicos');
       toast({
         title: "Erro",
-        description: "Não foi possível carregar os dados meteorológicos",
+        description: "Não foi possível carregar os dados meteorológicos. Tente novamente.",
         variant: "destructive",
       });
     } finally {
@@ -100,15 +97,33 @@ const useWeather = () => {
     }
   };
 
+  const searchWeatherByCity = useCallback(async (city: string) => {
+    if (!city.trim()) return;
+    
+    setLoading(true);
+    setSearchCity(city);
+    await fetchWeatherData({ city: city.trim() });
+  }, []);
+
   const initializeWeather = async () => {
     try {
       setLoading(true);
+      setError(null);
+      
+      // Tentar obter localização do usuário
       const coords = await getCurrentLocation();
-      await fetchWeatherData(coords);
-    } catch (err) {
+      await fetchWeatherData({ lat: coords.lat, lon: coords.lon });
+    } catch (err: any) {
       console.error('Erro ao inicializar dados meteorológicos:', err);
-      // Usar localização padrão se não conseguir obter localização
-      await fetchWeatherData({ lat: -23.5505, lon: -46.6333 }); // São Paulo
+      
+      // Fallback para São Paulo se não conseguir obter localização
+      toast({
+        title: "Localização não disponível",
+        description: "Usando São Paulo como localização padrão. Para obter dados da sua região, permita o acesso à localização.",
+        variant: "default",
+      });
+      
+      await fetchWeatherData({ lat: -23.5505, lon: -46.6333 });
     }
   };
 
@@ -120,7 +135,9 @@ const useWeather = () => {
     weatherData,
     loading,
     error,
+    searchCity,
     refetch: initializeWeather,
+    searchWeatherByCity,
   };
 };
 

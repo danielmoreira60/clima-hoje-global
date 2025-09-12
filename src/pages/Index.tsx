@@ -3,9 +3,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import WeatherCard from "@/components/WeatherCard";
 import WeatherDashboard from "@/components/WeatherDashboard";
-import WeatherMap from "@/components/WeatherMap";
+import RealTimeWeatherMap from "@/components/RealTimeWeatherMap";
 import GlobalWeatherMap from "@/components/GlobalWeatherMap";
 import AlertsForm from "@/components/AlertsForm";
+import WeatherNotifications from "@/components/WeatherNotifications";
+import CitySearch from "@/components/CitySearch";
 import useWeather from "@/hooks/useWeather";
 import { 
   MapPin, 
@@ -24,7 +26,7 @@ import {
 } from "lucide-react";
 
 const Index = () => {
-  const { weatherData, loading, error, refetch } = useWeather();
+  const { weatherData, loading, error, refetch, searchWeatherByCity } = useWeather();
 
   if (loading) {
     return (
@@ -64,6 +66,15 @@ const Index = () => {
           )}
         </section>
 
+        {/* City Search */}
+        <section className="mb-12">
+          <CitySearch 
+            onSearch={searchWeatherByCity}
+            currentLocation={weatherData?.location}
+            isLoading={loading}
+          />
+        </section>
+
         {/* Current Weather Dashboard */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
@@ -71,6 +82,15 @@ const Index = () => {
             Condições Meteorológicas Detalhadas
           </h2>
           <WeatherDashboard data={weatherData} />
+        </section>
+
+        {/* Weather Notifications */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Bell className="h-6 w-6 text-primary" />
+            Notificações e Alertas
+          </h2>
+          <WeatherNotifications />
         </section>
 
         {/* Alerts Form */}
@@ -86,9 +106,9 @@ const Index = () => {
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
             <Satellite className="h-6 w-6 text-primary" />
-            Mapas Meteorológicos do Brasil
+            Mapas Meteorológicos em Tempo Real
           </h2>
-          <WeatherMap />
+          <RealTimeWeatherMap />
         </section>
 
         {/* Global Weather Monitoring */}

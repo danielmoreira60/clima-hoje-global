@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useToast } from '@/hooks/use-toast';
+import { supabase } from '@/integrations/supabase/client';
 import { 
   Bell, 
   Mail, 
@@ -22,6 +23,7 @@ import {
 
 const AlertsForm = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
     whatsapp: '',
@@ -60,40 +62,84 @@ const AlertsForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
-    // Validate form
-    if (!formData.email && !formData.whatsapp) {
+    try {
+      // Validate form
+      if (!formData.email && !formData.whatsapp) {
+        toast({
+          title: "Erro",
+          description: "Informe pelo menos um meio de contato (email ou WhatsApp)",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      const selectedAlerts = Object.entries(formData.alertTypes)
+        .filter(([_, selected]) => selected)
+        .map(([type, _]) => type);
+
+      if (selectedAlerts.length === 0) {
+        toast({
+          title: "Erro",
+          description: "Selecione pelo menos um tipo de alerta",
+          variant: "destructive",
+        });
+        return;
+      }
+
+      // Submit to Supabase via edge function
+      const { data, error } = await supabase.functions.invoke('weather-alerts', {
+        body: {
+          email: formData.email || null,
+          whatsapp: formData.whatsapp || null,
+          location: formData.city,
+          alertTypes: selectedAlerts,
+          frequency: formData.frequency,
+          timePreference: formData.timePreference,
+          name: formData.name
+        }
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Alertas Configurados!",
+        description: `Você receberá ${selectedAlerts.length} tipos de alertas climáticos em ${formData.city}`,
+        duration: 5000,
+      });
+
+      // Reset form
+      setFormData({
+        email: '',
+        whatsapp: '',
+        name: '',
+        city: '',
+        alertTypes: {
+          rain: false,
+          storm: false,
+          temperature: false,
+          wind: false,
+          uv: false,
+          frost: false,
+          severe: false,
+        },
+        frequency: 'immediate',
+        timePreference: 'anytime'
+      });
+
+    } catch (error: any) {
+      console.error('Erro ao configurar alertas:', error);
       toast({
         title: "Erro",
-        description: "Informe pelo menos um meio de contato (email ou WhatsApp)",
+        description: "Não foi possível configurar os alertas. Tente novamente.",
         variant: "destructive",
       });
-      return;
+    } finally {
+      setIsSubmitting(false);
     }
-
-    const selectedAlerts = Object.entries(formData.alertTypes)
-      .filter(([_, selected]) => selected)
-      .map(([type, _]) => type);
-
-    if (selectedAlerts.length === 0) {
-      toast({
-        title: "Erro",
-        description: "Selecione pelo menos um tipo de alerta",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    // Simulate form submission
-    toast({
-      title: "Alertas Configurados!",
-      description: `Você receberá ${selectedAlerts.length} tipos de alertas climáticos`,
-      duration: 5000,
-    });
-
-    console.log('Form submitted:', formData);
   };
 
   return (
@@ -226,9 +272,14 @@ const AlertsForm = () => {
           </div>
 
           {/* Submit Button */}
-          <Button type="submit" className="w-full" size="lg">
+          <Button 
+            type="submit" 
+            className="w-full" 
+            size="lg" 
+            disabled={isSubmitting}
+          >
             <Bell className="h-4 w-4 mr-2" />
-            Ativar Alertas Climáticos
+            {isSubmitting ? 'Configurando...' : 'Ativar Alertas Climáticos'}
           </Button>
 
           {/* Disclaimer */}
