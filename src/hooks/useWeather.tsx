@@ -95,13 +95,23 @@ const useWeather = () => {
       });
     } catch (err: any) {
       console.error('Erro ao buscar dados meteorológicos:', err);
-      setError(err.message || 'Erro ao carregar dados do clima');
-      
-      toast({
-        title: "Erro ao carregar dados ❌",
-        description: "Verifique sua conexão e tente novamente.",
-        variant: "destructive",
-      });
+      // Fallback para dados simulados quando a API não estiver disponível ou Supabase não estiver configurado
+      try {
+        const fallback = generateMockWeatherData(params);
+        setWeatherData(fallback);
+        setError(null);
+        toast({
+          title: "Dados temporários exibidos",
+          description: "Mostrando clima simulado até a API estar disponível.",
+        });
+      } catch (e) {
+        setError(err?.message || 'Erro ao carregar dados do clima');
+        toast({
+          title: "Erro ao carregar dados ❌",
+          description: "Verifique sua conexão e tente novamente.",
+          variant: "destructive",
+        });
+      }
     } finally {
       setLoading(false);
     }
