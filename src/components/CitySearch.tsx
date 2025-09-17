@@ -22,9 +22,9 @@ const CitySearch = ({ onSearch, currentLocation, isLoading = false }: CitySearch
   };
 
   const popularCities = [
-    'São Paulo', 'Rio de Janeiro', 'Brasília', 'Salvador', 
-    'Fortaleza', 'Belo Horizonte', 'Manaus', 'Curitiba',
-    'Recife', 'Goiânia', 'Belém', 'Porto Alegre'
+    'São Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Cabo Frio', 
+    'Salvador', 'Fortaleza', 'Brasília', 'Manaus', 
+    'Curitiba', 'Recife', 'Goiânia', 'Porto Alegre'
   ];
 
   return (
@@ -60,7 +60,7 @@ const CitySearch = ({ onSearch, currentLocation, isLoading = false }: CitySearch
           </form>
 
           <div className="space-y-2">
-            <p className="text-sm font-medium text-muted-foreground">Cidades populares:</p>
+            <p className="text-sm font-medium text-muted-foreground">Previsão do tempo para cidades populares:</p>
             <div className="flex flex-wrap gap-2">
               {popularCities.map((popularCity) => (
                 <Button
@@ -70,6 +70,7 @@ const CitySearch = ({ onSearch, currentLocation, isLoading = false }: CitySearch
                   onClick={() => onSearch(popularCity)}
                   disabled={isLoading}
                   className="text-xs"
+                  title={`Clima tempo ${popularCity} - previsão do tempo ${popularCity.toLowerCase()}`}
                 >
                   {popularCity}
                 </Button>
