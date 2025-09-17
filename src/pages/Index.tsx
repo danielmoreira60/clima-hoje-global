@@ -9,6 +9,7 @@ import AlertsForm from "@/components/AlertsForm";
 import WeatherNotifications from "@/components/WeatherNotifications";
 import CitySearch from "@/components/CitySearch";
 import useWeather from "@/hooks/useWeather";
+import weatherBanner from "@/assets/weather-banner.jpg";
 import { 
   MapPin, 
   RefreshCw, 
@@ -43,36 +44,46 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-weather">
       <div className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <section className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-4 animate-scale-in bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
-            Clima Hoje
-          </h1>
-          <p className="text-xl text-muted-foreground mb-8">
-            Previsão do tempo completa e precisa para sua região com monitoramento global
-          </p>
-          <div className="flex items-center justify-center gap-2 text-muted-foreground mb-6">
-            <MapPin className="h-4 w-4" />
-            <span>{weatherData?.location || 'Carregando localização...'}</span>
-          </div>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            {!loading && (
+        <section 
+          className="relative text-center mb-12 animate-fade-in py-20 px-8 rounded-2xl overflow-hidden"
+          style={{
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${weatherBanner})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
+          }}
+        >
+          <div className="relative z-10">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-scale-in drop-shadow-2xl">
+              Clima Hoje
+            </h1>
+            <p className="text-xl text-white/90 mb-8 drop-shadow-lg">
+              Previsão do tempo completa e precisa para sua região com monitoramento global
+            </p>
+            <div className="flex items-center justify-center gap-2 text-white/80 mb-6 bg-black/30 backdrop-blur-sm rounded-full px-4 py-2 inline-flex">
+              <MapPin className="h-4 w-4" />
+              <span className="font-medium">{weatherData?.location || 'Detectando sua localização...'}</span>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              {!loading && (
+                <Button 
+                  onClick={refetch} 
+                  variant="outline" 
+                  className="gap-2 hover-scale bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm"
+                >
+                  <RefreshCw className="h-4 w-4" />
+                  Atualizar Dados
+                </Button>
+              )}
               <Button 
                 onClick={refetch} 
-                variant="outline" 
-                className="gap-2 hover-scale"
+                variant="default" 
+                className="gap-2 hover-scale bg-white/10 hover:bg-white/20 border border-white/30 text-white backdrop-blur-sm"
               >
-                <RefreshCw className="h-4 w-4" />
-                Atualizar Dados
+                <MapPin className="h-4 w-4" />
+                Usar Minha Localização
               </Button>
-            )}
-            <Button 
-              onClick={refetch} 
-              variant="default" 
-              className="gap-2 hover-scale bg-primary hover:bg-primary/90"
-            >
-              <MapPin className="h-4 w-4" />
-              Usar Minha Localização
-            </Button>
+            </div>
           </div>
         </section>
 

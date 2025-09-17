@@ -58,18 +58,37 @@ const useWeather = () => {
 
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          resolve({
+          const coords = {
             lat: position.coords.latitude,
             lon: position.coords.longitude,
-          });
+          };
+          
+          // Salvar nova localização no localStorage
+          localStorage.setItem('weather-location', JSON.stringify(coords));
+          
+          resolve(coords);
         },
         (error) => {
           console.error('Erro de geolocalização:', error);
-          reject(new Error('Erro ao obter localização. Verifique se você permitiu o acesso à localização.'));
+          let message = 'Erro ao obter localização.';
+          
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              message = 'Acesso à localização negado. Permita o acesso para ver o clima da sua região.';
+              break;
+            case error.POSITION_UNAVAILABLE:
+              message = 'Localização não disponível no momento.';
+              break;
+            case error.TIMEOUT:
+              message = 'Tempo limite excedido ao obter localização.';
+              break;
+          }
+          
+          reject(new Error(message));
         },
         {
           enableHighAccuracy: true,
-          timeout: 10000,
+          timeout: 15000,
           maximumAge: 300000 // 5 minutos
         }
       );
@@ -178,16 +197,34 @@ const useWeather = () => {
       setLoading(true);
       setError(null);
       
+      // Verificar se há localização salva no localStorage
+      const savedLocation = localStorage.getItem('weather-location');
+      if (savedLocation) {
+        const { lat, lon } = JSON.parse(savedLocation);
+        await fetchWeatherData({ lat, lon });
+        return;
+      }
+
       // Tentar obter localização do usuário
       const coords = await getCurrentLocation();
+      
+      // Salvar localização no localStorage
+      localStorage.setItem('weather-location', JSON.stringify(coords));
+      
       await fetchWeatherData({ lat: coords.lat, lon: coords.lon });
+      
+      toast({
+        title: "📍 Localização detectada",
+        description: "Mostrando o clima da sua região atual",
+      });
+      
     } catch (err: any) {
       console.error('Erro ao inicializar dados meteorológicos:', err);
       
       // Fallback para São Paulo se não conseguir obter localização
       toast({
-        title: "Localização não disponível",
-        description: "Usando São Paulo como localização padrão. Para obter dados da sua região, permita o acesso à localização.",
+        title: "🌍 Localização padrão",
+        description: "Para ver o clima da sua região, permita o acesso à localização e clique em 'Usar Minha Localização'",
         variant: "default",
       });
       
