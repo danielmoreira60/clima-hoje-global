@@ -14,11 +14,7 @@ serve(async (req) => {
   try {
     const { lat, lon, city, lang = 'pt_br' } = await req.json()
     
-    const supabaseClient = createClient(
-      Deno.env.get('SUPABASE_URL') ?? '',
-      Deno.env.get('SUPABASE_ANON_KEY') ?? ''
-    )
-
+    // No Supabase client needed for this function; we only call external weather API
     const apiKey = Deno.env.get('OPENWEATHER_API_KEY')
     
     if (!apiKey) {
