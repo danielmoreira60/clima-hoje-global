@@ -2,3 +2,6 @@ project_id = "hrpirytnikoezvynrxze"
 
 [functions.weather]
 verify_jwt = false
+
+[functions.environmental-data]
+verify_jwt = false

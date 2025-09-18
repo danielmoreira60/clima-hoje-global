@@ -14,13 +14,128 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      environmental_risks: {
+        Row: {
+          created_at: string
+          description: string | null
+          detected_at: string
+          expires_at: string | null
+          external_id: string | null
+          id: string
+          is_active: boolean
+          latitude: number | null
+          location_name: string | null
+          longitude: number | null
+          metadata: Json | null
+          risk_type: string
+          severity: string
+          source_api: string
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          description?: string | null
+          detected_at?: string
+          expires_at?: string | null
+          external_id?: string | null
+          id?: string
+          is_active?: boolean
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          metadata?: Json | null
+          risk_type: string
+          severity: string
+          source_api: string
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          description?: string | null
+          detected_at?: string
+          expires_at?: string | null
+          external_id?: string | null
+          id?: string
+          is_active?: boolean
+          latitude?: number | null
+          location_name?: string | null
+          longitude?: number | null
+          metadata?: Json | null
+          risk_type?: string
+          severity?: string
+          source_api?: string
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_alert_preferences: {
+        Row: {
+          created_at: string
+          email_alerts: boolean
+          id: string
+          notifications_enabled: boolean
+          proximity_radius_km: number
+          risk_types: string[]
+          severity_threshold: string
+          sound_enabled: boolean
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          email_alerts?: boolean
+          id?: string
+          notifications_enabled?: boolean
+          proximity_radius_km?: number
+          risk_types?: string[]
+          severity_threshold?: string
+          sound_enabled?: boolean
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          email_alerts?: boolean
+          id?: string
+          notifications_enabled?: boolean
+          proximity_radius_km?: number
+          risk_types?: string[]
+          severity_threshold?: string
+          sound_enabled?: boolean
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_nearby_risks: {
+        Args: {
+          radius_km?: number
+          risk_types?: string[]
+          user_lat: number
+          user_lon: number
+        }
+        Returns: {
+          description: string
+          detected_at: string
+          distance_km: number
+          id: string
+          latitude: number
+          location_name: string
+          longitude: number
+          metadata: Json
+          risk_type: string
+          severity: string
+          title: string
+        }[]
+      }
     }
     Enums: {
       [_ in never]: never

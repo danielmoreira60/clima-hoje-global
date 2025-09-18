@@ -8,6 +8,8 @@ import GlobalWeatherMap from "@/components/GlobalWeatherMap";
 import AlertsForm from "@/components/AlertsForm";
 import WeatherNotifications from "@/components/WeatherNotifications";
 import CitySearch from "@/components/CitySearch";
+import EnvironmentalRiskMap from "@/components/EnvironmentalRiskMap";
+import EnvironmentalAlerts from "@/components/EnvironmentalAlerts";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
 import { 
@@ -23,7 +25,8 @@ import {
   TrendingUp,
   Globe,
   Satellite,
-  Bell
+  Bell,
+  AlertTriangle
 } from "lucide-react";
 
 const Index = () => {
@@ -170,7 +173,34 @@ const Index = () => {
             <Satellite className="h-6 w-6 text-primary" />
             Mapas Meteorológicos em Tempo Real
           </h2>
+          <p className="text-muted-foreground mb-6">
+            Visualização interativa de condições meteorológicas, radar de chuva, imagens de satélite e monitoramento climático em tempo real.
+          </p>
           <RealTimeWeatherMap />
+        </section>
+
+        {/* Environmental Risk Monitoring */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <AlertTriangle className="h-6 w-6 text-primary" />
+            Monitoramento Ambiental e Riscos Climáticos
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Sistema avançado de monitoramento de queimadas, atividade solar, furacões, desmatamento e outros fenômenos extremos em tempo real com dados oficiais da NASA, NOAA e INPE.
+          </p>
+          <EnvironmentalRiskMap />
+        </section>
+
+        {/* Environmental Alerts System */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Bell className="h-6 w-6 text-primary" />
+            Sistema de Alertas Ambientais Avançado
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Receba notificações em tempo real sobre riscos ambientais próximos à sua localização com monitoramento contínuo e alertas personalizados.
+          </p>
+          <EnvironmentalAlerts />
         </section>
 
         {/* Global Weather Monitoring */}
@@ -179,6 +209,9 @@ const Index = () => {
             <Globe className="h-6 w-6 text-primary" />
             Monitoramento Meteorológico Global
           </h2>
+          <p className="text-muted-foreground mb-6">
+            Acompanhe condições climáticas globais, padrões meteorológicos mundiais e fenômenos atmosféricos de grande escala.
+          </p>
           <GlobalWeatherMap />
         </section>
 
@@ -226,16 +259,40 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Environmental Risk Monitoring */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Satellite className="h-6 w-6 text-primary" />
+            Monitoramento Ambiental e Riscos Climáticos
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Sistema avançado de monitoramento de queimadas, atividade solar, furacões, desmatamento e outros fenômenos extremos em tempo real.
+          </p>
+          <EnvironmentalRiskMap />
+        </section>
+
+        {/* Environmental Alerts System */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+            <Bell className="h-6 w-6 text-primary" />
+            Sistema de Alertas Ambientais Avançado
+          </h2>
+          <p className="text-muted-foreground mb-6">
+            Receba notificações em tempo real sobre riscos ambientais próximos à sua localização com dados oficiais da NASA, NOAA, INPE e outras fontes.
+          </p>
+          <EnvironmentalAlerts />
+        </section>
+
         {/* Weather Insights */}
         <section className="mb-12">
           <Card className="bg-card/50 backdrop-blur-sm border-border/50">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-primary" />
-                Insights Meteorológicos
+                Insights Meteorológicos e Ambientais
               </CardTitle>
               <CardDescription>
-                Análise personalizada baseada nos dados atuais
+                Análise personalizada baseada nos dados meteorológicos e ambientais atuais
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -246,24 +303,27 @@ const Index = () => {
                     <li>• Caminhada ao ar livre</li>
                     <li>• Exercícios externos</li>
                     <li>• Passeios de bicicleta</li>
+                    <li>• Monitorar alertas ambientais</li>
                   </ul>
                 </div>
                 
                 <div className="p-4 rounded-lg bg-accent/30">
-                  <h4 className="font-semibold mb-2 text-yellow-600">Cuidados com o Tempo para Amanhã</h4>
+                  <h4 className="font-semibold mb-2 text-yellow-600">Cuidados com Riscos Ambientais</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Use protetor solar</li>
-                    <li>• Mantenha-se hidratado</li>
-                    <li>• Acompanhe a previsão de chuva</li>
+                    <li>• Verificar focos de queimadas próximos</li>
+                    <li>• Acompanhar atividade solar</li>
+                    <li>• Estar atento a alertas de desmatamento</li>
+                    <li>• Monitorar condições meteorológicas extremas</li>
                   </ul>
                 </div>
                 
                 <div className="p-4 rounded-lg bg-accent/30">
-                  <h4 className="font-semibold mb-2 text-blue-600">Previsão de Tempo Próximas 24h</h4>
+                  <h4 className="font-semibold mb-2 text-blue-600">Previsão Integrada 24h</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
                     <li>• Temperatura agora estável</li>
                     <li>• Baixa previsão de chuva</li>
                     <li>• Ventos moderados</li>
+                    <li>• Sem alertas ambientais críticos</li>
                   </ul>
                 </div>
               </div>
