@@ -17,21 +17,24 @@ import { useToast } from "@/hooks/use-toast";
 
 interface EnvironmentalRisk {
   id: string;
-  type: 'fire' | 'solar' | 'hurricane' | 'flood' | 'deforestation';
+  risk_type: 'fire' | 'solar' | 'hurricane' | 'flood' | 'deforestation';
   title: string;
   description: string;
   severity: 'low' | 'medium' | 'high' | 'extreme';
-  distance?: number;
-  coordinates?: { lat: number; lon: number };
-  timestamp: string;
+  latitude: number;
+  longitude: number;
+  detected_at: string;
+  source: string;
+  distance_km?: number;
 }
+
+import useEnvironmentalData from '@/hooks/useEnvironmentalData';
 
 const EnvironmentalRiskMap = () => {
   const [activeLayer, setActiveLayer] = useState<string>('fires');
-  const [risks, setRisks] = useState<EnvironmentalRisk[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
   const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
   const { toast } = useToast();
+  const { risks, loading, error, fetchRisksByType, refreshData } = useEnvironmentalData();
 
   const mapLayers = [
     { id: 'fires', label: 'Queimadas e Focos de Incêndio', icon: Flame, color: 'text-red-500', description: 'Dados NASA FIRMS em tempo real' },
@@ -58,8 +61,15 @@ const EnvironmentalRiskMap = () => {
 
   useEffect(() => {
     getCurrentLocation();
-    loadEnvironmentalData();
-  }, [activeLayer]);
+  }, []);
+
+  useEffect(() => {
+    if (userLocation) {
+      fetchRisksByType(activeLayer, userLocation.lat, userLocation.lon, 100);
+    } else {
+      fetchRisksByType(activeLayer, -23.5505, -46.6333, 100);
+    }
+  }, [activeLayer, userLocation, fetchRisksByType]);
 
   const getCurrentLocation = () => {
     if (navigator.geolocation) {
@@ -79,66 +89,12 @@ const EnvironmentalRiskMap = () => {
     }
   };
 
-  const loadEnvironmentalData = async () => {
-    setIsLoading(true);
-    try {
-      // Simular dados até implementar APIs reais
-      const mockRisks: EnvironmentalRisk[] = [
-        {
-          id: '1',
-          type: 'fire',
-          title: 'Foco de Incêndio Detectado',
-          description: 'Queimada ativa na região de Pantanal - MS',
-          severity: 'high',
-          distance: 45,
-          coordinates: { lat: -19.2840, lon: -57.6472 },
-          timestamp: new Date().toISOString()
-        },
-        {
-          id: '2', 
-          type: 'solar',
-          title: 'Tempestade Solar Moderada',
-          description: 'Atividade solar elevada - possível interferência em comunicações',
-          severity: 'medium',
-          timestamp: new Date().toISOString()
-        },
-        {
-          id: '3',
-          type: 'deforestation',
-          title: 'Alerta de Desmatamento',
-          description: 'Área desmatada detectada na Amazônia - Rondônia',
-          severity: 'high',
-          distance: 850,
-          coordinates: { lat: -8.7619, lon: -63.9039 },
-          timestamp: new Date().toISOString()
-        }
-      ];
-
-      // Filtrar por camada ativa
-      const filteredRisks = activeLayer === 'all' 
-        ? mockRisks 
-        : mockRisks.filter(risk => {
-            if (activeLayer === 'fires') return risk.type === 'fire';
-            if (activeLayer === 'solar') return risk.type === 'solar';
-            if (activeLayer === 'deforestation') return risk.type === 'deforestation';
-            return false;
-          });
-
-      setRisks(filteredRisks);
-    } catch (error) {
-      console.error('Erro ao carregar dados ambientais:', error);
-      toast({
-        title: "Erro ao carregar dados",
-        description: "Não foi possível carregar os dados ambientais. Tente novamente.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsLoading(false);
+  const handleRefresh = () => {
+    if (userLocation) {
+      refreshData(userLocation.lat, userLocation.lon, 100);
+    } else {
+      refreshData(-23.5505, -46.6333, 100);
     }
-  };
-
-  const refreshData = () => {
-    loadEnvironmentalData();
     toast({
       title: "Dados atualizados",
       description: "Informações ambientais atualizadas com sucesso.",
@@ -149,8 +105,8 @@ const EnvironmentalRiskMap = () => {
     if (!userLocation) return risks;
     
     return risks
-      .filter(risk => risk.distance !== undefined)
-      .sort((a, b) => (a.distance || 0) - (b.distance || 0));
+      .filter(risk => risk.distance_km !== undefined)
+      .sort((a, b) => (a.distance_km || 0) - (b.distance_km || 0));
   };
 
   return (
@@ -168,8 +124,8 @@ const EnvironmentalRiskMap = () => {
                 Dados em tempo real de queimadas, atividade solar, furacões e riscos ambientais
               </p>
             </div>
-            <Button onClick={refreshData} disabled={isLoading} variant="outline">
-              <RefreshCw className={`h-4 w-4 mr-2 ${isLoading ? 'animate-spin' : ''}`} />
+            <Button onClick={handleRefresh} disabled={loading} variant="outline">
+              <RefreshCw className={`h-4 w-4 mr-2 ${loading ? 'animate-spin' : ''}`} />
               Atualizar
             </Button>
           </div>
@@ -252,8 +208,8 @@ const EnvironmentalRiskMap = () => {
                     </Badge>
                   </div>
                   <p className="text-sm text-muted-foreground mb-2">{risk.description}</p>
-                  {risk.distance && (
-                    <p className="text-xs text-blue-600">📍 {risk.distance} km de distância</p>
+                  {risk.distance_km && (
+                    <p className="text-xs text-blue-600">📍 {risk.distance_km} km de distância</p>
                   )}
                 </div>
               ))
@@ -282,7 +238,7 @@ const EnvironmentalRiskMap = () => {
                   </div>
                   <p className="text-sm text-muted-foreground">{risk.description}</p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    {new Date(risk.timestamp).toLocaleString('pt-BR')}
+                    {new Date(risk.detected_at).toLocaleString('pt-BR')}
                   </p>
                 </div>
               ))

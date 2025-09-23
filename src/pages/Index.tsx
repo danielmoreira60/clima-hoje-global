@@ -45,7 +45,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-weather">
-      <div className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <section 
           className="relative text-center mb-12 animate-fade-in py-20 px-8 rounded-2xl overflow-hidden"
@@ -149,23 +149,6 @@ const Index = () => {
           <WeatherDashboard />
         </section>
 
-        {/* Weather Notifications */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Bell className="h-6 w-6 text-primary" />
-            Notificações e Alertas
-          </h2>
-          <WeatherNotifications />
-        </section>
-
-        {/* Alerts Form */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Bell className="h-6 w-6 text-primary" />
-            Sistema de Alertas Personalizados
-          </h2>
-          <AlertsForm />
-        </section>
 
         {/* Interactive Weather Maps */}
         <section className="mb-12">
@@ -193,26 +176,12 @@ const Index = () => {
 
         {/* Environmental Alerts System */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Bell className="h-6 w-6 text-primary" />
-            Sistema de Alertas Ambientais Avançado
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Receba notificações em tempo real sobre riscos ambientais próximos à sua localização com monitoramento contínuo e alertas personalizados.
-          </p>
           <EnvironmentalAlerts />
         </section>
 
-        {/* Global Weather Monitoring */}
+        {/* Sistema de Alertas Personalizados */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Globe className="h-6 w-6 text-primary" />
-            Monitoramento Meteorológico Global
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Acompanhe condições climáticas globais, padrões meteorológicos mundiais e fenômenos atmosféricos de grande escala.
-          </p>
-          <GlobalWeatherMap />
+          <AlertsForm />
         </section>
 
         {/* Quick Access Cards */}
@@ -306,7 +275,7 @@ const Index = () => {
             </CardContent>
           </Card>
         </section>
-      </div>
+      </main>
     </div>
   );
 };

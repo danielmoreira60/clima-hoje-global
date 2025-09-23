@@ -99,12 +99,12 @@ const AmanhãPage = () => {
       <img 
         src={cloudImage} 
         alt="" 
-        className="cloud-bg-1 cloud-float w-32 h-24 object-contain pointer-events-none" 
+        className="cloud-bg-1 cloud-float w-96 h-72 object-contain pointer-events-none" 
       />
       <img 
         src={cloudImage} 
         alt="" 
-        className="cloud-bg-2 cloud-float-delayed w-40 h-30 object-contain pointer-events-none" 
+        className="cloud-bg-2 cloud-float-delayed w-120 h-90 object-contain pointer-events-none" 
       />
       
       <div className="container mx-auto px-4 relative z-10">

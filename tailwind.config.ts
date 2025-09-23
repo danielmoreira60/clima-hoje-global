@@ -117,6 +117,12 @@ export default {
 				'bounce-gentle': 'bounce-gentle 2s ease-in-out infinite',
 				'float': 'float 3s ease-in-out infinite',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
+			},
+			width: {
+				'120': '30rem',
+			},
+			height: {
+				'90': '22.5rem',
 			}
 		}
 	},
