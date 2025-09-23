@@ -12,6 +12,8 @@ import {
   Clock
 } from 'lucide-react';
 
+import cloudImage from '@/assets/cloud.webp';
+
 const HojePage = () => {
   const { weatherData, loading, error } = useWeather();
 
@@ -60,8 +62,20 @@ const HojePage = () => {
   });
 
   return (
-    <div className="min-h-screen bg-gradient-sky py-8">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      {/* Floating Clouds */}
+      <img 
+        src={cloudImage} 
+        alt="" 
+        className="cloud-bg-1 cloud-float w-32 h-24 object-contain pointer-events-none" 
+      />
+      <img 
+        src={cloudImage} 
+        alt="" 
+        className="cloud-bg-2 cloud-float-delayed w-40 h-30 object-contain pointer-events-none" 
+      />
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Header */}
         <div className="text-center mb-8">
           <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 animate-fade-in">

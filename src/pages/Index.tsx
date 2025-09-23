@@ -259,30 +259,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Environmental Risk Monitoring */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Satellite className="h-6 w-6 text-primary" />
-            Monitoramento Ambiental e Riscos Climáticos
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Sistema avançado de monitoramento de queimadas, atividade solar, furacões, desmatamento e outros fenômenos extremos em tempo real.
-          </p>
-          <EnvironmentalRiskMap />
-        </section>
-
-        {/* Environmental Alerts System */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Bell className="h-6 w-6 text-primary" />
-            Sistema de Alertas Ambientais Avançado
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Receba notificações em tempo real sobre riscos ambientais próximos à sua localização com dados oficiais da NASA, NOAA, INPE e outras fontes.
-          </p>
-          <EnvironmentalAlerts />
-        </section>
-
         {/* Weather Insights */}
         <section className="mb-12">
           <Card className="bg-card/50 backdrop-blur-sm border-border/50">
