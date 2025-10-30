@@ -150,106 +150,129 @@ const EnvironmentalRiskMap = () => {
           </div>
 
           {/* Mapa placeholder */}
-          <div className="bg-gradient-to-br from-blue-50 to-green-50 border-2 border-dashed border-border rounded-lg h-96 flex items-center justify-center relative overflow-hidden">
+          <div className="bg-gradient-to-br from-blue-50 to-green-50 border-2 border-dashed border-border rounded-lg h-96 flex flex-col items-center justify-center relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-green-500/10"></div>
             <div className="text-center z-10">
               <Satellite className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
               <h3 className="text-lg font-semibold mb-2">Mapa Interativo Ambiental</h3>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-2">
                 Camada ativa: {mapLayers.find(l => l.id === activeLayer)?.label}
               </p>
-              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <p className="text-sm text-muted-foreground mb-4">
+                {mapLayers.find(l => l.id === activeLayer)?.description}
+              </p>
+              <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground bg-white/80 px-4 py-2 rounded-full">
                 <MapPin className="h-4 w-4" />
                 {userLocation ? 
                   `Sua localização: ${userLocation.lat.toFixed(2)}, ${userLocation.lon.toFixed(2)}` :
                   'Detectando localização...'
                 }
               </div>
+              {loading && (
+                <div className="mt-4">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary mx-auto"></div>
+                  <p className="text-sm text-muted-foreground mt-2">Carregando dados...</p>
+                </div>
+              )}
+              {!loading && risks.length > 0 && (
+                <div className="mt-4 bg-white/90 px-4 py-2 rounded-lg">
+                  <p className="text-sm font-medium text-foreground">
+                    {risks.length} {risks.length === 1 ? 'alerta detectado' : 'alertas detectados'}
+                  </p>
+                </div>
+              )}
+              {!loading && risks.length === 0 && (
+                <div className="mt-4 bg-white/90 px-4 py-2 rounded-lg">
+                  <p className="text-sm font-medium text-green-600">
+                    Nenhum alerta ativo nesta camada
+                  </p>
+                </div>
+              )}
             </div>
 
-            {/* Overlay com pontos simulados */}
-            <div className="absolute inset-0">
-              {risks.map((risk, index) => (
-                <div
-                  key={risk.id}
-                  className={`absolute w-3 h-3 rounded-full animate-pulse ${
-                    risk.severity === 'extreme' ? 'bg-red-500' :
-                    risk.severity === 'high' ? 'bg-orange-500' :
-                    risk.severity === 'medium' ? 'bg-yellow-500' :
-                    'bg-green-500'
-                  }`}
-                  style={{
-                    left: `${20 + index * 15}%`,
-                    top: `${30 + index * 20}%`
-                  }}
-                  title={risk.title}
-                />
+            {/* Overlay com pontos de riscos */}
+            {!loading && risks.length > 0 && (
+              <div className="absolute inset-0">
+                {risks.slice(0, 8).map((risk, index) => (
+                  <div
+                    key={risk.id}
+                    className={`absolute w-4 h-4 rounded-full animate-pulse ${
+                      risk.severity === 'extreme' ? 'bg-red-500 shadow-lg shadow-red-500/50' :
+                      risk.severity === 'high' ? 'bg-orange-500 shadow-lg shadow-orange-500/50' :
+                      risk.severity === 'medium' ? 'bg-yellow-500 shadow-lg shadow-yellow-500/50' :
+                      'bg-green-500 shadow-lg shadow-green-500/50'
+                    }`}
+                    style={{
+                      left: `${15 + (index * 10) % 70}%`,
+                      top: `${20 + (index * 15) % 60}%`
+                    }}
+                    title={risk.title}
+                  />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Lista de alertas detectados */}
+          {!loading && risks.length > 0 && (
+            <div className="mt-4 space-y-2 max-h-64 overflow-y-auto">
+              <h4 className="font-semibold text-sm">Alertas Detectados:</h4>
+              {risks.slice(0, 10).map((risk) => (
+                <div key={risk.id} className="p-3 border rounded-lg bg-card flex items-start justify-between gap-2">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Badge variant="outline" className={severityColors[risk.severity]}>
+                        {severityLabels[risk.severity]}
+                      </Badge>
+                      {risk.distance_km && (
+                        <span className="text-xs text-muted-foreground">
+                          {Math.round(risk.distance_km)} km
+                        </span>
+                      )}
+                    </div>
+                    <h5 className="font-medium text-sm">{risk.title}</h5>
+                    <p className="text-xs text-muted-foreground">{risk.description}</p>
+                  </div>
+                </div>
               ))}
             </div>
-          </div>
+          )}
         </CardContent>
       </Card>
 
-      {/* Alertas próximos */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-        {/* Riscos por proximidade */}
+      {/* Informações e Status */}
+      {risks.length > 0 && (
         <Card>
           <CardHeader>
-            <CardTitle className="text-lg">Alertas Próximos à Sua Localização</CardTitle>
+            <CardTitle className="text-lg">Status Atual - {mapLayers.find(l => l.id === activeLayer)?.label}</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-3">
-            {getRisksByProximity().length > 0 ? (
-              getRisksByProximity().map((risk) => (
-                <div key={risk.id} className="p-3 border rounded-lg">
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-medium">{risk.title}</h4>
-                    <Badge variant="outline" className={severityColors[risk.severity]}>
-                      {severityLabels[risk.severity]}
-                    </Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground mb-2">{risk.description}</p>
-                  {risk.distance_km && (
-                    <p className="text-xs text-blue-600">📍 {risk.distance_km} km de distância</p>
-                  )}
-                </div>
-              ))
-            ) : (
-              <p className="text-muted-foreground text-center py-4">
-                Nenhum alerta próximo à sua localização
-              </p>
-            )}
+          <CardContent>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-accent/30 rounded-lg">
+                <p className="text-sm text-muted-foreground mb-1">Total de Alertas</p>
+                <p className="text-2xl font-bold">{risks.length}</p>
+              </div>
+              <div className="p-4 bg-accent/30 rounded-lg">
+                <p className="text-sm text-muted-foreground mb-1">Alertas de Alto Risco</p>
+                <p className="text-2xl font-bold text-orange-600">
+                  {risks.filter(r => r.severity === 'high' || r.severity === 'extreme').length}
+                </p>
+              </div>
+              <div className="p-4 bg-accent/30 rounded-lg">
+                <p className="text-sm text-muted-foreground mb-1">Última Atualização</p>
+                <p className="text-sm font-medium">
+                  {new Date().toLocaleString('pt-BR', { 
+                    hour: '2-digit', 
+                    minute: '2-digit',
+                    day: '2-digit',
+                    month: '2-digit'
+                  })}
+                </p>
+              </div>
+            </div>
           </CardContent>
         </Card>
-
-        {/* Todos os alertas globais */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">Alertas Globais Ativos</CardTitle>
-          </CardHeader>
-          <CardContent className="space-y-3">
-            {risks.length > 0 ? (
-              risks.map((risk) => (
-                <div key={risk.id} className="p-3 border rounded-lg">
-                  <div className="flex items-start justify-between mb-2">
-                    <h4 className="font-medium">{risk.title}</h4>
-                    <Badge variant="outline" className={severityColors[risk.severity]}>
-                      {severityLabels[risk.severity]}
-                    </Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{risk.description}</p>
-                  <p className="text-xs text-muted-foreground mt-1">
-                    {new Date(risk.detected_at).toLocaleString('pt-BR')}
-                  </p>
-                </div>
-              ))
-            ) : (
-              <p className="text-muted-foreground text-center py-4">
-                Carregando alertas ambientais...
-              </p>
-            )}
-          </CardContent>
-        </Card>
-      </div>
+      )}
 
       {/* Informações das fontes */}
       <Card>

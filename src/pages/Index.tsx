@@ -134,19 +134,11 @@ const Index = () => {
 
         {/* Interactive Weather Maps */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Satellite className="h-6 w-6 text-primary" />
-            Mapas Meteorológicos em Tempo Real
-          </h2>
           <RealTimeWeatherMap />
         </section>
 
         {/* Environmental Risk Monitoring */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <AlertTriangle className="h-6 w-6 text-primary" />
-            Monitoramento Ambiental e Riscos Climáticos
-          </h2>
           <EnvironmentalRiskMap />
         </section>
 
