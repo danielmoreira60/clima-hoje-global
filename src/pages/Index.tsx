@@ -1,15 +1,10 @@
 import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import WeatherCard from "@/components/WeatherCard";
-import WeatherDashboard from "@/components/WeatherDashboard";
 import RealTimeWeatherMap from "@/components/RealTimeWeatherMap";
-import GlobalWeatherMap from "@/components/GlobalWeatherMap";
 import AlertsForm from "@/components/AlertsForm";
-import WeatherNotifications from "@/components/WeatherNotifications";
 import CitySearch from "@/components/CitySearch";
 import EnvironmentalRiskMap from "@/components/EnvironmentalRiskMap";
-import EnvironmentalAlerts from "@/components/EnvironmentalAlerts";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
 import { 
@@ -137,28 +132,12 @@ const Index = () => {
           />
         </section>
 
-        {/* Current Weather Dashboard */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Thermometer className="h-6 w-6 text-primary" />
-            Previsão do Tempo Hoje - Condições Meteorológicas Detalhadas
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Acompanhe em tempo real as condições climáticas atuais com dados precisos de temperatura, umidade, vento e previsão de chuva para hoje.
-          </p>
-          <WeatherDashboard />
-        </section>
-
-
         {/* Interactive Weather Maps */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
             <Satellite className="h-6 w-6 text-primary" />
             Mapas Meteorológicos em Tempo Real
           </h2>
-          <p className="text-muted-foreground mb-6">
-            Visualização interativa de condições meteorológicas, radar de chuva, imagens de satélite e monitoramento climático em tempo real.
-          </p>
           <RealTimeWeatherMap />
         </section>
 
@@ -168,64 +147,7 @@ const Index = () => {
             <AlertTriangle className="h-6 w-6 text-primary" />
             Monitoramento Ambiental e Riscos Climáticos
           </h2>
-          <p className="text-muted-foreground mb-6">
-            Sistema avançado de monitoramento de queimadas, atividade solar, furacões, desmatamento e outros fenômenos extremos em tempo real com dados oficiais da NASA, NOAA e INPE.
-          </p>
           <EnvironmentalRiskMap />
-        </section>
-
-        {/* Environmental Alerts System */}
-        <section className="mb-12">
-          <EnvironmentalAlerts />
-        </section>
-
-        {/* Sistema de Alertas Personalizados */}
-        <section className="mb-12">
-          <AlertsForm />
-        </section>
-
-        {/* Quick Access Cards */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-            <Calendar className="h-6 w-6 text-primary" />
-            Previsão do Tempo para Hoje, Amanhã e Próximos Dias
-          </h2>
-          <p className="text-muted-foreground mb-6">
-            Acesse rapidamente a previsão do tempo para amanhã e os próximos 15 dias. Planeje suas atividades com antecedência consultando o clima para amanhã.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="hover-lift cursor-pointer bg-card/50 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6 text-center">
-                <Clock className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">Tempo Agora</h3>
-                <p className="text-sm text-muted-foreground">Condições atuais em tempo real</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover-lift cursor-pointer bg-card/50 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6 text-center">
-                <Sun className="h-8 w-8 text-yellow-500 mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">Clima para Hoje</h3>
-                <p className="text-sm text-muted-foreground">Previsão do tempo hoje completa</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover-lift cursor-pointer bg-card/50 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6 text-center">
-                <TrendingUp className="h-8 w-8 text-green-500 mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">Clima para Amanhã</h3>
-                <p className="text-sm text-muted-foreground">Previsão do tempo para amanhã</p>
-              </CardContent>
-            </Card>
-            
-            <Card className="hover-lift cursor-pointer bg-card/50 backdrop-blur-sm border-border/50">
-              <CardContent className="p-6 text-center">
-                <Globe className="h-8 w-8 text-blue-500 mx-auto mb-3" />
-                <h3 className="font-semibold mb-2">15 Dias</h3>
-                <p className="text-sm text-muted-foreground">Previsão estendida detalhada</p>
-              </CardContent>
-            </Card>
-          </div>
         </section>
 
         {/* Weather Insights */}
@@ -274,6 +196,11 @@ const Index = () => {
               </div>
             </CardContent>
           </Card>
+        </section>
+
+        {/* Sistema de Alertas Personalizados */}
+        <section className="mb-12">
+          <AlertsForm />
         </section>
       </main>
     </div>
