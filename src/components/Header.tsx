@@ -6,7 +6,8 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Switch } from '@/components/ui/switch';
-import { Cloud, Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX } from 'lucide-react';
+import { Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX, Cloud } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 interface Alert {
   id: string;
@@ -128,10 +129,9 @@ const Header = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 text-2xl font-bold bg-gradient-sky bg-clip-text text-transparent hover:scale-105 transition-transform duration-200"
+            className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200"
           >
-            <Cloud className="h-8 w-8 text-primary animate-float" />
-            <span>Clima Hoje</span>
+            <img src={logo} alt="Clima Hoje" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -145,11 +145,11 @@ const Header = () => {
                       variant={isActivePath(item.path) ? "default" : "ghost"}
                       className={`flex items-center space-x-2 transition-all duration-200 ${
                         isActivePath(item.path) 
-                          ? 'shadow-weather' 
+                          ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' 
                           : 'hover:bg-accent/50 hover:scale-105'
                       }`}
                     >
-                      <Icon className="h-4 w-4" />
+                      <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
                       <span>{item.name}</span>
                     </Button>
                   </Link>
@@ -159,10 +159,10 @@ const Header = () => {
             
             {/* Notification Bell with Environmental Alerts */}
             <div className="relative group">
-              <Button variant="ghost" size="icon" className="relative">
-                <Bell className="h-5 w-5" />
+              <Button variant="ghost" size="icon" className="relative hover:bg-accent/50">
+                <Bell className="h-5 w-5 text-primary" />
                 {activeAlerts.length > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-red-500 text-white text-xs flex items-center justify-center animate-pulse">
+                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs flex items-center justify-center animate-pulse">
                     {activeAlerts.length}
                   </span>
                 )}
@@ -275,9 +275,8 @@ const Header = () => {
             </SheetTrigger>
             <SheetContent side="right" className="w-[280px] sm:w-[350px]">
               <div className="flex flex-col space-y-4 mt-8">
-                <div className="flex items-center space-x-2 text-xl font-bold bg-gradient-sky bg-clip-text text-transparent">
-                  <Cloud className="h-6 w-6 text-primary" />
-                  <span>Clima Hoje</span>
+                <div className="flex items-center space-x-2">
+                  <img src={logo} alt="Clima Hoje" className="h-8 w-auto" />
                 </div>
                 <nav className="flex flex-col space-y-2">
                   {navigationItems.map((item) => {
@@ -291,10 +290,10 @@ const Header = () => {
                         <Button
                           variant={isActivePath(item.path) ? "default" : "ghost"}
                           className={`w-full justify-start space-x-2 ${
-                            isActivePath(item.path) ? 'shadow-weather' : ''
+                            isActivePath(item.path) ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' : ''
                           }`}
                         >
-                          <Icon className="h-4 w-4" />
+                          <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
                           <span>{item.name}</span>
                         </Button>
                       </Link>

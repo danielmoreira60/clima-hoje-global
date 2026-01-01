@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MapPin, Mail, Phone, Globe } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
+import logo from '@/assets/logo.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,21 +22,20 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card/50 backdrop-blur-sm border-t border-border/50 mt-16">
+    <footer className="bg-gradient-to-b from-card/50 to-card backdrop-blur-sm border-t border-border/50 mt-16">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <Globe className="h-8 w-8 text-primary" />
-              <h3 className="text-2xl font-bold text-foreground">Clima Tempo</h3>
+              <img src={logo} alt="Clima Hoje" className="h-10 w-auto" />
             </div>
             <p className="text-muted-foreground text-sm">
               Previsão do tempo completa e precisa com monitoramento ambiental avançado. 
               Dados em tempo real para sua segurança e planejamento.
             </p>
             <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-              <MapPin className="h-4 w-4" />
+              <MapPin className="h-4 w-4 text-primary" />
               <span>Brasil - Cobertura Nacional</span>
             </div>
           </div>
@@ -79,11 +79,11 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-foreground">Contato</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Mail className="h-4 w-4" />
+                <Mail className="h-4 w-4 text-primary" />
                 <span>contato@climatempo.com.br</span>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <Phone className="h-4 w-4" />
+                <Phone className="h-4 w-4 text-primary" />
                 <span>(11) 3000-0000</span>
               </div>
             </div>

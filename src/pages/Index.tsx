@@ -101,7 +101,7 @@ const Index = () => {
                 <Button 
                   onClick={refetch} 
                   variant="outline" 
-                  className="gap-2 hover-scale bg-white/20 border-white/30 text-white hover:bg-white/30 backdrop-blur-sm"
+                  className="gap-2 hover-scale bg-gradient-to-r from-primary/20 to-secondary/20 border-white/30 text-white hover:from-primary/40 hover:to-secondary/40 backdrop-blur-sm"
                 >
                   <RefreshCw className="h-4 w-4" />
                   Atualizar Dados
@@ -110,7 +110,7 @@ const Index = () => {
               <Button 
                 onClick={refetch} 
                 variant="default" 
-                className="gap-2 hover-scale bg-white/10 hover:bg-white/20 border border-white/30 text-white backdrop-blur-sm"
+                className="gap-2 hover-scale bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather hover:shadow-glow border-0"
               >
                 <MapPin className="h-4 w-4" />
                 Usar Minha Localização
@@ -144,11 +144,13 @@ const Index = () => {
 
         {/* Weather Insights */}
         <section className="mb-12">
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+          <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-weather">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <TrendingUp className="h-5 w-5 text-primary" />
-                Insights Meteorológicos e Ambientais
+                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                  Insights Meteorológicos e Ambientais
+                </span>
               </CardTitle>
               <CardDescription>
                 Análise personalizada baseada nos dados meteorológicos e ambientais atuais
@@ -156,7 +158,7 @@ const Index = () => {
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="p-4 rounded-lg bg-accent/30">
+                <div className="p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20">
                   <h4 className="font-semibold mb-2 text-green-600">Atividades Recomendadas para Hoje</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
                     <li>• Caminhada ao ar livre</li>
@@ -166,8 +168,8 @@ const Index = () => {
                   </ul>
                 </div>
                 
-                <div className="p-4 rounded-lg bg-accent/30">
-                  <h4 className="font-semibold mb-2 text-yellow-600">Cuidados com Riscos Ambientais</h4>
+                <div className="p-4 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20">
+                  <h4 className="font-semibold mb-2 text-primary">Cuidados com Riscos Ambientais</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
                     <li>• Verificar focos de queimadas próximos</li>
                     <li>• Acompanhar atividade solar</li>
@@ -176,7 +178,7 @@ const Index = () => {
                   </ul>
                 </div>
                 
-                <div className="p-4 rounded-lg bg-accent/30">
+                <div className="p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20">
                   <h4 className="font-semibold mb-2 text-blue-600">Previsão Integrada 24h</h4>
                   <ul className="text-sm space-y-1 text-muted-foreground">
                     <li>• Temperatura agora estável</li>
