@@ -10,6 +10,7 @@ const Footer = () => {
     { name: 'Sobre Nós', href: '/sobre' },
     { name: 'Contato', href: '/contato' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Sitemap', href: '/sitemap' },
   ];
 
   const legalItems = [

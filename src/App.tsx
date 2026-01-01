@@ -12,6 +12,7 @@ import AmanhãPage from "./pages/AmanhãPage";
 import FimDeSemanaPage from "./pages/FimDeSemanaPage";
 import QuinzeDiasPage from "./pages/QuinzeDiasPage";
 import ContatoPage from "./pages/ContatoPage";
+import SitemapPage from "./pages/SitemapPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
               <Route path="/fim-de-semana" element={<FimDeSemanaPage />} />
               <Route path="/15-dias" element={<QuinzeDiasPage />} />
               <Route path="/contato" element={<ContatoPage />} />
+              <Route path="/sitemap" element={<SitemapPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
