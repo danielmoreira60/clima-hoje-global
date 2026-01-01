@@ -63,11 +63,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
-			backgroundImage: {
+		backgroundImage: {
 				'gradient-sky': 'var(--gradient-sky)',
 				'gradient-sunset': 'var(--gradient-sunset)',
 				'gradient-rain': 'var(--gradient-rain)',
-				'gradient-night': 'var(--gradient-night)'
+				'gradient-night': 'var(--gradient-night)',
+				'gradient-warm': 'var(--gradient-warm)'
 			},
 			boxShadow: {
 				'weather': 'var(--shadow-weather)',

@@ -165,12 +165,14 @@ const RealTimeWeatherMap = () => {
   return (
     <div className="space-y-6">
       {/* Map Controls */}
-      <Card className="bg-card/50 backdrop-blur-sm border-border/50">
+      <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-weather">
         <CardHeader className="flex flex-row items-center justify-between pb-4">
           <div>
             <CardTitle className="flex items-center gap-2">
               <Layers className="h-5 w-5 text-primary" />
-              Mapas Meteorológicos em Tempo Real
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                Mapas Meteorológicos em Tempo Real
+              </span>
             </CardTitle>
             <p className="text-sm text-muted-foreground mt-1">
               Visualize condições climáticas atualizadas a cada 15 minutos
@@ -181,7 +183,7 @@ const RealTimeWeatherMap = () => {
             disabled={isLoading}
             variant="outline" 
             size="sm"
-            className="gap-2"
+            className="gap-2 border-primary/50 text-primary hover:bg-primary hover:text-primary-foreground transition-all"
           >
             <RefreshCw className={`h-4 w-4 ${isLoading ? 'animate-spin' : ''}`} />
             Atualizar
@@ -196,7 +198,11 @@ const RealTimeWeatherMap = () => {
                 variant={selectedLayer === layer.id ? "default" : "outline"}
                 size="sm"
                 onClick={() => setSelectedLayer(layer.id)}
-                className="gap-2"
+                className={`gap-2 transition-all ${
+                  selectedLayer === layer.id 
+                    ? `${layer.color} text-white border-transparent shadow-lg hover:opacity-90` 
+                    : `border-border hover:border-primary/50 hover:text-primary`
+                }`}
               >
                 {layer.icon}
                 {layer.label}
@@ -220,14 +226,14 @@ const RealTimeWeatherMap = () => {
           {/* Map Info */}
           <div className="mt-4 flex flex-wrap items-center justify-between gap-4 text-sm text-muted-foreground">
             <div className="flex items-center gap-4">
-              <Badge variant="secondary" className="gap-1">
-                <MapPin className="h-3 w-3" />
+              <Badge variant="secondary" className="gap-1 bg-gradient-to-r from-primary/20 to-secondary/20 border-primary/30">
+                <MapPin className="h-3 w-3 text-primary" />
                 Brasil
               </Badge>
               <span>Última atualização: {lastUpdate.toLocaleTimeString('pt-BR')}</span>
             </div>
             <div className="flex items-center gap-2">
-              <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-yellow-500 animate-pulse' : 'bg-green-500'}`}></div>
+              <div className={`w-2 h-2 rounded-full ${isLoading ? 'bg-secondary animate-pulse' : 'bg-green-500'}`}></div>
               <span>{isLoading ? 'Atualizando...' : 'Dados atualizados'}</span>
             </div>
           </div>
