@@ -99,7 +99,15 @@ const Footer = () => {
         <div className="border-t border-border/50 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Clima Tempo. Todos os direitos reservados.
+              © {currentYear} | Clima Tempo | Todos os direitos reservados | Desenvolvido por{' '}
+              <a 
+                href="https://danielolimpio.com" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary hover:underline"
+              >
+                DanielOlimpio
+              </a>
             </p>
             <div className="flex items-center space-x-4">
               <p className="text-xs text-muted-foreground">
