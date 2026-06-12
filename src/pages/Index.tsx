@@ -7,8 +7,8 @@ import CitySearch from "@/components/CitySearch";
 import EnvironmentalRiskMap from "@/components/EnvironmentalRiskMap";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
-import { 
 import SEO from '@/components/SEO';
+import { 
   MapPin, 
   RefreshCw, 
   Calendar,

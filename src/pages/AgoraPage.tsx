@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
 import useWeather from '@/hooks/useWeather';
-import { 
 import SEO from '@/components/SEO';
+import { 
   Thermometer, 
   Droplets, 
   Wind, 
