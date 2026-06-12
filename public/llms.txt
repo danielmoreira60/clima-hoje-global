@@ -1,0 +1,19 @@
+# Clima Tempo
+
+> Previsão do tempo completa e precisa para sua região com monitoramento global.
+
+Clima Tempo oferece previsão do tempo detalhada para hoje, amanhã e os próximos 15 dias. O site inclui monitoramento meteorológico em tempo real, mapas interativos de riscos ambientais, alertas climáticos e insights meteorológicos personalizados para cidades do Brasil.
+
+## Pages
+
+- [Página Inicial](/): Previsão do tempo completa com monitoramento global e insights meteorológicos.
+- [Tempo Agora](/agora): Condições meteorológicas atuais e dados em tempo real.
+- [Previsão Hoje](/hoje): Previsão detalhada do tempo para hoje.
+- [Previsão Amanhã](/amanha): Previsão detalhada do tempo para amanhã.
+- [Fim de Semana](/fim-de-semana): Previsão do tempo para o fim de semana.
+- [Próximos 15 Dias](/15-dias): Previsão estendida para os próximos 15 dias.
+- [Contato](/contato): Entre em contato com a equipe Clima Tempo.
+
+## Optional
+
+- [Sitemap](/sitemap): Mapa completo de todas as páginas do site.
