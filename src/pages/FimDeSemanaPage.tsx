@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import useWeather from '@/hooks/useWeather';
 import { 
+import SEO from '@/components/SEO';
   Calendar, 
   Sun, 
   Cloud,
@@ -101,6 +102,7 @@ const FimDeSemanaPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      <SEO title="Previsão do Tempo para o Fim de Semana | Clima Tempo" description="Planeje seu fim de semana com a previsão do tempo para sábado e domingo: temperatura, chuva e sol." path="/fim-de-semana" />
       {/* Floating Clouds */}
       <img 
         src={cloudImage} 

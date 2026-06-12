@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { 
+import SEO from '@/components/SEO';
   Mail, 
   Phone, 
   MapPin, 
@@ -24,6 +25,7 @@ const ContatoPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8">
+      <SEO title="Contato | Clima Tempo" description="Entre em contato com a equipe do Clima Tempo. Tire dúvidas, envie sugestões ou reporte problemas." path="/contato" />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">

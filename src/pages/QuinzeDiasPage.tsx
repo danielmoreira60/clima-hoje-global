@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import useWeather from '@/hooks/useWeather';
 import { 
+import SEO from '@/components/SEO';
   Calendar, 
   TrendingUp,
   TrendingDown,
@@ -79,6 +80,7 @@ const QuinzeDiasPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      <SEO title="Previsão do Tempo para os Próximos 15 Dias | Clima Tempo" description="Previsão estendida do tempo para os próximos 15 dias: temperaturas, chuvas e tendência climática." path="/15-dias" />
       {/* Floating Clouds */}
       <img 
         src={cloudImage} 

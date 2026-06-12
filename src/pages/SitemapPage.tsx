@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Map, Home, Cloud, Sun, Calendar, Phone, FileText, BookOpen, Globe } from 'lucide-react';
+import SEO from '@/components/SEO';
 
 const SitemapPage = () => {
   const mainPages = [
@@ -54,6 +55,7 @@ const SitemapPage = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO title="Mapa do Site | Clima Tempo" description="Mapa do site Clima Tempo com todas as páginas, categorias e conteúdos disponíveis." path="/sitemap" />
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Header */}
