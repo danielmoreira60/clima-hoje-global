@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
 import useWeather from '@/hooks/useWeather';
 import { 
+import SEO from '@/components/SEO';
   Thermometer, 
   Droplets, 
   Wind, 
@@ -50,6 +51,7 @@ const AgoraPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      <SEO title="Tempo Agora - Condições Climáticas em Tempo Real | Clima Tempo" description="Veja as condições do tempo agora: temperatura, umidade, vento e pressão atualizadas em tempo real para sua cidade." path="/agora" />
       {/* Floating Clouds */}
       <img 
         src={cloudImage} 

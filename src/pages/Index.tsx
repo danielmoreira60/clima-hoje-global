@@ -8,6 +8,7 @@ import EnvironmentalRiskMap from "@/components/EnvironmentalRiskMap";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
 import { 
+import SEO from '@/components/SEO';
   MapPin, 
   RefreshCw, 
   Calendar,
@@ -40,6 +41,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-gradient-weather">
+      <SEO title="Clima Tempo - Previsão do Tempo Hoje e 15 Dias" description="Previsão do tempo detalhada para todo o Brasil: temperatura agora, chuva, clima para hoje, amanhã e próximos 15 dias." path="/" />
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
         <section 

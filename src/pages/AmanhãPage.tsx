@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
 import useWeather from '@/hooks/useWeather';
 import { 
+import SEO from '@/components/SEO';
   Sunrise, 
   Sunset, 
   Thermometer, 
@@ -95,6 +96,7 @@ const AmanhãPage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      <SEO title="Previsão do Tempo para Amanhã | Clima Tempo" description="Como estará o tempo amanhã? Confira temperatura, chance de chuva e condições climáticas para sua cidade." path="/amanha" />
       {/* Floating Clouds */}
       <img 
         src={cloudImage} 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import useWeather from '@/hooks/useWeather';
 import { 
+import SEO from '@/components/SEO';
   Sunrise, 
   Sunset, 
   Thermometer, 
@@ -63,6 +64,7 @@ const HojePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-sky py-8 relative overflow-hidden">
+      <SEO title="Previsão do Tempo para Hoje | Clima Tempo" description="Previsão do tempo completa para hoje: máxima, mínima, chuva, vento e horários de nascer e pôr do sol." path="/hoje" />
       {/* Floating Clouds */}
       <img 
         src={cloudImage} 
