@@ -76,6 +76,10 @@ const AgoraPage = () => {
           </div>
         </div>
 
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-6 animate-fade-in">
+          Dados Meteorológicos em Tempo Real
+        </h2>
+
         {weatherData && (
           <>
             {/* Current Weather Card */}

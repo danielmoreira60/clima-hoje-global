@@ -159,7 +159,7 @@ const Header = () => {
             
             {/* Notification Bell with Environmental Alerts */}
             <div className="relative group">
-              <Button variant="ghost" size="icon" className="relative hover:bg-accent/50">
+              <Button variant="ghost" size="icon" className="relative hover:bg-accent/50" aria-label="Alertas ambientais">
                 <Bell className="h-5 w-5 text-primary" />
                 {activeAlerts.length > 0 && (
                   <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs flex items-center justify-center animate-pulse">

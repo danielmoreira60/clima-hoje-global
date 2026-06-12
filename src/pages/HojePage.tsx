@@ -88,6 +88,10 @@ const HojePage = () => {
           </p>
         </div>
 
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-6 animate-fade-in">
+          Previsão Completa para Hoje
+        </h2>
+
         {weatherData && (
           <>
             {/* Summary Cards */}

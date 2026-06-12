@@ -55,7 +55,7 @@ const Index = () => {
         >
           <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-scale-in drop-shadow-2xl">
-              Clima Tempo
+              Clima Tempo — Previsão do tempo precisa e monitoramento global
             </h1>
             <p className="text-xl text-white/90 mb-8 drop-shadow-lg">
               Previsão do tempo completa e precisa para sua região com monitoramento global. Confira a previsão do tempo para hoje, amanhã e próximos 15 dias.
