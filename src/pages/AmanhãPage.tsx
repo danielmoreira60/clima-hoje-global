@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
 import useWeather from '@/hooks/useWeather';
-import { 
 import SEO from '@/components/SEO';
+import { 
   Sunrise, 
   Sunset, 
   Thermometer, 
@@ -120,6 +120,10 @@ const AmanhãPage = () => {
             <p className="text-lg capitalize">{tomorrowFormatted}</p>
           </div>
         </div>
+
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-6 animate-fade-in">
+          Previsão Detalhada para Amanhã
+        </h2>
 
         {tomorrowData && (
           <>

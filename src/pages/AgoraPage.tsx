@@ -2,8 +2,8 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
 import useWeather from '@/hooks/useWeather';
-import { 
 import SEO from '@/components/SEO';
+import { 
   Thermometer, 
   Droplets, 
   Wind, 
@@ -75,6 +75,10 @@ const AgoraPage = () => {
             <p className="text-lg capitalize">{currentTime}</p>
           </div>
         </div>
+
+        <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-6 animate-fade-in">
+          Dados Meteorológicos em Tempo Real
+        </h2>
 
         {weatherData && (
           <>

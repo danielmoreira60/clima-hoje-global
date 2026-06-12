@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import useWeather from '@/hooks/useWeather';
-import { 
 import SEO from '@/components/SEO';
+import { 
   Calendar, 
   TrendingUp,
   TrendingDown,
