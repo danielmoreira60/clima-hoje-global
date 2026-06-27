@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import RealTimeWeatherMap from "@/components/RealTimeWeatherMap";
 import AlertsForm from "@/components/AlertsForm";
 import CitySearch from "@/components/CitySearch";
-import EnvironmentalRiskMap from "@/components/EnvironmentalRiskMap";
+import NaturalEventsMonitor from "@/components/NaturalEventsMonitor";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
 import SEO from '@/components/SEO';
@@ -141,7 +141,7 @@ const Index = () => {
 
         {/* Environmental Risk Monitoring */}
         <section className="mb-12">
-          <EnvironmentalRiskMap />
+          <NaturalEventsMonitor />
         </section>
 
         {/* Weather Insights */}
