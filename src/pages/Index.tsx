@@ -141,7 +141,7 @@ const Index = () => {
 
         {/* Environmental Risk Monitoring */}
         <section className="mb-12">
-          <EnvironmentalRiskMap />
+          <NaturalEventsMonitor />
         </section>
 
         {/* Weather Insights */}
