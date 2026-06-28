@@ -2,6 +2,18 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import useWeather from '@/hooks/useWeather';
 import SEO from '@/components/SEO';
+import {
+  ResponsiveContainer,
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend,
+  Area,
+  ComposedChart,
+} from 'recharts';
 import { 
   Calendar, 
   TrendingUp,
@@ -242,10 +254,30 @@ const QuinzeDiasPage = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="h-64 bg-gradient-sky rounded-lg flex items-center justify-center mb-4">
-              <p className="text-white text-lg font-semibold">
-                Gráfico de temperatura dos próximos 15 dias
-              </p>
+            <div className="h-72 w-full mb-4">
+              <ResponsiveContainer width="100%" height="100%">
+                <ComposedChart data={fifteenDaysForecast.map(d => ({
+                  name: `${d.dayNumber}/${d.month}`,
+                  Máx: d.maxTemp,
+                  Mín: d.minTemp,
+                  Chuva: d.rainChance,
+                }))} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
+                  <defs>
+                    <linearGradient id="maxGrad" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity={0.6} />
+                      <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
+                  <XAxis dataKey="name" stroke="hsl(var(--muted-foreground))" fontSize={12} />
+                  <YAxis stroke="hsl(var(--muted-foreground))" fontSize={12} />
+                  <Tooltip contentStyle={{ background: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', borderRadius: 8 }} />
+                  <Legend />
+                  <Area type="monotone" dataKey="Máx" stroke="hsl(var(--primary))" fill="url(#maxGrad)" strokeWidth={2} />
+                  <Line type="monotone" dataKey="Mín" stroke="#3b82f6" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="Chuva" stroke="#06b6d4" strokeWidth={2} strokeDasharray="4 4" dot={false} />
+                </ComposedChart>
+              </ResponsiveContainer>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
               <div>

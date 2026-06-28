@@ -13,6 +13,12 @@ import FimDeSemanaPage from "./pages/FimDeSemanaPage";
 import QuinzeDiasPage from "./pages/QuinzeDiasPage";
 import ContatoPage from "./pages/ContatoPage";
 import SitemapPage from "./pages/SitemapPage";
+import SobrePage from "./pages/SobrePage";
+import BlogPage from "./pages/BlogPage";
+import PoliticaPrivacidadePage from "./pages/PoliticaPrivacidadePage";
+import TermosUsoPage from "./pages/TermosUsoPage";
+import PoliticaCookiesPage from "./pages/PoliticaCookiesPage";
+import PoliticaTransparenciaPage from "./pages/PoliticaTransparenciaPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -34,6 +40,12 @@ const App = () => (
               <Route path="/fim-de-semana" element={<FimDeSemanaPage />} />
               <Route path="/15-dias" element={<QuinzeDiasPage />} />
               <Route path="/contato" element={<ContatoPage />} />
+              <Route path="/sobre" element={<SobrePage />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/politica-privacidade" element={<PoliticaPrivacidadePage />} />
+              <Route path="/termos-uso" element={<TermosUsoPage />} />
+              <Route path="/politica-cookies" element={<PoliticaCookiesPage />} />
+              <Route path="/politica-transparencia" element={<PoliticaTransparenciaPage />} />
               <Route path="/sitemap" element={<SitemapPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

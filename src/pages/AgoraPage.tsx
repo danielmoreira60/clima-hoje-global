@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import WeatherCard from '@/components/WeatherCard';
+import RealTimeWeatherMap from '@/components/RealTimeWeatherMap';
 import useWeather from '@/hooks/useWeather';
 import SEO from '@/components/SEO';
 import { 
@@ -207,25 +208,8 @@ const AgoraPage = () => {
               </Card>
             </div>
 
-            {/* Weather Map Placeholder */}
-            <Card className="bg-card/80 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="flex items-center space-x-2">
-                  <MapPin className="h-6 w-6 text-primary" />
-                  <span>Mapa Meteorológico</span>
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="bg-gradient-rain rounded-lg h-64 flex items-center justify-center">
-                  <p className="text-white text-lg font-semibold">
-                    Mapa de radar em tempo real
-                  </p>
-                </div>
-                <p className="text-muted-foreground mt-4">
-                  Visualize as condições meteorológicas em tempo real na sua região com nosso radar integrado.
-                </p>
-              </CardContent>
-            </Card>
+            {/* Weather Map */}
+            <RealTimeWeatherMap />
           </>
         )}
       </div>
