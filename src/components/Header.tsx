@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Switch } from '@/components/ui/switch';
-import { Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX, Cloud } from 'lucide-react';
+import { Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX, Cloud, CloudSun, CalendarDays, CalendarRange, CalendarClock, Home, Mail } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 interface Alert {
@@ -109,13 +109,13 @@ const Header = () => {
   const nearbyAlerts = activeAlerts.filter(alert => alert.distance && alert.distance <= 100);
 
   const navigationItems = [
-    { name: 'Início', path: '/', icon: Sun },
-    { name: 'Agora', path: '/agora', icon: Cloud },
+    { name: 'Início', path: '/', icon: Home },
+    { name: 'Agora', path: '/agora', icon: CloudSun },
     { name: 'Hoje', path: '/hoje', icon: Sun },
     { name: 'Amanhã', path: '/amanha', icon: Cloud },
-    { name: 'Fim de semana', path: '/fim-de-semana', icon: Sun },
-    { name: '15 dias', path: '/15-dias', icon: Cloud },
-    { name: 'Contato', path: '/contato', icon: MapPin },
+    { name: 'Fim de semana', path: '/fim-de-semana', icon: CalendarRange },
+    { name: '15 dias', path: '/15-dias', icon: CalendarDays },
+    { name: 'Contato', path: '/contato', icon: Mail },
   ];
 
   const isActivePath = (path: string) => {
@@ -123,50 +123,57 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200"
+          <Link
+            to="/"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
           >
-            <img src={logo} alt="Clima Hoje" className="h-10 w-auto" />
+            <img src={logo} alt="Clima Hoje" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            <nav className="flex items-center space-x-1">
+          <div className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center gap-0.5">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
+                const active = isActivePath(item.path);
                 return (
                   <Link key={item.path} to={item.path}>
                     <Button
-                      variant={isActivePath(item.path) ? "default" : "ghost"}
-                      className={`flex items-center space-x-2 transition-all duration-200 ${
-                        isActivePath(item.path) 
-                          ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' 
-                          : 'hover:bg-accent/50 hover:scale-105'
+                      variant="ghost"
+                      size="sm"
+                      className={`relative h-10 px-3 text-sm font-medium rounded-md transition-colors ${
+                        active
+                          ? 'text-primary bg-primary/8'
+                          : 'text-foreground/70 hover:text-foreground hover:bg-muted'
                       }`}
                     >
-                      <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
+                      <Icon className={`h-4 w-4 ${active ? 'text-primary' : 'text-muted-foreground'}`} />
                       <span>{item.name}</span>
+                      {active && (
+                        <span className="absolute -bottom-[17px] left-2 right-2 h-[2px] bg-primary rounded-full" />
+                      )}
                     </Button>
                   </Link>
                 );
               })}
             </nav>
+
             
             {/* Notification Bell with Environmental Alerts */}
-            <div className="relative group">
-              <Button variant="ghost" size="icon" className="relative hover:bg-accent/50" aria-label="Alertas ambientais">
-                <Bell className="h-5 w-5 text-primary" />
+            <div className="relative group ml-1">
+              <Button variant="ghost" size="icon" className="relative h-10 w-10 hover:bg-muted" aria-label="Alertas ambientais">
+                <Bell className="h-5 w-5 text-foreground/70" />
                 {activeAlerts.length > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs flex items-center justify-center animate-pulse">
+                  <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 px-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold flex items-center justify-center">
                     {activeAlerts.length}
                   </span>
                 )}
               </Button>
+
               
               {/* Notification Dropdown */}
               <div className="absolute right-0 top-full mt-2 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100]">
@@ -288,12 +295,12 @@ const Header = () => {
                         onClick={() => setIsOpen(false)}
                       >
                         <Button
-                          variant={isActivePath(item.path) ? "default" : "ghost"}
-                          className={`w-full justify-start space-x-2 ${
-                            isActivePath(item.path) ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' : ''
+                          variant="ghost"
+                          className={`w-full justify-start gap-2 ${
+                            isActivePath(item.path) ? 'bg-primary/10 text-primary border-l-2 border-primary rounded-l-none' : 'text-foreground/80'
                           }`}
                         >
-                          <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
+                          <Icon className={`h-4 w-4 ${isActivePath(item.path) ? 'text-primary' : 'text-muted-foreground'}`} />
                           <span>{item.name}</span>
                         </Button>
                       </Link>
