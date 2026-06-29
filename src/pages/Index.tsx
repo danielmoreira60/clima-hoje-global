@@ -144,49 +144,52 @@ const Index = () => {
 
         {/* Weather Insights */}
         <section className="mb-12">
-          <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-weather">
+          <Card className="bg-white border-border/50 shadow-weather">
             <CardHeader>
-              <CardTitle className="flex items-center gap-2">
+              <CardTitle className="flex items-center gap-2 text-slate-900">
                 <TrendingUp className="h-5 w-5 text-primary" />
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <span className="text-slate-900">
                   Insights Meteorológicos e Ambientais
                 </span>
               </CardTitle>
-              <CardDescription>
+              <CardDescription className="text-slate-600">
                 Análise personalizada baseada nos dados meteorológicos e ambientais atuais
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20">
-                  <h4 className="font-semibold mb-2 text-green-600">Atividades Recomendadas para Hoje</h4>
-                  <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Caminhada ao ar livre</li>
-                    <li>• Exercícios externos</li>
-                    <li>• Passeios de bicicleta</li>
-                    <li>• Monitorar alertas ambientais</li>
-                  </ul>
-                </div>
-                
-                <div className="p-4 rounded-lg bg-gradient-to-br from-primary/10 to-secondary/5 border border-primary/20">
-                  <h4 className="font-semibold mb-2 text-primary">Cuidados com Riscos Ambientais</h4>
-                  <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Verificar focos de queimadas próximos</li>
-                    <li>• Acompanhar atividade solar</li>
-                    <li>• Estar atento a alertas de desmatamento</li>
-                    <li>• Monitorar condições meteorológicas extremas</li>
-                  </ul>
-                </div>
-                
-                <div className="p-4 rounded-lg bg-gradient-to-br from-blue-500/10 to-blue-600/5 border border-blue-500/20">
-                  <h4 className="font-semibold mb-2 text-blue-600">Previsão Integrada 24h</h4>
-                  <ul className="text-sm space-y-1 text-muted-foreground">
-                    <li>• Temperatura agora estável</li>
-                    <li>• Baixa previsão de chuva</li>
-                    <li>• Ventos moderados</li>
-                    <li>• Sem alertas ambientais críticos</li>
-                  </ul>
-                </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {[
+                  {
+                    title: "Atividades Recomendadas para Hoje",
+                    accent: "bg-emerald-500",
+                    items: ["Caminhada ao ar livre", "Exercícios externos", "Passeios de bicicleta", "Monitorar alertas ambientais"],
+                  },
+                  {
+                    title: "Cuidados com Riscos Ambientais",
+                    accent: "bg-orange-500",
+                    items: ["Verificar focos de queimadas próximos", "Acompanhar atividade solar", "Estar atento a alertas de desmatamento", "Monitorar condições meteorológicas extremas"],
+                  },
+                  {
+                    title: "Previsão Integrada 24h",
+                    accent: "bg-sky-500",
+                    items: ["Temperatura agora estável", "Baixa previsão de chuva", "Ventos moderados", "Sem alertas ambientais críticos"],
+                  },
+                ].map((col) => (
+                  <div key={col.title} className="p-5 rounded-lg bg-slate-50 border border-slate-200 hover:shadow-md transition-shadow">
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className={`h-2 w-8 rounded-full ${col.accent}`} />
+                      <h3 className="font-semibold text-slate-900 text-base">{col.title}</h3>
+                    </div>
+                    <ul className="space-y-2">
+                      {col.items.map((it) => (
+                        <li key={it} className="flex items-start gap-2 text-sm text-slate-700">
+                          <span className={`mt-1.5 h-1.5 w-1.5 rounded-full ${col.accent} shrink-0`} />
+                          <span>{it}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
               </div>
             </CardContent>
           </Card>
