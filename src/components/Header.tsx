@@ -164,15 +164,16 @@ const Header = () => {
 
             
             {/* Notification Bell with Environmental Alerts */}
-            <div className="relative group">
-              <Button variant="ghost" size="icon" className="relative hover:bg-accent/50" aria-label="Alertas ambientais">
-                <Bell className="h-5 w-5 text-primary" />
+            <div className="relative group ml-1">
+              <Button variant="ghost" size="icon" className="relative h-10 w-10 hover:bg-muted" aria-label="Alertas ambientais">
+                <Bell className="h-5 w-5 text-foreground/70" />
                 {activeAlerts.length > 0 && (
-                  <span className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-primary to-secondary text-primary-foreground text-xs flex items-center justify-center animate-pulse">
+                  <span className="absolute -top-0.5 -right-0.5 h-4 min-w-4 px-1 rounded-full bg-primary text-primary-foreground text-[10px] font-semibold flex items-center justify-center">
                     {activeAlerts.length}
                   </span>
                 )}
               </Button>
+
               
               {/* Notification Dropdown */}
               <div className="absolute right-0 top-full mt-2 w-96 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[100]">
