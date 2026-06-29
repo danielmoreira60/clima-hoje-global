@@ -6,7 +6,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Switch } from '@/components/ui/switch';
-import { Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX, Cloud } from 'lucide-react';
+import { Menu, Sun, MapPin, Bell, AlertTriangle, Droplets, Flame, Wind, Waves, TreePine, Volume2, VolumeX, Cloud, CloudSun, CalendarDays, CalendarRange, CalendarClock, Home, Mail } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 interface Alert {
