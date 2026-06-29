@@ -109,13 +109,13 @@ const Header = () => {
   const nearbyAlerts = activeAlerts.filter(alert => alert.distance && alert.distance <= 100);
 
   const navigationItems = [
-    { name: 'Início', path: '/', icon: Sun },
-    { name: 'Agora', path: '/agora', icon: Cloud },
+    { name: 'Início', path: '/', icon: Home },
+    { name: 'Agora', path: '/agora', icon: CloudSun },
     { name: 'Hoje', path: '/hoje', icon: Sun },
     { name: 'Amanhã', path: '/amanha', icon: Cloud },
-    { name: 'Fim de semana', path: '/fim-de-semana', icon: Sun },
-    { name: '15 dias', path: '/15-dias', icon: Cloud },
-    { name: 'Contato', path: '/contato', icon: MapPin },
+    { name: 'Fim de semana', path: '/fim-de-semana', icon: CalendarRange },
+    { name: '15 dias', path: '/15-dias', icon: CalendarDays },
+    { name: 'Contato', path: '/contato', icon: Mail },
   ];
 
   const isActivePath = (path: string) => {
