@@ -184,17 +184,17 @@ const NaturalEventsMonitor = () => {
   const extremeCount = filtered.filter((e) => e.severity === "extreme").length;
 
   return (
-    <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-weather overflow-hidden">
-      <CardHeader className="bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 border-b border-border/50">
+    <Card className="bg-white border-border/50 shadow-weather overflow-hidden">
+      <CardHeader className="bg-slate-50 border-b border-border/50">
         <div className="flex items-start justify-between flex-wrap gap-3">
           <div>
-            <CardTitle className="flex items-center gap-2 text-2xl">
-              <Globe2 className="h-6 w-6 text-primary animate-pulse" />
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <CardTitle className="flex items-center gap-2 text-2xl text-slate-900">
+              <Globe2 className="h-6 w-6 text-primary" />
+              <span className="text-slate-900">
                 Monitor Geológico e Climático Global
               </span>
             </CardTitle>
-            <CardDescription className="mt-1">
+            <CardDescription className="mt-1 text-slate-600">
               Mapa interativo em tempo real — terremotos (USGS) e eventos naturais (NASA EONET)
               {lastUpdate && ` • Atualizado ${lastUpdate.toLocaleTimeString("pt-BR")}`}
             </CardDescription>
