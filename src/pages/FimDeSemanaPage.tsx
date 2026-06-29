@@ -10,7 +10,11 @@ import {
   Thermometer,
   Droplets,
   Wind,
-  MapPin
+  MapPin,
+  Umbrella,
+  Footprints,
+  Flame,
+  Home
 } from 'lucide-react';
 
 import cloudImage from '@/assets/cloud.webp';
@@ -78,25 +82,29 @@ const FimDeSemanaPage = () => {
       name: 'Praia/Piscina',
       saturday: 'Ideal',
       sunday: 'Bom',
-      icon: '🏖️'
+      icon: <Umbrella className="h-5 w-5 text-sky-600" />,
+      bg: 'bg-sky-100'
     },
     {
       name: 'Caminhada/Corrida',
       saturday: 'Excelente',
       sunday: 'Bom', 
-      icon: '🏃‍♂️'
+      icon: <Footprints className="h-5 w-5 text-emerald-600" />,
+      bg: 'bg-emerald-100'
     },
     {
       name: 'Churrasco',
       saturday: 'Perfeito',
       sunday: 'Moderado',
-      icon: '🍖'
+      icon: <Flame className="h-5 w-5 text-orange-600" />,
+      bg: 'bg-orange-100'
     },
     {
       name: 'Atividades Internas',
       saturday: 'Opcional',
       sunday: 'Recomendado',
-      icon: '🏠'
+      icon: <Home className="h-5 w-5 text-slate-600" />,
+      bg: 'bg-slate-100'
     }
   ];
 
