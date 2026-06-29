@@ -216,9 +216,11 @@ const FimDeSemanaPage = () => {
                   {activities.map((activity, index) => (
                     <tr key={index} className="border-b border-border/50 hover:bg-accent/20 transition-colors">
                       <td className="py-3 px-4">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-2xl">{activity.icon}</span>
-                          <span className="font-medium">{activity.name}</span>
+                        <div className="flex items-center gap-3">
+                          <div className={`h-9 w-9 rounded-lg ${activity.bg} flex items-center justify-center shrink-0 border border-border/50`}>
+                            {activity.icon}
+                          </div>
+                          <span className="font-medium text-slate-900">{activity.name}</span>
                         </div>
                       </td>
                       <td className="text-center py-3 px-4">
