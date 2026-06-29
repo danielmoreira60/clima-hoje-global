@@ -102,8 +102,7 @@ const Index = () => {
               {!loading && (
                 <Button 
                   onClick={refetch} 
-                  variant="outline" 
-                  className="gap-2 hover-scale bg-gradient-to-r from-primary/20 to-secondary/20 border-white/30 text-white hover:from-primary/40 hover:to-secondary/40 backdrop-blur-sm"
+                  className="gap-2 hover-scale bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-lg font-semibold"
                 >
                   <RefreshCw className="h-4 w-4" />
                   Atualizar Dados
@@ -111,8 +110,7 @@ const Index = () => {
               )}
               <Button 
                 onClick={refetch} 
-                variant="default" 
-                className="gap-2 hover-scale bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather hover:shadow-glow border-0"
+                className="gap-2 hover-scale bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white border-0 shadow-lg font-semibold"
               >
                 <MapPin className="h-4 w-4" />
                 Usar Minha Localização
