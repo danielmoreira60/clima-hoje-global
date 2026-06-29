@@ -10,7 +10,11 @@ import {
   Thermometer,
   Droplets,
   Wind,
-  MapPin
+  MapPin,
+  Umbrella,
+  Footprints,
+  Flame,
+  Home
 } from 'lucide-react';
 
 import cloudImage from '@/assets/cloud.webp';
@@ -78,25 +82,29 @@ const FimDeSemanaPage = () => {
       name: 'Praia/Piscina',
       saturday: 'Ideal',
       sunday: 'Bom',
-      icon: '🏖️'
+      icon: <Umbrella className="h-5 w-5 text-sky-600" />,
+      bg: 'bg-sky-100'
     },
     {
       name: 'Caminhada/Corrida',
       saturday: 'Excelente',
       sunday: 'Bom', 
-      icon: '🏃‍♂️'
+      icon: <Footprints className="h-5 w-5 text-emerald-600" />,
+      bg: 'bg-emerald-100'
     },
     {
       name: 'Churrasco',
       saturday: 'Perfeito',
       sunday: 'Moderado',
-      icon: '🍖'
+      icon: <Flame className="h-5 w-5 text-orange-600" />,
+      bg: 'bg-orange-100'
     },
     {
       name: 'Atividades Internas',
       saturday: 'Opcional',
       sunday: 'Recomendado',
-      icon: '🏠'
+      icon: <Home className="h-5 w-5 text-slate-600" />,
+      bg: 'bg-slate-100'
     }
   ];
 
@@ -208,9 +216,11 @@ const FimDeSemanaPage = () => {
                   {activities.map((activity, index) => (
                     <tr key={index} className="border-b border-border/50 hover:bg-accent/20 transition-colors">
                       <td className="py-3 px-4">
-                        <div className="flex items-center space-x-2">
-                          <span className="text-2xl">{activity.icon}</span>
-                          <span className="font-medium">{activity.name}</span>
+                        <div className="flex items-center gap-3">
+                          <div className={`h-9 w-9 rounded-lg ${activity.bg} flex items-center justify-center shrink-0 border border-border/50`}>
+                            {activity.icon}
+                          </div>
+                          <span className="font-medium text-slate-900">{activity.name}</span>
                         </div>
                       </td>
                       <td className="text-center py-3 px-4">

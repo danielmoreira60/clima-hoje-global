@@ -168,9 +168,9 @@ const RealTimeWeatherMap = () => {
       <Card className="bg-card/50 backdrop-blur-sm border-border/50 shadow-weather">
         <CardHeader className="flex flex-row items-center justify-between pb-4">
           <div>
-            <CardTitle className="flex items-center gap-2">
+            <CardTitle className="flex items-center gap-2 text-slate-900">
               <Layers className="h-5 w-5 text-primary" />
-              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-slate-900">
                 Mapas Meteorológicos em Tempo Real
               </span>
             </CardTitle>
