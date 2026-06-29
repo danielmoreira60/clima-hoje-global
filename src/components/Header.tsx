@@ -123,39 +123,45 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/85 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link 
-            to="/" 
-            className="flex items-center space-x-2 hover:scale-105 transition-transform duration-200"
+          <Link
+            to="/"
+            className="flex items-center gap-2 transition-opacity hover:opacity-80"
           >
-            <img src={logo} alt="Clima Hoje" className="h-10 w-auto" />
+            <img src={logo} alt="Clima Hoje" className="h-9 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            <nav className="flex items-center space-x-1">
+          <div className="hidden md:flex items-center gap-1">
+            <nav className="flex items-center gap-0.5">
               {navigationItems.map((item) => {
                 const Icon = item.icon;
+                const active = isActivePath(item.path);
                 return (
                   <Link key={item.path} to={item.path}>
                     <Button
-                      variant={isActivePath(item.path) ? "default" : "ghost"}
-                      className={`flex items-center space-x-2 transition-all duration-200 ${
-                        isActivePath(item.path) 
-                          ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' 
-                          : 'hover:bg-accent/50 hover:scale-105'
+                      variant="ghost"
+                      size="sm"
+                      className={`relative h-10 px-3 text-sm font-medium rounded-md transition-colors ${
+                        active
+                          ? 'text-primary bg-primary/8'
+                          : 'text-foreground/70 hover:text-foreground hover:bg-muted'
                       }`}
                     >
-                      <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
+                      <Icon className={`h-4 w-4 ${active ? 'text-primary' : 'text-muted-foreground'}`} />
                       <span>{item.name}</span>
+                      {active && (
+                        <span className="absolute -bottom-[17px] left-2 right-2 h-[2px] bg-primary rounded-full" />
+                      )}
                     </Button>
                   </Link>
                 );
               })}
             </nav>
+
             
             {/* Notification Bell with Environmental Alerts */}
             <div className="relative group">
