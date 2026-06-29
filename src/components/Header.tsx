@@ -295,12 +295,12 @@ const Header = () => {
                         onClick={() => setIsOpen(false)}
                       >
                         <Button
-                          variant={isActivePath(item.path) ? "default" : "ghost"}
-                          className={`w-full justify-start space-x-2 ${
-                            isActivePath(item.path) ? 'bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-weather' : ''
+                          variant="ghost"
+                          className={`w-full justify-start gap-2 ${
+                            isActivePath(item.path) ? 'bg-primary/10 text-primary border-l-2 border-primary rounded-l-none' : 'text-foreground/80'
                           }`}
                         >
-                          <Icon className={`h-4 w-4 ${isActivePath(item.path) ? '' : 'text-primary'}`} />
+                          <Icon className={`h-4 w-4 ${isActivePath(item.path) ? 'text-primary' : 'text-muted-foreground'}`} />
                           <span>{item.name}</span>
                         </Button>
                       </Link>
