@@ -5,6 +5,7 @@ import RealTimeWeatherMap from "@/components/RealTimeWeatherMap";
 import AlertsForm from "@/components/AlertsForm";
 import CitySearch from "@/components/CitySearch";
 import NaturalEventsMonitor from "@/components/NaturalEventsMonitor";
+import BlogSection from "@/components/BlogSection";
 import useWeather from "@/hooks/useWeather";
 import weatherBanner from "@/assets/weather-banner.jpg";
 import SEO from '@/components/SEO';
@@ -194,6 +195,9 @@ const Index = () => {
             </CardContent>
           </Card>
         </section>
+
+        {/* Blog Section */}
+        <BlogSection />
 
         {/* Sistema de Alertas Personalizados */}
         <section className="mb-12">

@@ -15,6 +15,7 @@ import ContatoPage from "./pages/ContatoPage";
 import SitemapPage from "./pages/SitemapPage";
 import SobrePage from "./pages/SobrePage";
 import BlogPage from "./pages/BlogPage";
+import BlogPostPage from "./pages/BlogPostPage";
 import PoliticaPrivacidadePage from "./pages/PoliticaPrivacidadePage";
 import TermosUsoPage from "./pages/TermosUsoPage";
 import PoliticaCookiesPage from "./pages/PoliticaCookiesPage";
@@ -42,6 +43,7 @@ const App = () => (
               <Route path="/contato" element={<ContatoPage />} />
               <Route path="/sobre" element={<SobrePage />} />
               <Route path="/blog" element={<BlogPage />} />
+              <Route path="/blog/:slug" element={<BlogPostPage />} />
               <Route path="/politica-privacidade" element={<PoliticaPrivacidadePage />} />
               <Route path="/termos-uso" element={<TermosUsoPage />} />
               <Route path="/politica-cookies" element={<PoliticaCookiesPage />} />
