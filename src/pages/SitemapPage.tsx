@@ -17,6 +17,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Super El Niño 2026', url: '/blog/super-el-nino-2026', icon: BookOpen },
+    { name: 'Terremoto na Venezuela 2026', url: '/blog/terremoto-venezuela-2026', icon: BookOpen },
   ];
 
   const legalPages = [
