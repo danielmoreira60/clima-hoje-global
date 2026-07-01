@@ -5,14 +5,22 @@ import { Button } from '@/components/ui/button';
 import { Calendar, Clock, ArrowLeft, User, Tag, Share2, ChevronRight } from 'lucide-react';
 import SEO from '@/components/SEO';
 import { getPostBySlug, blogPosts } from '@/data/blogPosts';
-import { SuperElNinoArticle, TerremotoVenezuelaArticle } from '@/components/blog/articles';
+import {
+  SuperElNinoArticle,
+  TerremotoVenezuelaArticle,
+  CalorEuropaArticle,
+  VulcoesArticle,
+} from '@/components/blog/articles';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
   if (slug === 'super-el-nino-2026') return <SuperElNinoArticle midImage={midImage} />;
   if (slug === 'terremoto-venezuela-2026') return <TerremotoVenezuelaArticle midImage={midImage} />;
+  if (slug === 'calor-extremo-europa-2026') return <CalorEuropaArticle midImage={midImage} />;
+  if (slug === 'vulcoes-erupcao-2026') return <VulcoesArticle midImage={midImage} />;
   return null;
 };
+
 
 const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
