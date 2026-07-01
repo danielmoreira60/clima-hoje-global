@@ -985,7 +985,8 @@ export const VulcoesArticle: React.FC<{ midImage: string }> = ({ midImage }) => 
       respiratórias. Dióxido de enxofre (SO₂) e sulfeto de hidrogênio (H₂S) são gases tóxicos
       liberados por muitos vulcões e formam neblina ácida ao entrar em contato com a atmosfera.
       Máscaras N95 são o mínimo recomendado em zonas afetadas.
-    </H3>
+    </P>
+
 
     <H3>Impacto climático global</H3>
     <P>
