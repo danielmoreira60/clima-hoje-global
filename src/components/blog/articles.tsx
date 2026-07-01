@@ -412,9 +412,10 @@ export const TerremotoVenezuelaArticle: React.FC<{ midImage: string }> = ({ midI
         ['1967', '6,5', 'Caracas', '~240', 'Boconó / San Sebastián'],
         ['1997', '6,9', 'Cariaco', '74', 'El Pilar'],
         ['2018', '7,3', 'Sucre', '0 (mar)', 'Subducção Caribe'],
-        ['2026', '6,1', 'Costa Norte', 'Em apuração', 'Boconó'],
+        ['Fev/2026', '6,1', 'Costa Norte', 'Baixo', 'Boconó'],
+        ['24/Jun/2026', '7,2 + 7,5', 'Sucre / Anzoátegui', 'Milhares (parcial)', 'El Pilar'],
       ]}
-      caption="Fonte: USGS, Funvisis e registros históricos consolidados."
+      caption="Fonte: USGS, Funvisis e registros históricos consolidados. O evento de 24 de junho de 2026 é o maior já registrado no país."
     />
 
     <P>
