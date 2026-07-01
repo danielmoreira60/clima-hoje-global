@@ -279,48 +279,99 @@ export const SuperElNinoArticle: React.FC<{ midImage: string }> = ({ midImage })
 export const TerremotoVenezuelaArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
   <>
     <Lead>
-      Os terremotos que abalaram a Venezuela em 2026 trouxeram à tona uma realidade que muitos
-      ignoravam: a América do Sul possui zonas sísmicas ativas capazes de produzir tremores
-      significativos. Entender o que aconteceu, por que aconteceu e quais são os riscos para os
-      países vizinhos é fundamental para qualquer pessoa que vive na região.
+      A Venezuela viveu no dia 24 de junho de 2026 a maior tragédia sísmica de sua história. Um
+      duplo terremoto de magnitudes 7,2 e 7,5, separado por apenas 42 minutos, arrasou cidades
+      inteiras no norte do país, derrubou centenas de edifícios e deixou milhares de mortos e
+      desaparecidos. Entender o que aconteceu — e por que aconteceu — é essencial para toda a
+      América do Sul.
     </Lead>
 
+    <Warning title="Atualização: duplo terremoto de 24 de junho de 2026">
+      Segundo boletins preliminares do{' '}
+      <ExternalLink href="https://earthquake.usgs.gov/">USGS</ExternalLink> e da{' '}
+      <ExternalLink href="http://www.funvisis.gob.ve/">Funvisis</ExternalLink>, o primeiro tremor de
+      magnitude 7,2 ocorreu às 14h37 (horário local), seguido por um segundo evento de magnitude
+      7,5 às 15h19. Os epicentros ficaram na faixa costeira norte, próximos aos estados de Sucre e
+      Anzoátegui. Autoridades venezuelanas confirmam milhares de vítimas fatais, milhares de
+      desaparecidos e mais de 15 mil edificações total ou parcialmente destruídas em Caracas,
+      Barcelona, Cumaná e Puerto La Cruz.
+    </Warning>
+
     <P>
-      Nas primeiras semanas de 2026, o território venezuelano registrou uma sequência de tremores
-      moderados a fortes, com epicentros distribuídos entre os estados de Sucre, Mérida, Trujillo e
-      a faixa litorânea próxima a Caracas. O evento mais expressivo, registrado pelo{' '}
-      <ExternalLink href="https://earthquake.usgs.gov/">USGS — United States Geological Survey</ExternalLink>,
-      atingiu magnitude 6,1 na escala Richter, com profundidade rasa de apenas 12 km — um cenário
-      potencialmente destrutivo em áreas urbanas.
+      Nunca antes na história registrada da Venezuela dois eventos de magnitude tão elevada haviam
+      ocorrido em sequência tão curta. Os sismos foram sentidos em toda a costa caribenha, em
+      Trinidad e Tobago, na Colômbia, em partes do norte do Brasil e até em ilhas do sul do Caribe.
+      Este artigo reúne dados oficiais consolidados até o momento, análise técnica das falhas
+      envolvidas, o histórico sísmico do país e orientações práticas para os países vizinhos.
+    </P>
+
+    <H2 id="o-que-aconteceu-24-junho">O que aconteceu no dia 24 de junho de 2026</H2>
+
+    <P>
+      Na tarde de quarta-feira, 24 de junho, o solo venezuelano tremeu como nunca. O primeiro
+      abalo, de magnitude 7,2, foi registrado às 14h37 (18h37 UTC), com hipocentro a apenas 18 km
+      de profundidade — um valor considerado raso, o que amplifica os danos em superfície. O
+      epicentro localizou-se a cerca de 60 km ao norte de Cumaná, capital do estado de Sucre, em
+      uma zona conhecida por concentrar segmentos ativos da Falha de El Pilar.
     </P>
 
     <P>
-      Este artigo reúne dados oficiais, análise técnica das falhas envolvidas, comparativos
-      históricos e orientações práticas. Também respondemos às principais dúvidas sobre risco
-      sísmico para o Brasil e para outros países da América do Sul.
+      Enquanto a população ainda corria para as ruas, um segundo tremor — ainda mais violento, com
+      magnitude 7,5 — atingiu a região às 15h19. Especialistas classificaram o evento como um
+      "duplo terremoto", categoria rara em que dois eventos principais próximos disparam um ao
+      outro por transferência de tensão ao longo da mesma zona de falha. A energia liberada nas
+      duas horas seguintes foi comparável à de dezenas de bombas atômicas, segundo estimativas
+      preliminares do{' '}
+      <ExternalLink href="https://www.usgs.gov/programs/earthquake-hazards">
+        Programa de Riscos Sísmicos do USGS
+      </ExternalLink>
+      .
     </P>
 
-    <H2 id="o-que-aconteceu">O que aconteceu na Venezuela em 2026</H2>
+    <InfoBox title="Dados oficiais do duplo terremoto de 24/06/2026">
+      Magnitudes: 7,2 Mw (14h37) e 7,5 Mw (15h19). Profundidades: 18 km e 22 km. Epicentros: norte
+      de Sucre e norte de Anzoátegui. Réplicas registradas em 48 h: mais de 900. Municípios em
+      calamidade: 34. Alertas de tsunami emitidos e cancelados após 3 horas.
+    </InfoBox>
+
+    <H3>Escala da destruição</H3>
+    <P>
+      Cumaná, uma das cidades mais antigas fundadas pelos europeus na América continental, foi
+      literalmente cortada em duas por rachaduras profundas no solo. Em Caracas, distante cerca de
+      380 km do epicentro, o abalo foi sentido com intensidade suficiente para derrubar prédios
+      antigos nos bairros de Petare, Catia e El Valle. Barcelona e Puerto La Cruz, cidades
+      litorâneas, sofreram colapsos em massa de edifícios residenciais construídos nas décadas de
+      1970 e 1980, quando o código sísmico venezuelano ainda era incipiente.
+    </P>
 
     <P>
-      O ciclo de eventos sísmicos teve início em fevereiro de 2026 com tremores menores próximos à
-      Falha de Boconó, considerada a estrutura geológica mais ativa do norte da América do Sul. Essa
-      falha se estende por mais de 500 km, cruzando os Andes venezuelanos no sentido sudoeste-nordeste.
-      A energia acumulada ali ao longo de séculos foi parcialmente liberada em uma série de tremores
-      registrados pela{' '}
-      <ExternalLink href="http://www.funvisis.gob.ve/">Fundación Venezolana de Investigaciones Sismológicas (Funvisis)</ExternalLink>.
+      Segundo balanço parcial divulgado pela Defesa Civil venezuelana e organizações humanitárias
+      internacionais 48 horas após o evento, mais de 15 mil edificações foram severamente danificadas
+      ou desabaram por completo. O número de mortos confirmados supera os milhares, com estimativas
+      apontando que o total pode chegar às dezenas de milhares nos próximos dias, à medida que
+      equipes de resgate acessam áreas isoladas.
     </P>
+
+    <PullQuote author="Comunicado conjunto USGS/Funvisis — 25 de junho de 2026">
+      "O duplo evento de 24 de junho representa a maior liberação de energia sísmica já registrada
+      na história instrumental da Venezuela. Nenhum registro anterior — nem mesmo o terremoto de
+      Caracas de 1812 — se equipara à combinação de magnitude, superficialidade e proximidade
+      urbana observada neste evento."
+    </PullQuote>
+
+    <H2 id="o-que-aconteceu">O contexto: os tremores anteriores de 2026</H2>
 
     <P>
-      O evento principal foi sentido em Caracas, Barquisimeto, Mérida e Maracaibo, com relatos de
-      pessoas correndo às ruas e danos em construções antigas. Felizmente, o número de vítimas foi
-      contido graças à profundidade do hipocentro e à hora do dia em que ocorreu — fora do horário
-      de pico nas escolas e escritórios.
+      O ciclo sísmico de 2026 na Venezuela teve início em fevereiro, com tremores moderados
+      próximos à Falha de Boconó, considerada a estrutura geológica mais ativa do norte da América
+      do Sul. Naquele momento, o evento mais expressivo — registrado também pelo USGS — atingiu
+      magnitude 6,1, com profundidade rasa de apenas 12 km. Em retrospecto, aqueles sismos podem
+      ter funcionado como precursores do evento catastrófico de junho.
     </P>
 
-    <InfoBox title="Resumo dos principais tremores de 2026">
-      Magnitude máxima registrada: 6,1 ML. Profundidade: 12 km. Epicentro a 90 km a leste de
-      Caracas. Mais de 240 réplicas registradas em 30 dias. Sem registro de tsunami associado.
+    <InfoBox title="Resumo dos tremores precursores (fevereiro/2026)">
+      Magnitude máxima: 6,1 ML. Profundidade: 12 km. Epicentro a 90 km a leste de Caracas. Mais de
+      240 réplicas em 30 dias. Sem tsunami associado.
     </InfoBox>
 
     <H2 id="contexto-geologico">Contexto geológico: por que a Venezuela treme tanto</H2>
