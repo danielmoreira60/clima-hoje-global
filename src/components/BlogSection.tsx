@@ -29,7 +29,7 @@ const BlogSection: React.FC = () => (
     </div>
 
     <div className="grid md:grid-cols-2 gap-6">
-      {blogPosts.slice(0, 2).map((p) => (
+      {blogPosts.slice(0, 4).map((p) => (
         <Link key={p.slug} to={`/blog/${p.slug}`} className="group">
           <Card className="overflow-hidden border-2 border-slate-200 hover:border-primary/40 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 h-full bg-white">
             <div className="relative h-56 md:h-64 overflow-hidden">
