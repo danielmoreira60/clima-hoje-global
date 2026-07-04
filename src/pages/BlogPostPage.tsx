@@ -10,6 +10,8 @@ import {
   TerremotoVenezuelaArticle,
   CalorEuropaArticle,
   VulcoesArticle,
+  PernambucoSecaArticle,
+  TornadosBrasilArticle,
 } from '@/components/blog/articles';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -18,6 +20,8 @@ const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, mid
   if (slug === 'terremoto-venezuela-2026') return <TerremotoVenezuelaArticle midImage={midImage} />;
   if (slug === 'calor-extremo-europa-2026') return <CalorEuropaArticle midImage={midImage} />;
   if (slug === 'vulcoes-erupcao-2026') return <VulcoesArticle midImage={midImage} />;
+  if (slug === 'pernambuco-emergencia-seca-75-cidades') return <PernambucoSecaArticle midImage={midImage} />;
+  if (slug === 'segundo-maior-corredor-tornados-brasil') return <TornadosBrasilArticle midImage={midImage} />;
   return null;
 };
 
