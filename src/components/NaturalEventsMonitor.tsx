@@ -259,16 +259,16 @@ const NaturalEventsMonitor = () => {
               scrollWheelZoom
             >
               <LayersControl position="topright">
-                <LayersControl.BaseLayer checked name="Escuro">
-                  <TileLayer
-                    attribution='&copy; <a href="https://carto.com/">CARTO</a>'
-                    url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-                  />
-                </LayersControl.BaseLayer>
-                <LayersControl.BaseLayer name="Satélite">
+                <LayersControl.BaseLayer checked name="Satélite">
                   <TileLayer
                     attribution="&copy; Esri"
                     url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                  />
+                </LayersControl.BaseLayer>
+                <LayersControl.BaseLayer name="Escuro">
+                  <TileLayer
+                    attribution='&copy; <a href="https://carto.com/">CARTO</a>'
+                    url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                   />
                 </LayersControl.BaseLayer>
                 <LayersControl.BaseLayer name="Claro">

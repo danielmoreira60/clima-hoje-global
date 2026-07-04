@@ -10,7 +10,7 @@ const BlogSection: React.FC = () => (
   <section className="mb-12">
     <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
       <div>
-        <Badge className="mb-3 bg-gradient-to-r from-primary to-secondary text-primary-foreground border-0">
+        <Badge className="mb-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white border-0 shadow-md">
           <Sparkles className="h-3 w-3 mr-1.5" /> Blog Clima Tempo
         </Badge>
         <h2 className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">

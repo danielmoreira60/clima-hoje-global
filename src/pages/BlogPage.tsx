@@ -35,7 +35,7 @@ const BlogPage = () => {
       <div className="container mx-auto px-4 max-w-6xl">
         {/* Hero */}
         <section className="text-center mb-12">
-          <Badge className="mb-4 bg-gradient-to-r from-primary to-secondary text-primary-foreground border-0 px-4 py-1.5">
+          <Badge className="mb-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white border-0 px-4 py-1.5 shadow-md">
             <BookOpen className="h-3.5 w-3.5 mr-1.5" /> Blog Clima Tempo
           </Badge>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-slate-900 tracking-tight">
