@@ -6,6 +6,10 @@ import calorEuropaCover from '@/assets/blog/calor-europa-cover.jpg';
 import calorEuropaMid from '@/assets/blog/calor-europa-mid.jpg';
 import vulcoesCover from '@/assets/blog/vulcoes-2026-cover.jpg';
 import vulcoesMid from '@/assets/blog/vulcoes-2026-mid.jpg';
+import pernambucoSecaCover from '@/assets/blog/pernambuco-seca-cover.jpg';
+import pernambucoSecaMid from '@/assets/blog/pernambuco-seca-mid.jpg';
+import tornadosBrasilCover from '@/assets/blog/tornados-brasil-cover.jpg';
+import tornadosBrasilMid from '@/assets/blog/tornados-brasil-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -25,6 +29,64 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'pernambuco-emergencia-seca-75-cidades',
+    title: 'Pernambuco decreta emergência em 75 cidades por seca: reservatórios em nível crítico',
+    excerpt:
+      'O governo de Pernambuco decretou situação de emergência em 75 municípios afetados pela estiagem prolongada, com reservatórios da Compesa em níveis críticos e forte impacto no Sertão e Agreste.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-red-500 to-orange-600',
+    date: '02 Jul 2026',
+    dateISO: '2026-07-02',
+    readTime: '15 min',
+    author: 'Equipe Clima Tempo',
+    cover: pernambucoSecaCover,
+    midImage: pernambucoSecaMid,
+    tags: [
+      'seca em pernambuco 2026',
+      'emergência 75 municípios pernambuco',
+      'estiagem sertão pernambucano',
+      'reservatórios compesa nível crítico',
+      'seca hidrológica nordeste',
+      'decreto emergência seca pernambuco',
+      'crise hídrica agreste',
+      'previsão de chuvas nordeste 2026',
+      'agricultura seca nordeste',
+      'clima semiárido brasil',
+    ],
+    metaTitle: 'Pernambuco: Emergência em 75 Cidades por Seca e Estiagem 2026',
+    metaDescription:
+      'Governo de PE decreta emergência em 75 municípios por estiagem e seca hidrológica. Entenda a crise dos reservatórios, causas climáticas e previsão.',
+  },
+  {
+    slug: 'segundo-maior-corredor-tornados-brasil',
+    title: 'Segundo maior corredor de tornados do mundo fica no Brasil: por que o Paraná é tão vulnerável',
+    excerpt:
+      'Pesquisadores confirmam que o Sul do Brasil abriga o segundo maior corredor de tornados do planeta, atrás apenas do Tornado Alley dos EUA. Entenda o fenômeno que destruiu Rio Bonito do Iguaçu, Guarapuava e Turvo.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-violet-500 to-purple-600',
+    date: '01 Jul 2026',
+    dateISO: '2026-07-01',
+    readTime: '16 min',
+    author: 'Equipe Clima Tempo',
+    cover: tornadosBrasilCover,
+    midImage: tornadosBrasilMid,
+    tags: [
+      'corredor de tornados brasil',
+      'tornado no paraná 2026',
+      'tornado rio bonito do iguaçu',
+      'tornado guarapuava',
+      'segundo maior corredor de tornados do mundo',
+      'tornado alley brasil',
+      'meteorologia paraná',
+      'escala fujita tornado brasil',
+      'como se proteger de tornado',
+      'ciclones extratropicais sul do brasil',
+    ],
+    metaTitle: 'Segundo Maior Corredor de Tornados do Mundo Está no Brasil',
+    metaDescription:
+      'Sul do Brasil é o 2º maior corredor de tornados do planeta. Entenda por que o Paraná é tão vulnerável, escala Fujita e como se proteger.',
+  },
   {
     slug: 'calor-extremo-europa-2026',
     title: 'Calor Extremo na Europa 2026: onda de calor histórica bate recordes em Paris, Roma e Madri',

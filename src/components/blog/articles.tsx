@@ -1100,3 +1100,574 @@ export const VulcoesArticle: React.FC<{ midImage: string }> = ({ midImage }) => 
   </>
 );
 
+
+export const PernambucoSecaArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      Pernambuco vive um dos capítulos mais duros da sua longa relação com a estiagem. O governo do
+      estado publicou no Diário Oficial um decreto que reconhece situação de emergência em 75
+      municípios afetados pela seca, com validade de 180 dias — um retrato incômodo da crise
+      hídrica que já castiga o Sertão, o Agreste e parte da Zona da Mata pernambucana.
+    </Lead>
+
+    <P>
+      A medida, oficializada no fim de junho de 2026, chega em um momento em que os reservatórios
+      administrados pela Companhia Pernambucana de Saneamento (Compesa) operam abaixo dos níveis
+      considerados seguros para abastecimento urbano e rural. Municípios que dependem de açudes de
+      pequeno e médio porte já vivem sob rodízio, e o campo sente na pele o efeito da chuva que não
+      veio: pastagens ressecadas, milho perdido no chão, feijão sem vingar e um rebanho bovino que
+      emagrece à espera do próximo inverno amazônico.
+    </P>
+
+    <P>
+      Neste artigo, o Clima Tempo explica, de forma direta e sem sensacionalismo, o que está por
+      trás do decreto de emergência em 75 cidades de Pernambuco, o que dizem os dados climáticos,
+      quais os impactos práticos para quem vive na região e o que esperar dos próximos meses.
+      Trouxemos ainda um panorama comparativo com secas anteriores, dicas para o consumidor
+      urbano e um FAQ completo no final da leitura.
+    </P>
+
+    <H2 id="o-que-diz-decreto">O que diz o decreto de situação de emergência</H2>
+
+    <P>
+      O documento, publicado no Diário Oficial de Pernambuco, reconhece que 75 municípios sofrem
+      efeitos diretos da estiagem prolongada e da seca hidrológica, com prejuízos à população,
+      à agropecuária e ao abastecimento público de água. Na prática, o decreto abre caminho para
+      dispensa de licitação em compras emergenciais, contratação temporária de carros-pipa,
+      liberação de recursos do Fundo Estadual de Defesa Civil e acesso mais ágil a repasses da
+      União via Ministério da Integração e do Desenvolvimento Regional.
+    </P>
+
+    <P>
+      O decreto tem validade de 180 dias, prazo padrão em situações desse tipo, e pode ser
+      prorrogado caso a situação hidrológica não melhore no segundo semestre. Segundo dados
+      divulgados pelo governo estadual e pela Agência Pernambucana de Águas e Clima (Apac), a
+      maior parte dos municípios afetados está localizada no Sertão do Pajeú, no Sertão do São
+      Francisco, no Sertão Central e em pontos críticos do Agreste Meridional. A distribuição
+      espacial não é aleatória: ela acompanha a assinatura climática do semiárido nordestino,
+      que combina alta variabilidade das chuvas, temperaturas médias elevadas e taxas de
+      evaporação superiores a 2.000 mm por ano.
+    </P>
+
+    <InfoBox title="Como funciona um decreto de emergência por seca">
+      Um decreto estadual reconhece que a rotina de determinados municípios foi comprometida por
+      um evento adverso. Ele autoriza medidas administrativas mais rápidas (como contratação de
+      carros-pipa) e habilita municípios a pleitear reconhecimento federal via Sistema Integrado
+      de Informações sobre Desastres (S2iD), da Defesa Civil Nacional. Sem esse passo, a
+      liberação de recursos federais fica travada por processos burocráticos comuns.
+    </InfoBox>
+
+    <H2 id="reservatorios">Reservatórios da Compesa em estado crítico</H2>
+
+    <P>
+      A Compesa opera dezenas de sistemas produtores em Pernambuco, muitos deles dependentes de
+      açudes como Jucazinho, Poço da Cruz, Chapéu, Ipojuca-Pirangi, Tapacurá e Duas Unas. O
+      monitoramento contínuo mostra que boa parte desses reservatórios está bem abaixo do
+      volume de referência para o período. Alguns operam com menos de 20% da capacidade útil,
+      obrigando o rodízio no abastecimento de dezenas de cidades e a redistribuição da água
+      remanescente para consumo humano, prioridade absoluta na legislação brasileira.
+    </P>
+
+    <P>
+      Na Região Metropolitana do Recife, o cenário ainda é menos crítico do que no interior,
+      graças à combinação de reservatórios como o Sistema Pirapama e a integração com o Rio
+      São Francisco por adutoras estratégicas. Ainda assim, a Compesa reforça a necessidade de
+      consumo consciente, especialmente em bairros com histórico de perdas na rede. Para os
+      moradores do Sertão, porém, a realidade é outra: em muitos municípios pequenos, os
+      carros-pipa continuam sendo a única fonte regular de água — um retrato que se repete há
+      décadas e que revela a fragilidade estrutural do sistema hídrico regional.
+    </P>
+
+    <img
+      src={midImage}
+      alt="Agricultor do sertão de Pernambuco ao lado de rebanho e bebedouro seco durante estiagem"
+      width={1536}
+      height={864}
+      loading="lazy"
+      className="w-full rounded-2xl shadow-xl my-10"
+    />
+
+    <H2 id="tabela-reservatorios">Panorama dos principais reservatórios pernambucanos</H2>
+
+    <DataTable
+      headers={['Reservatório', 'Município', 'Situação atual', 'Impacto no abastecimento']}
+      rows={[
+        ['Jucazinho', 'Surubim', 'Crítica', 'Rodízio severo no Agreste Setentrional'],
+        ['Poço da Cruz', 'Ibimirim', 'Baixa', 'Restrições para agricultura irrigada'],
+        ['Tapacurá', 'São Lourenço da Mata', 'Moderada', 'Complementa a RMR'],
+        ['Duas Unas', 'Jaboatão dos Guararapes', 'Moderada', 'Reforço da Zona Sul do Recife'],
+        ['Ipojuca-Pirangi', 'Pesqueira', 'Baixa', 'Cidade sob calendário de rodízio'],
+        ['Chapéu', 'São Bento do Una', 'Crítica', 'Municípios do Agreste dependentes de pipa'],
+      ]}
+      caption="Panorama qualitativo com base em boletins públicos da Compesa e da Apac."
+    />
+
+    <H2 id="por-que-esta-acontecendo">Por que essa seca está acontecendo agora</H2>
+
+    <P>
+      A estiagem em Pernambuco não é um evento isolado. Ela se encaixa em um padrão climático
+      historicamente reconhecido: o Semiárido brasileiro é a única grande região seca do mundo
+      que apresenta chuvas concentradas em poucos meses, alta variabilidade interanual e
+      convivência secular com secas plurianuais. Quando o padrão atmosférico "desanda" — com
+      La Niña fraca, aquecimento anômalo do Atlântico Norte tropical ou enfraquecimento da Zona
+      de Convergência Intertropical (ZCIT) — a chamada quadra chuvosa (fevereiro a maio)
+      fracassa e os reservatórios não se recuperam.
+    </P>
+
+    <P>
+      Segundo boletins climáticos do{' '}
+      <ExternalLink href="https://portal.inmet.gov.br/">
+        Instituto Nacional de Meteorologia (INMET)
+      </ExternalLink>
+      , a região Nordeste registrou, em várias sub-regiões, precipitação abaixo da média
+      histórica ao longo do primeiro semestre de 2026. Somem-se a isso as temperaturas do ar
+      persistentemente acima da média, que aumentam a evapotranspiração e drenam mais
+      rapidamente o pouco de água que ainda existe nos açudes.
+    </P>
+
+    <P>
+      Outro fator relevante é o encadeamento com fenômenos globais. O ciclo atual do{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026</InternalLink>{' '}
+      ajuda a explicar parte do desarranjo das chuvas no Norte e Nordeste do país, com
+      transporte de umidade preferencial para o Sul. O efeito combinado desses padrões
+      encurta a estação chuvosa e agrava a seca hidrológica — aquela que acontece quando os
+      reservatórios já não conseguem se recompor mesmo diante de chuvas eventuais.
+    </P>
+
+    <Warning title="Seca hidrológica é diferente de seca meteorológica">
+      A seca meteorológica é a falta de chuvas em determinado período. A seca hidrológica
+      acontece quando essa falta persiste e os reservatórios, aquíferos e rios não recuperam
+      seu volume normal. É este segundo tipo que agora atinge Pernambuco em várias sub-regiões
+      — e o mais difícil de reverter, mesmo com chuvas isoladas.
+    </Warning>
+
+    <H2 id="impactos">Impactos práticos: água, comida e economia</H2>
+
+    <H3>Abastecimento urbano em rodízio</H3>
+    <P>
+      Nas cidades, o efeito mais visível é o rodízio: bairros passam dias sem água encanada,
+      obrigando famílias a estocar em baldes, tambores e caixas suplementares. A Compesa mantém
+      calendários públicos por sistema e recomenda que o consumidor não desperdice justamente
+      nos dias em que a água está disponível — reservar de forma exagerada agrava o
+      desequilíbrio da rede.
+    </P>
+
+    <H3>Agropecuária em risco</H3>
+    <P>
+      No campo, o impacto é ainda mais duro. A safra de milho e feijão em regime de sequeiro
+      geralmente se perde quando a quadra chuvosa é curta. O rebanho bovino, ovino e caprino
+      emagrece, obrigando muitos criadores a vender animais antes do tempo ou depender de
+      programas de ração emergencial. Cadeias inteiras — leite, queijo, carne, mel — sofrem
+      quebra de produção, com efeito em cascata sobre a renda das famílias rurais.
+    </P>
+
+    <H3>Energia e economia</H3>
+    <P>
+      Reservatórios em nível baixo comprometem também a geração hidrelétrica na bacia do São
+      Francisco e afetam projetos de agricultura irrigada no Vale do São Francisco. A
+      combinação eleva o preço da energia e pressiona a inflação de alimentos em todo o país,
+      já que muitas frutas e hortaliças consumidas em outras regiões vêm justamente daí.
+    </P>
+
+    <PullQuote author="Boletim técnico Apac/Sudene — 2026">
+      "A seca em Pernambuco não é uma novidade histórica, mas sua repetição em ciclos cada vez
+      mais frequentes é. Convivência com o semiárido significa investir permanentemente em
+      infraestrutura, ciência e políticas públicas de longo prazo."
+    </PullQuote>
+
+    <H2 id="convivencia">Convivência com o semiárido: o caminho consolidado</H2>
+
+    <P>
+      A ideia de "combater a seca" foi substituída, nas últimas décadas, pela lógica da
+      convivência com o semiárido, encampada por movimentos sociais, universidades e órgãos
+      técnicos como a{' '}
+      <ExternalLink href="https://www.gov.br/agricultura/pt-br/assuntos/insumos-agropecuarios/insumos-agricolas/fertilizantes/publicacoes-fertilizantes/00-embrapa-semi-arido-caracteristicas-e-desafios.pdf">
+        Embrapa Semiárido
+      </ExternalLink>
+      . Essa nova abordagem parte de um princípio simples: a seca é parte estrutural da região
+      e precisa ser encarada como variável permanente, não como emergência esporádica.
+    </P>
+
+    <P>
+      Ela se apoia em tecnologias sociais consagradas — cisternas de placas para captação de
+      água da chuva, barragens subterrâneas, reúso de água cinza, sistemas agroflorestais
+      adaptados à caatinga, criação de caprinos e ovinos de raças locais e barragens
+      sucessivas ao longo dos rios intermitentes. Somam-se a isso políticas públicas como o
+      Programa Cisternas, o Garantia-Safra e o próprio sistema de defesa civil, hoje
+      responsável pela distribuição sistemática de carros-pipa.
+    </P>
+
+    <Checklist
+      items={[
+        'Use cisternas domiciliares e reservatórios individuais como reserva estratégica de água.',
+        'Adote reúso de água cinza (banho e pia) em jardins e limpeza de quintais.',
+        'Prefira plantios resistentes à seca (palma, sorgo, macaxeira, feijão de corda).',
+        'Escute os boletins da Apac e do INMET antes de plantar em regime de sequeiro.',
+        'Combine caprinocultura e ovinocultura em raças adaptadas à caatinga.',
+        'Cadastre-se em programas federais e estaduais de convivência com o semiárido.',
+      ]}
+    />
+
+    <H2 id="como-ajudar">Como o consumidor urbano pode ajudar</H2>
+
+    <P>
+      Mesmo quem mora em capitais e não sente diretamente o rodízio pode fazer a diferença.
+      Reduzir o desperdício em casa, consertar vazamentos, evitar longas duchas, reutilizar
+      água da máquina de lavar e apoiar organizações que atuam no semiárido — como Cáritas,
+      Articulação Semiárido Brasileiro (ASA) e ONGs locais — são maneiras concretas de
+      contribuir. A escolha de consumir alimentos e produtos de agricultores familiares do
+      Nordeste também ajuda a fortalecer economias regionais castigadas pela estiagem.
+    </P>
+
+    <Highlight title="Fique de olho na previsão do tempo">
+      Antes de programar viagens, plantios ou eventos, consulte a{' '}
+      <InternalLink to="/15-dias">previsão para os próximos 15 dias</InternalLink> e o{' '}
+      <InternalLink to="/agora">tempo agora</InternalLink> na sua cidade. Nosso monitor climático
+      integra dados oficiais e ajuda a tomar decisões mais bem informadas.
+    </Highlight>
+
+    <H2 id="proximos-meses">O que esperar nos próximos meses</H2>
+
+    <P>
+      A segunda metade do ano, no Sertão e no Agreste pernambucanos, é tradicionalmente seca —
+      o chamado "verão nordestino" vai, na prática, de junho a novembro. As chuvas mais
+      significativas dependem do retorno da quadra chuvosa em fevereiro. Se ela for regular,
+      há recuperação parcial dos açudes; se falhar novamente, o quadro atual tende a se
+      agravar e o decreto de emergência provavelmente será prorrogado.
+    </P>
+
+    <P>
+      Modelos globais de agências como NOAA, ECMWF e OMM projetam alta variabilidade nos
+      próximos meses, o que exige atualização constante dos boletins locais. A Apac emite
+      relatórios periódicos sobre bacias, açudes e prognóstico climático de curto prazo — o
+      recomendável é acompanhar diretamente esses documentos ao lado de portais especializados
+      como o nosso <InternalLink to="/blog">blog Clima Tempo</InternalLink>.
+    </P>
+
+    <H2 id="conclusao">Conclusão: emergência hoje, planejamento sempre</H2>
+
+    <P>
+      O decreto que reconhece emergência em 75 municípios de Pernambuco é, ao mesmo tempo, um
+      instrumento imediato para socorrer famílias e um lembrete permanente: o semiárido
+      brasileiro não convive apenas com secas, ele é feito delas. Ignorar essa característica
+      é insistir em soluções de curto prazo que não sobrevivem à próxima estiagem.
+    </P>
+
+    <P>
+      Continuar investindo em ciência do clima, previsão de tempo confiável, obras de
+      infraestrutura hídrica (adutoras, integração de bacias, dessalinização) e tecnologias
+      sociais é o caminho apontado pelos especialistas. É também a única forma sustentável de
+      transformar a inevitabilidade da seca em algo administrável para quem vive, planta e
+      cria animais nessa parte tão simbólica do Brasil.
+    </P>
+
+    <H2 id="faq">Perguntas frequentes sobre a seca em Pernambuco</H2>
+
+    <FAQ
+      items={[
+        {
+          q: 'Quantos municípios de Pernambuco estão em situação de emergência por seca em 2026?',
+          a: 'O decreto estadual publicado no fim de junho de 2026 reconhece 75 municípios afetados pela estiagem, com validade de 180 dias e possibilidade de prorrogação.',
+        },
+        {
+          q: 'A Região Metropolitana do Recife também está sob rodízio?',
+          a: 'A RMR sofre menos que o interior graças à combinação de reservatórios e adutoras integradas. Ainda assim, a Compesa mantém programas de redução de perdas e pede consumo consciente.',
+        },
+        {
+          q: 'O que faz o governo do estado durante o decreto de emergência?',
+          a: 'O decreto permite contratação emergencial de carros-pipa, dispensa de licitação em compras urgentes, acesso a recursos do Fundo Estadual de Defesa Civil e articulação com o governo federal via S2iD.',
+        },
+        {
+          q: 'Por que essa seca é considerada tão grave?',
+          a: 'Trata-se de seca hidrológica: além da falta de chuvas, os reservatórios não conseguem se recompor, comprometendo abastecimento humano, agricultura e economia rural.',
+        },
+        {
+          q: 'Como o cidadão comum pode ajudar?',
+          a: 'Economizando água em casa, evitando desperdícios, apoiando programas de convivência com o semiárido e consumindo produtos da agricultura familiar do Nordeste.',
+        },
+        {
+          q: 'Onde acompanhar a evolução da crise hídrica em Pernambuco?',
+          a: (
+            <>
+              O ideal é acompanhar os boletins da Apac e da Compesa e complementar com portais
+              climáticos independentes, como o{' '}
+              <InternalLink to="/blog">blog do Clima Tempo</InternalLink> e as páginas de{' '}
+              <InternalLink to="/agora">tempo agora</InternalLink> e{' '}
+              <InternalLink to="/15-dias">previsão de 15 dias</InternalLink>.
+            </>
+          ),
+        },
+      ]}
+    />
+  </>
+);
+
+export const TornadosBrasilArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      A ideia de que tornados são um fenômeno "americano" está errada. O Sul do Brasil abriga o
+      segundo maior corredor de tornados do planeta, atrás apenas do famoso Tornado Alley dos
+      Estados Unidos. Casos recentes no Paraná — como o que devastou Rio Bonito do Iguaçu e
+      atingiu Guarapuava e Turvo — reacenderam a discussão sobre por que esse pedaço do país
+      é tão vulnerável a ventos extremos.
+    </Lead>
+
+    <P>
+      Segundo especialistas em climatologia ouvidos por veículos brasileiros e por institutos de
+      pesquisa, o Sul do Brasil combina, em uma área relativamente pequena, todos os ingredientes
+      físicos necessários para a formação de tornados. Massas de ar quente e úmido vindas do
+      Norte encontram frentes frias polares em avanço rápido pelo continente, sob relevo plano ou
+      suavemente ondulado, criando o cenário perfeito para tempestades severas e ciclones
+      violentos de curta escala.
+    </P>
+
+    <P>
+      Neste artigo, o Clima Tempo mergulha na climatologia do Sul brasileiro, explica o que é
+      um tornado de verdade, como se mede sua força, por que o Paraná é a região mais afetada
+      do país, o que fazer antes, durante e depois de um evento desses e como interpretar os
+      alertas emitidos pelo Inmet e por defesas civis estaduais.
+    </P>
+
+    <H2 id="segundo-maior-corredor">O "segundo Tornado Alley" fica no Brasil</H2>
+
+    <P>
+      A expressão "corredor de tornados" descreve regiões do planeta onde a atmosfera favorece,
+      de forma recorrente, a formação de tempestades severas com potencial tornádico. O mais
+      conhecido é o Tornado Alley, corredor central dos Estados Unidos que corta estados como
+      Texas, Oklahoma, Kansas e Nebraska. Em segundo lugar, na maior parte dos estudos
+      internacionais, aparece o corredor do Cone Sul da América do Sul — que inclui o Paraná,
+      o oeste de Santa Catarina, o Rio Grande do Sul, o norte da Argentina, o Uruguai e o
+      leste do Paraguai.
+    </P>
+
+    <P>
+      Pesquisadores brasileiros e argentinos, ao longo das últimas duas décadas, ajudaram a
+      confirmar essa condição por meio de imagens de radar, satélite, relatos históricos e
+      reconstruções via modelagem numérica. Estudos publicados por instituições como o{' '}
+      <ExternalLink href="https://portal.inmet.gov.br/">
+        Instituto Nacional de Meteorologia (INMET)
+      </ExternalLink>{' '}
+      e universidades como a UFPR, a USP e a UFSM apontam que o Sul do Brasil é palco de dezenas
+      de eventos tornádicos por ano, muitos deles subnotificados por atingirem áreas rurais de
+      baixa densidade populacional.
+    </P>
+
+    <InfoBox title="Por que o Sul do Brasil favorece tornados">
+      Três ingredientes se combinam: (1) ar quente e úmido vindo da Amazônia por meio do Jato de
+      Baixos Níveis; (2) ar frio e seco vindo do sul do continente, muitas vezes trazido por
+      frentes polares vigorosas; (3) relevo relativamente plano, com altitudes baixas a médias,
+      que não bloqueia a formação de células convectivas profundas. Essa mistura recria, em
+      escala menor, o que acontece nas Grandes Planícies dos EUA.
+    </InfoBox>
+
+    <H2 id="o-que-e-tornado">O que é um tornado, do ponto de vista técnico</H2>
+
+    <P>
+      Um tornado é uma coluna de ar em rotação violenta que se estende de uma nuvem cumulonimbus
+      até o solo. Nem toda tempestade gera tornado — a maioria produz apenas chuva forte, vento
+      e raios. Para que um tornado se forme, é preciso uma supercélula: uma tempestade organizada,
+      com forte cisalhamento do vento em altura, capaz de manter um mesociclone (rotação em
+      escala de alguns quilômetros) por dezenas de minutos.
+    </P>
+
+    <P>
+      Quando esse mesociclone se estreita e "toca o chão", forma-se o funil clássico dos tornados,
+      capaz de atingir velocidades de vento superiores a 300 km/h nos casos mais extremos.
+      Diferente de um ciclone extratropical (grande, com centenas de quilômetros de diâmetro), o
+      tornado é pequeno em área — mas destrói tudo o que encontra no caminho.
+    </P>
+
+    <img
+      src={midImage}
+      alt="Cidade do interior devastada após passagem de tornado, com telhados destruídos e equipes de resgate"
+      width={1536}
+      height={864}
+      loading="lazy"
+      className="w-full rounded-2xl shadow-xl my-10"
+    />
+
+    <H2 id="escala-fujita">Escala Fujita Aprimorada: como se mede a força de um tornado</H2>
+
+    <P>
+      A escala mais utilizada no mundo hoje é a Escala Fujita Aprimorada (EF), adotada pelo
+      Serviço Nacional de Meteorologia dos EUA. Ela vai de EF0 a EF5 e é calibrada a partir dos
+      danos observados em edificações, vegetação e infraestrutura. O Brasil, embora não use a
+      escala de maneira oficial e sistemática, adota o mesmo padrão em estudos técnicos, o que
+      permite comparação internacional dos eventos brasileiros.
+    </P>
+
+    <DataTable
+      headers={['Categoria', 'Ventos estimados (km/h)', 'Danos característicos']}
+      rows={[
+        ['EF0', '105 – 137', 'Danos leves: telhas, galhos, sinalizações'],
+        ['EF1', '138 – 177', 'Danos moderados: janelas, coberturas, veículos deslocados'],
+        ['EF2', '178 – 217', 'Danos consideráveis: casas de alvenaria danificadas, árvores derrubadas'],
+        ['EF3', '218 – 266', 'Danos severos: paredes derrubadas, trens descarrilhados'],
+        ['EF4', '267 – 322', 'Danos devastadores: casas bem construídas destruídas'],
+        ['EF5', '> 322', 'Danos catastróficos: estruturas removidas de fundações'],
+      ]}
+      caption="Adaptado da Enhanced Fujita Scale, referência internacional de danos tornádicos."
+    />
+
+    <H2 id="casos-parana">Casos recentes no Paraná: Rio Bonito do Iguaçu, Guarapuava e Turvo</H2>
+
+    <P>
+      O Paraná concentra parte significativa dos tornados brasileiros documentados por radar,
+      satélite e imagens de câmeras cidadãs. Nos episódios mais recentes, cidades como Rio
+      Bonito do Iguaçu, Guarapuava e Turvo foram atingidas em sequência por um sistema
+      convectivo severo que produziu múltiplos tornados no mesmo dia — uma configuração conhecida
+      como "surto tornádico".
+    </P>
+
+    <P>
+      Os relatos incluem casas destelhadas, galpões agrícolas destruídos, torres de energia
+      caídas, veículos arremessados e vítimas fatais. Imagens aéreas divulgadas pelas defesas
+      civis mostram um padrão típico de dano linear e concentrado, característico de tornados —
+      diferente da dispersão mais ampla de uma tempestade convectiva comum. A partir dessas
+      evidências, meteorologistas confirmaram tratar-se de eventos tornádicos, provavelmente
+      entre EF2 e EF3, o que já é considerado muito destrutivo em áreas urbanas.
+    </P>
+
+    <Warning title="Alerta é diferente de aviso — e ambos são importantes">
+      No Brasil, o INMET emite "aviso meteorológico" (amarelo, laranja e vermelho) sobre
+      condições favoráveis a tempestades severas. Já as defesas civis municipais e estaduais
+      publicam "alertas" mais localizados. Sempre priorize as informações oficiais — não
+      dependa apenas de redes sociais em situações extremas.
+    </Warning>
+
+    <H2 id="por-que-parana">Por que o Paraná é tão vulnerável</H2>
+
+    <P>
+      A resposta está em três palavras: geografia, dinâmica atmosférica e ocupação humana. O
+      Paraná combina relevo plano no oeste, altitudes moderadas no centro e transição para a
+      Serra do Mar no leste. Isso cria zonas de contraste térmico e disparo de convecção
+      intensa. Além disso, o estado está no caminho preferencial das frentes frias que sobem do
+      sul e das massas quentes que descem do Centro-Oeste, especialmente na primavera e no
+      início do verão.
+    </P>
+
+    <P>
+      A crescente ocupação urbana e agrícola de áreas historicamente rurais também aumenta a
+      exposição da população. Muitas construções em cidades pequenas foram erguidas sem
+      considerar cargas de vento extremas, comuns em tornados EF2 ou superiores. É por isso que
+      especialistas pedem revisão das normas de construção civil no Sul do país, especialmente
+      em municípios com histórico de tempestades severas.
+    </P>
+
+    <PullQuote author="Climatologia contemporânea — Sul do Brasil">
+      "Chamar o Sul do Brasil de segundo maior corredor de tornados do mundo não é exagero
+      jornalístico. É o que a climatologia comparada mostra há duas décadas — só faltava a
+      opinião pública se apropriar dessa realidade."
+    </PullQuote>
+
+    <H2 id="mudancas-climaticas">Mudanças climáticas mudam a frequência de tornados?</H2>
+
+    <P>
+      A pergunta é frequente e a resposta, honesta: ainda não há consenso científico total.
+      Alguns estudos indicam que o aquecimento global tende a aumentar a energia disponível
+      para tempestades severas no Sul da América do Sul — o que, em tese, favoreceria eventos
+      mais intensos, embora não necessariamente mais numerosos. Pesquisas ligadas ao{' '}
+      <ExternalLink href="https://www.wmo.int/">
+        World Meteorological Organization (WMO)
+      </ExternalLink>{' '}
+      apontam que fenômenos extremos vêm se tornando mais frequentes em várias regiões do
+      globo, embora tornados sejam eventos de escala tão pequena que dificultam estatísticas
+      robustas de longo prazo.
+    </P>
+
+    <P>
+      No caso brasileiro, há relativo consenso de que a subnotificação histórica de tornados
+      compromete comparações. Muitos episódios de décadas passadas foram registrados como
+      "ventania" ou "ciclone", quando eram tornados de fato. Com o avanço de radares
+      meteorológicos de dupla polarização, satélites geoestacionários e câmeras de cidadãos, a
+      detecção melhorou — o que ajuda a explicar parte do "aumento" percebido nos últimos anos.
+    </P>
+
+    <H2 id="como-se-proteger">Como se proteger de um tornado no Sul do Brasil</H2>
+
+    <Checklist
+      items={[
+        'Conheça os cômodos internos da sua casa sem janelas — banheiros e corredores costumam ser mais seguros.',
+        'Guarde documentos, remédios e uma lanterna em uma mochila de emergência de fácil acesso.',
+        'Não busque abrigo embaixo de viadutos: o vento acelera nesses pontos e o risco é ainda maior.',
+        'Se estiver ao ar livre e não houver estrutura sólida próxima, deite-se em vala ou depressão do terreno.',
+        'Nunca tente filmar o tornado — a distância de segurança é sempre maior do que parece.',
+        'Instale aplicativos oficiais de defesa civil e ative as notificações de tempestade severa.',
+        'Após o evento, evite postes caídos, fios elétricos expostos e escombros instáveis.',
+      ]}
+    />
+
+    <H2 id="como-monitorar">Como monitorar tempestades severas em tempo real</H2>
+
+    <P>
+      No Clima Tempo, o{' '}
+      <InternalLink to="/">Monitor Geológico e Climático Global</InternalLink> integra dados
+      meteorológicos de fontes oficiais em um mapa interativo. Combine essa ferramenta com a{' '}
+      <InternalLink to="/agora">página de tempo agora</InternalLink> e a{' '}
+      <InternalLink to="/15-dias">previsão de 15 dias</InternalLink> para acompanhar a evolução
+      de sistemas convectivos, avisos meteorológicos e frentes frias sobre o Sul do país.
+    </P>
+
+    <P>
+      Vale também acompanhar diretamente o Inmet, o SIMEPAR (Paraná), o Ciram-Epagri (Santa
+      Catarina) e a Sala de Situação da Defesa Civil do seu estado. Em situações de risco
+      elevado, esses canais publicam alertas específicos, com mapas e recomendações práticas.
+    </P>
+
+    <Highlight title="Educação climática salva vidas">
+      Ensinar crianças e adolescentes a reconhecer céus ameaçadores, saber a diferença entre
+      raios, granizo e vento severo, e ter um plano familiar de emergência é tão importante
+      quanto qualquer investimento em infraestrutura. Cultura de prevenção reduz mortes e
+      prejuízos de forma comprovada.
+    </Highlight>
+
+    <H2 id="conclusao">Conclusão: aceitar a realidade climática do Sul</H2>
+
+    <P>
+      Reconhecer que o Sul do Brasil é o segundo maior corredor de tornados do mundo não deve
+      gerar pânico — deve gerar preparação. Estados Unidos, Bangladesh, Argentina e outras
+      regiões vulneráveis convivem com esses eventos por meio de sistemas de alerta robustos,
+      normas construtivas ajustadas, campanhas educativas frequentes e resposta rápida das
+      defesas civis. O Brasil pode e precisa avançar na mesma direção.
+    </P>
+
+    <P>
+      Enquanto isso, o papel do jornalismo climático sério — como o que buscamos praticar aqui
+      no <InternalLink to="/blog">blog Clima Tempo</InternalLink> — é traduzir a ciência sem
+      sensacionalismo, informar com transparência sobre riscos e fortalecer a cultura de
+      prevenção. Assim, a próxima tempestade severa que atravessar o Paraná encontrará
+      cidadãos, cidades e governos mais preparados.
+    </P>
+
+    <H2 id="faq">Perguntas frequentes sobre tornados no Brasil</H2>
+
+    <FAQ
+      items={[
+        {
+          q: 'É verdade que o Brasil tem o segundo maior corredor de tornados do mundo?',
+          a: 'Sim. Estudos climatológicos internacionais reconhecem o Cone Sul da América do Sul — incluindo o Sul do Brasil, o norte da Argentina, o Uruguai e o leste do Paraguai — como o segundo corredor tornádico mais ativo do planeta, atrás apenas do Tornado Alley nos EUA.',
+        },
+        {
+          q: 'Qual estado brasileiro registra mais tornados?',
+          a: 'O Paraná lidera as ocorrências documentadas, seguido por Rio Grande do Sul, Santa Catarina e regiões do interior de São Paulo. A combinação de relevo, umidade e frentes frias explica esse padrão.',
+        },
+        {
+          q: 'Tornado e ciclone são a mesma coisa?',
+          a: 'Não. Ciclones (tropicais ou extratropicais) são sistemas de baixa pressão de grande escala, com centenas de quilômetros. Tornados são colunas rotativas curtas, com poucas centenas de metros a alguns quilômetros de diâmetro, mas com ventos muito mais intensos.',
+        },
+        {
+          q: 'O que fazer se eu ver um tornado se aproximando?',
+          a: 'Procure imediatamente um cômodo interno, sem janelas, no andar mais baixo possível. Cubra-se com colchões ou cobertores para proteger contra estilhaços. Se estiver ao ar livre, deite-se em vala ou depressão do terreno e proteja a cabeça com os braços.',
+        },
+        {
+          q: 'Existe previsão específica para tornados no Brasil?',
+          a: 'Ainda não como nos EUA. O que os órgãos oficiais fazem é emitir avisos de tempestade severa quando as condições atmosféricas são favoráveis. O ideal é acompanhar simultaneamente Inmet, defesas civis estaduais e portais especializados.',
+        },
+        {
+          q: 'As mudanças climáticas estão aumentando os tornados no Brasil?',
+          a: 'Há indícios de que os eventos extremos vêm se tornando mais intensos, mas ainda não existe consenso científico total sobre aumento de frequência. A subnotificação histórica também influencia essa percepção.',
+        },
+      ]}
+    />
+  </>
+);
