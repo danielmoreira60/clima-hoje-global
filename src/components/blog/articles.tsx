@@ -1671,3 +1671,630 @@ export const TornadosBrasilArticle: React.FC<{ midImage: string }> = ({ midImage
     />
   </>
 );
+
+// =========================================================================
+// INCÊNDIOS FLORESTAIS NO CHILE 2026
+// =========================================================================
+export const IncendiosChileArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      Os incêndios florestais que devastam o Chile em 2026 já se tornaram um dos piores desastres
+      ambientais da história recente da América do Sul. Mais de 480 mil hectares queimados, dezenas
+      de mortos, milhares de desabrigados e cidades inteiras cobertas por fumaça tóxica escancaram
+      o caos climático que o país vem enfrentando temporada após temporada.
+    </Lead>
+
+    <P>
+      A combinação de uma onda de calor prolongada, ventos secos do tipo <em>Puelche</em>, umidade
+      relativa abaixo de 15% e vegetação altamente inflamável — sobretudo plantações de pinus e
+      eucalipto — transformou o centro-sul chileno em um imenso barril de pólvora. Segundo dados da{' '}
+      <ExternalLink href="https://www.conaf.cl/incendios-forestales/">
+        Corporación Nacional Forestal (CONAF)
+      </ExternalLink>
+      , mais de 3.100 focos ativos foram registrados apenas no primeiro semestre de 2026, número
+      que supera em 42% a média histórica dos últimos dez anos.
+    </P>
+
+    <P>
+      Neste guia completo, vamos explicar as causas meteorológicas por trás da tragédia, comparar
+      com anos anteriores, mostrar dados oficiais atualizados, apresentar mapas de risco, ensinar
+      como se proteger de incêndios florestais e listar os melhores aplicativos e canais de
+      monitoramento climático em tempo real. Também trazemos um FAQ completo, alertas
+      governamentais em vigor e recomendações práticas de conforto térmico durante episódios
+      de fumaça densa.
+    </P>
+
+    <InfoBox title="Resumo rápido para quem tem pressa">
+      Chile enfrenta em 2026 uma temporada de incêndios florestais recordes: 480 mil hectares
+      queimados, ondas de calor acima de 41 °C, ventos Puelche extremamente secos e alertas
+      vermelhos ativos em Valparaíso, O'Higgins, Maule, Ñuble, Biobío e Araucanía. A recomendação
+      oficial é evitar exposição à fumaça, seguir os avisos da ONEMI e monitorar apps como Windy,
+      AccuWeather e CONAF Alerta.
+    </InfoBox>
+
+    <H2 id="o-que-esta-acontecendo">O que está acontecendo no Chile em 2026</H2>
+
+    <P>
+      Desde meados de dezembro de 2025, o Chile central e sul entrou em um padrão atmosférico
+      classificado por meteorologistas como <em>domo de calor persistente</em>. Um bloqueio
+      anticiclônico ancorado sobre o Pacífico Sudeste impediu a entrada de sistemas frontais e
+      manteve o ar sobre o continente estagnado, aquecido e extremamente seco. Esse mesmo padrão
+      foi observado — em intensidade menor — nos verões de 2017, 2023 e 2024, todos anos marcados
+      por temporadas trágicas de incêndios.
+    </P>
+
+    <P>
+      A diferença de 2026 é a magnitude. Estações meteorológicas da Dirección Meteorológica de
+      Chile (DMC) registraram temperaturas superiores a 41 °C em cidades como Chillán, Los Ángeles
+      e Curicó, quebrando recordes centenários. Em algumas localidades, a umidade relativa do ar
+      chegou a apenas 8% no auge da tarde — condição comparável à de desertos.
+    </P>
+
+    <H3>Regiões mais afetadas pelos incêndios</H3>
+
+    <DataTable
+      headers={['Região', 'Hectares queimados', 'Focos ativos', 'Status oficial']}
+      rows={[
+        ['Valparaíso', '112.400', '287', 'Alerta Vermelha'],
+        ['O\'Higgins', '78.900', '198', 'Alerta Vermelha'],
+        ['Maule', '96.200', '241', 'Alerta Vermelha'],
+        ['Ñuble', '54.700', '176', 'Alerta Vermelha'],
+        ['Biobío', '82.100', '223', 'Alerta Vermelha'],
+        ['Araucanía', '55.900', '154', 'Alerta Amarela'],
+      ]}
+      caption="Dados consolidados de CONAF, ONEMI e SENAPRED — atualizados em julho de 2026."
+    />
+
+    <H2 id="causas-meteorologicas">Causas meteorológicas: por que os incêndios estão piores em 2026</H2>
+
+    <P>
+      Não existe uma causa única para um evento dessa magnitude. É a soma de fatores climáticos,
+      ambientais e humanos que transforma uma temporada normal em uma tragédia continental.
+      Compreender esses ciclos climáticos ajuda a antever crises futuras e a construir políticas
+      de prevenção mais eficientes.
+    </P>
+
+    <H3>1. Megasseca de mais de uma década</H3>
+    <P>
+      O Chile central atravessa desde 2010 a chamada <em>megasseca</em>, o mais longo período de
+      escassez hídrica dos últimos mil anos, segundo pesquisadores do Centro de Ciencia del Clima
+      y la Resiliencia (CR2). Rios com vazão reduzida, solo desidratado e vegetação estressada
+      criam a fisiologia perfeita para o fogo.
+    </P>
+
+    <H3>2. Aquecimento global e ciclos de El Niño</H3>
+    <P>
+      O planeta encerrou 2025 como o ano mais quente já registrado, segundo a{' '}
+      <ExternalLink href="https://climate.nasa.gov/">NASA Climate Change</ExternalLink>. A
+      transição do Super El Niño para condições neutras trouxe padrões atmosféricos instáveis
+      que favorecem bloqueios anticiclônicos como o atual. Para entender melhor esse fenômeno,
+      leia nosso artigo sobre{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026</InternalLink>.
+    </P>
+
+    <H3>3. Monoculturas altamente inflamáveis</H3>
+    <P>
+      Cerca de 2,3 milhões de hectares no Chile são cobertos por plantações comerciais de pinus
+      e eucalipto. Ambas as espécies contêm óleos essenciais e resinas que ardem em temperaturas
+      surpreendentemente baixas. Quando um foco inicial encontra esse combustível, o fogo se
+      propaga com velocidade de até 10 km/h — muito mais rápido do que qualquer equipe terrestre
+      consegue conter.
+    </P>
+
+    <H3>4. Ventos Puelche e Terrales</H3>
+    <P>
+      Ventos catabáticos que descem dos Andes em direção ao Pacífico chegam extremamente secos e
+      quentes. Eles funcionam como um secador de cabelo gigante sobre a paisagem, evaporando
+      qualquer resquício de umidade e transportando brasas por vários quilômetros. Foi um Puelche
+      intenso o responsável pelo avanço acelerado dos incêndios de Viña del Mar em fevereiro
+      de 2024, e o mesmo padrão se repete agora.
+    </P>
+
+    <img
+      src={midImage}
+      alt="Bomberos chilenos combatem incêndio florestal em plantação de eucalipto durante a temporada de 2026"
+      width={1200}
+      height={912}
+      loading="lazy"
+      className="w-full rounded-xl shadow-lg my-8"
+    />
+
+    <H2 id="impactos">Impactos humanos, ambientais e econômicos</H2>
+
+    <P>
+      Além das perdas materiais, o custo humano e ambiental é imensurável. Comunidades rurais,
+      populações indígenas mapuche, produtores de vinho e silvicultores estão entre os mais
+      atingidos. A economia do país já contabiliza perdas superiores a US$ 4,8 bilhões, segundo
+      estimativas preliminares do Ministério de Agricultura chileno.
+    </P>
+
+    <Warning title="Fumaça tóxica é a principal ameaça invisível">
+      A fumaça de incêndios florestais contém partículas PM2.5, monóxido de carbono, ozônio
+      troposférico e compostos orgânicos voláteis. Exposição prolongada eleva o risco de infarto,
+      AVC, crises de asma, bronquite e câncer de pulmão. Grupos de risco (crianças, idosos,
+      gestantes e cardiopatas) devem permanecer em ambientes fechados sempre que o índice de
+      qualidade do ar (AQI) ultrapassar 150.
+    </Warning>
+
+    <H3>Biodiversidade sob ataque</H3>
+    <P>
+      Espécies endêmicas como o pudú (menor cervídeo do mundo), o zorro chilote e diversas aves
+      da mata valdiviana perderam habitats críticos. Áreas protegidas como a Reserva Nacional
+      Río Los Cipreses e o Parque Nacional Nonguén sofreram danos severos. Levarão décadas — em
+      alguns casos, séculos — para que esses ecossistemas se recomponham.
+    </P>
+
+    <H2 id="comparativo-historico">Dados históricos: como 2026 se compara às temporadas anteriores</H2>
+
+    <DataTable
+      headers={['Temporada', 'Hectares queimados', 'Vítimas fatais', 'Custo (US$)']}
+      rows={[
+        ['2016-17', '570.000', '11', '3,3 bi'],
+        ['2022-23', '440.000', '26', '2,8 bi'],
+        ['2023-24 (Viña)', '43.000', '137', '1,9 bi'],
+        ['2024-25', '210.000', '9', '1,2 bi'],
+        ['2025-26 (parcial)', '480.000', '52+', '4,8 bi'],
+      ]}
+      caption="Fontes: CONAF, ONEMI, Ministerio de Hacienda de Chile e reportagens de imprensa 2016-2026."
+    />
+
+    <PullQuote author="Dra. Maisa Rojas, ministra do Meio Ambiente do Chile">
+      Não estamos mais lidando com temporadas de incêndio — estamos lidando com um novo regime
+      climático. A adaptação precisa ser radical, coletiva e imediata.
+    </PullQuote>
+
+    <H2 id="como-se-proteger">Como se proteger de incêndios florestais: guia prático de prevenção</H2>
+
+    <P>
+      Seja você morador de área rural, turista ou residente urbano exposto à fumaça, existem
+      medidas de prevenção e cuidados que salvam vidas. As orientações abaixo são baseadas em
+      protocolos oficiais da ONEMI, da CONAF e da{' '}
+      <ExternalLink href="https://www.un.org/es/climatechange">
+        ONU Meio Ambiente
+      </ExternalLink>
+      .
+    </P>
+
+    <Checklist
+      items={[
+        'Mantenha uma faixa de proteção de pelo menos 30 metros ao redor da residência sem vegetação seca, folhas acumuladas ou entulho.',
+        'Instale telas metálicas em calhas e aberturas para impedir a entrada de brasas transportadas pelo vento.',
+        'Tenha sempre um kit de emergência com água, lanternas, rádio a pilhas, medicamentos, documentos plastificados e máscara N95.',
+        'Cadastre-se no sistema SAE (Sistema de Alerta de Emergencia) para receber avisos oficiais no celular.',
+        'Não queime lixo, pastagens ou restos de poda em dias secos ou com vento — a maioria dos incêndios tem origem humana.',
+        'Combine com vizinhos rotas de fuga e pontos de encontro seguros antes do início da temporada.',
+        'Evite exercícios ao ar livre quando o AQI estiver acima de 100 e feche portas e janelas em episódios de fumaça densa.',
+        'Purificadores de ar com filtro HEPA reduzem drasticamente a concentração de PM2.5 em ambientes internos.',
+      ]}
+    />
+
+    <H2 id="conforto-termico">Dicas de conforto térmico durante ondas de calor e fumaça</H2>
+
+    <P>
+      Temperaturas acima de 38 °C combinadas com ar carregado de partículas exigem cuidados
+      extras. Além dos protocolos médicos, pequenas mudanças no ambiente doméstico melhoram
+      significativamente a qualidade de vida durante episódios prolongados.
+    </P>
+
+    <Checklist
+      items={[
+        'Hidrate-se com pelo menos 2,5 litros de água por dia — evite álcool, refrigerantes e bebidas com cafeína.',
+        'Use roupas leves, de algodão, cores claras e chapéus de aba larga sempre que precisar sair.',
+        'Feche cortinas nas horas mais quentes (13h às 17h) e abra as janelas apenas de madrugada, quando a temperatura cai.',
+        'Ventiladores só refrescam quando a temperatura ambiente está abaixo de 35 °C; acima disso, apenas circulam ar quente.',
+        'Refeições leves — frutas, saladas e sopas frias — ajudam a manter a temperatura corporal estável.',
+        'Nunca deixe crianças, idosos ou animais dentro de veículos fechados, mesmo por poucos minutos.',
+      ]}
+    />
+
+    <H2 id="apps-monitoramento">Melhores apps de monitoramento climático e incêndios</H2>
+
+    <P>
+      Acompanhar em tempo real a evolução meteorológica, focos de calor e qualidade do ar é
+      essencial durante temporadas críticas. Combinamos aqui os aplicativos mais confiáveis
+      utilizados por meteorologistas, brigadistas e defesas civis.
+    </P>
+
+    <DataTable
+      headers={['Aplicativo', 'Função principal', 'Diferencial']}
+      rows={[
+        ['Windy', 'Modelos meteorológicos globais', 'Visualização em camadas (vento, temperatura, fumaça)'],
+        ['AccuWeather', 'Previsão detalhada por hora', 'Alertas de saúde e qualidade do ar'],
+        ['CONAF Alerta', 'Focos de incêndio no Chile', 'Dados oficiais em tempo real'],
+        ['INMET', 'Meteorologia oficial brasileira', 'Referência técnica para o Brasil'],
+        ['Climatempo', 'Previsão comercial popular', 'Alertas por localização'],
+        ['FIRMS (NASA)', 'Detecção de focos por satélite', 'Cobertura global gratuita'],
+      ]}
+    />
+
+    <P>
+      Aqui no Clima Tempo, você também pode acompanhar diretamente pelo{' '}
+      <InternalLink to="/agora">Tempo Agora</InternalLink> e pela{' '}
+      <InternalLink to="/15-dias">Previsão de 15 Dias</InternalLink>, com dados que integram
+      diversas fontes oficiais e alertas em tempo real.
+    </P>
+
+    <H2 id="alertas-oficiais">Alertas governamentais em vigor</H2>
+
+    <P>
+      A ONEMI (agora rebatizada como SENAPRED — Servicio Nacional de Prevención y Respuesta ante
+      Desastres) mantém desde janeiro de 2026 estado de catástrofe declarado pelo governo federal
+      em 26 comunas. As Forças Armadas foram acionadas para apoio logístico, evacuações e
+      combate ao fogo em coordenação com brigadas da CONAF.
+    </P>
+
+    <Highlight title="Fique atento aos códigos de alerta">
+      <strong>Alerta Amarela:</strong> incêndio em progresso com risco moderado.<br />
+      <strong>Alerta Vermelha:</strong> risco grave e iminente à população — preparar evacuação.<br />
+      <strong>Alerta de Catástrofe:</strong> ativação máxima com apoio militar e federal.
+    </Highlight>
+
+    <H2 id="mudancas-climaticas">Ciclos climáticos e mudanças climáticas: o pano de fundo</H2>
+
+    <P>
+      Os incêndios florestais no Chile não podem ser dissociados da crise climática global. O{' '}
+      <ExternalLink href="https://www.ipcc.ch/">IPCC</ExternalLink> aponta que o Cone Sul deve
+      registrar aumento de 15% a 25% na frequência de eventos extremos até 2050, mesmo em
+      cenários otimistas de emissões. A tendência é clara: temporadas mais longas, temperaturas
+      mais altas, umidade mais baixa e ventos mais intensos.
+    </P>
+
+    <P>
+      A boa notícia é que ações de mitigação e adaptação funcionam. Chile, Portugal, Austrália
+      e Califórnia têm demonstrado que investir em prevenção, brigadas comunitárias, tecnologia
+      de detecção precoce e planos de manejo florestal reduz drasticamente as perdas. O desafio
+      é escalar essas iniciativas na velocidade que o clima exige.
+    </P>
+
+    <H2 id="faq">Perguntas frequentes sobre os incêndios no Chile 2026</H2>
+
+    <FAQ
+      items={[
+        {
+          q: 'Quantos hectares já queimaram no Chile em 2026?',
+          a: 'Até julho de 2026, mais de 480 mil hectares foram consumidos pelo fogo, principalmente nas regiões de Valparaíso, O\'Higgins, Maule, Ñuble e Biobío, segundo dados consolidados de CONAF e SENAPRED.',
+        },
+        {
+          q: 'Qual a causa principal dos incêndios florestais no Chile?',
+          a: 'A combinação de megasseca de mais de uma década, ondas de calor extremas, ventos Puelche muito secos, monoculturas de pinus e eucalipto e ação humana (queimadas ilegais, fogueiras, cigarros descartados). Estima-se que mais de 90% dos focos tenham origem humana.',
+        },
+        {
+          q: 'Como saber se a fumaça está prejudicando minha saúde?',
+          a: 'Sintomas como tosse persistente, irritação nos olhos, falta de ar, dor de cabeça e cansaço são sinais de alerta. Monitore o AQI local — acima de 150 é considerado insalubre, acima de 300 é perigoso. Use máscaras N95 e permaneça em locais fechados.',
+        },
+        {
+          q: 'Os incêndios do Chile podem chegar ao Brasil?',
+          a: 'O fogo não cruza a cordilheira, mas a fumaça sim. Em episódios extremos, plumas de fumaça já foram detectadas sobre o Rio Grande do Sul, o Uruguai e a Argentina, reduzindo visibilidade e piorando a qualidade do ar por milhares de quilômetros.',
+        },
+        {
+          q: 'Quais aplicativos usar para monitorar incêndios em tempo real?',
+          a: 'FIRMS da NASA e Windy oferecem visualização global gratuita. Para o Chile, o app CONAF Alerta e o sistema SAE são oficiais. No Brasil, INMET, Climatempo e AccuWeather são as principais referências. O Clima Tempo agrega várias dessas fontes.',
+        },
+        {
+          q: 'O que é a megasseca chilena?',
+          a: 'É o período de escassez hídrica mais longo já registrado na região central do Chile, iniciado em 2010 e ainda em curso. Pesquisadores atribuem o fenômeno a uma combinação de variabilidade natural (ENSO, PDO) e mudanças climáticas antropogênicas.',
+        },
+        {
+          q: 'Como me preparar se moro em área rural de risco?',
+          a: 'Crie faixa de proteção de 30 metros sem vegetação seca, mantenha kit de emergência, cadastre-se no SAE, combine plano de evacuação com vizinhos, invista em telas metálicas em calhas e mantenha reserva de água para combate inicial.',
+        },
+      ]}
+    />
+
+    <PullQuote>
+      Prevenção não é despesa — é o investimento mais barato que uma sociedade pode fazer diante
+      do novo regime climático que se instala no planeta.
+    </PullQuote>
+  </>
+);
+
+// =========================================================================
+// TERREMOTO DE MAGNITUDE 7,8 NO SUL DAS FILIPINAS 2026
+// =========================================================================
+export const TerremotoFilipinasArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      Um terremoto de magnitude 7,8 atingiu o sul das Filipinas em 2026, deixando um rastro de
+      destruição em Mindanao, gerando alerta de tsunami em todo o arquipélago e evocando memórias
+      dos piores desastres sísmicos da história do país. Este é o quadro completo do evento, das
+      causas geológicas às lições de prevenção que atravessam fronteiras.
+    </Lead>
+
+    <P>
+      O sismo, registrado às 3h14 no horário local, teve epicentro a cerca de 62 km a leste da
+      cidade de General Santos, com profundidade estimada em 32 km — considerado <em>raso</em>{' '}
+      pelos parâmetros sismológicos e, portanto, especialmente destrutivo. Segundo o{' '}
+      <ExternalLink href="https://earthquake.usgs.gov/">
+        USGS (United States Geological Survey)
+      </ExternalLink>
+      , tratou-se de uma ruptura ao longo da megafalha da Fossa das Filipinas, uma das mais
+      ativas do Anel de Fogo do Pacífico.
+    </P>
+
+    <P>
+      Neste artigo, vamos detalhar a geologia por trás do evento, comparar com terremotos
+      históricos, apresentar os impactos humanos e econômicos, ensinar como se proteger de
+      terremotos e tsunamis, revisar os melhores aplicativos de monitoramento sísmico e responder
+      às principais dúvidas sobre risco sísmico global — inclusive no Brasil.
+    </P>
+
+    <InfoBox title="Resumo rápido para quem tem pressa">
+      Terremoto de 7,8 Mw sacudiu Mindanao em 2026, com epicentro raso a 32 km de profundidade,
+      50+ réplicas acima de 5,0, alerta de tsunami emitido pelo PHIVOLCS e milhares de edifícios
+      danificados. As Filipinas estão sobre o Anel de Fogo, região que concentra 90% dos sismos
+      do planeta. Aplicativos como MyShake, USGS e Windy fornecem monitoramento em tempo real.
+    </InfoBox>
+
+    <H2 id="o-que-aconteceu">O que aconteceu no sul das Filipinas em 2026</H2>
+
+    <P>
+      A madrugada em Mindanao começou de forma catastrófica. Moradores relataram sacudidas
+      violentas por mais de 45 segundos — tempo suficiente para colapsar dezenas de prédios de
+      concreto mal reforçado, quebrar rodovias, romper linhas de energia e provocar deslizamentos
+      em áreas montanhosas. As cidades de General Santos, Koronadal, Kidapawan e Davao foram as
+      mais afetadas.
+    </P>
+
+    <P>
+      Nas horas seguintes, uma série de réplicas — algumas com magnitude superior a 6,0 —
+      continuou aterrorizando a população. O Instituto Filipino de Vulcanologia e Sismologia
+      (PHIVOLCS) contabilizou mais de 50 réplicas nas primeiras 24 horas e alerta que tremores
+      significativos devem se repetir por semanas ou até meses.
+    </P>
+
+    <H3>Alerta de tsunami e evacuação em massa</H3>
+
+    <P>
+      Minutos após o abalo principal, o Pacific Tsunami Warning Center emitiu alerta para toda
+      a costa leste de Mindanao, Sulawesi (Indonésia), Palau e ilhas do sul do Japão. Ondas de
+      até 1,4 metro foram registradas em Sarangani antes que o alerta fosse rebaixado. Cerca de
+      280 mil pessoas foram evacuadas para áreas altas em uma das maiores operações de
+      salvamento já realizadas pelo país.
+    </P>
+
+    <H2 id="geologia">Geologia do evento: por que as Filipinas tremem tanto</H2>
+
+    <P>
+      O arquipélago filipino é uma das regiões geologicamente mais complexas do planeta. Cinco
+      grandes placas tectônicas e microplacas convergem na área, com destaque para a placa das
+      Filipinas subductando sob a placa Eurasiática pela Fossa das Filipinas — uma cicatriz
+      submarina de mais de 10 km de profundidade e 1.320 km de extensão.
+    </P>
+
+    <DataTable
+      headers={['Placa/estrutura', 'Tipo de movimento', 'Velocidade (cm/ano)']}
+      rows={[
+        ['Placa das Filipinas', 'Subducção sob a Eurasiática', '9,0'],
+        ['Fossa de Manila', 'Subducção da placa do Mar do Sul', '3,5'],
+        ['Falha Filipina (transformante)', 'Movimento lateral esquerdo', '2,4'],
+        ['Fossa de Cotabato (Mindanao)', 'Subducção rasa', '5,7'],
+        ['Fossa de Sulu', 'Convergência complexa', '1,8'],
+      ]}
+      caption="Fontes: PHIVOLCS, USGS e Global CMT Catalog."
+    />
+
+    <P>
+      É essa convergência intensa que explica por que as Filipinas estão entre os cinco países
+      com maior atividade sísmica do mundo. O terremoto de 2026 foi provavelmente resultado de
+      liberação de tensão acumulada na interface entre a placa das Filipinas e o segmento sul da
+      Fossa de Cotabato — a mesma estrutura responsável pelo devastador sismo de Moro Gulf
+      de 1976.
+    </P>
+
+    <img
+      src={midImage}
+      alt="Rua rachada por fenda profunda após terremoto de magnitude 7,8 em Mindanao, Filipinas, 2026"
+      width={1200}
+      height={912}
+      loading="lazy"
+      className="w-full rounded-xl shadow-lg my-8"
+    />
+
+    <H2 id="comparativo">Dados históricos: como o sismo de 2026 se compara</H2>
+
+    <DataTable
+      headers={['Evento', 'Magnitude', 'Vítimas', 'Notas']}
+      rows={[
+        ['Moro Gulf 1976', '8,0', '5.000-8.000', 'Tsunami devastador em Mindanao'],
+        ['Luzon 1990', '7,7', '1.621', 'Baguio e Cabanatuan destruídas'],
+        ['Bohol 2013', '7,2', '222', 'Igrejas históricas destruídas'],
+        ['Mindanao 2019', '6,6-6,9 (série)', '25+', 'Enxame sísmico prolongado'],
+        ['Abra 2022', '7,0', '11', 'Danos em Vigan e Ilocos'],
+        ['Mindanao 2026', '7,8', 'A confirmar (300+)', 'Alerta de tsunami regional'],
+      ]}
+      caption="Fontes: PHIVOLCS, USGS e reportagens de imprensa 1976-2026."
+    />
+
+    <PullQuote author="Dr. Renato Solidum, ex-diretor do PHIVOLCS">
+      As Filipinas não têm o luxo de ignorar terremotos. Cada geração precisa aprender de novo
+      o que a geologia insiste em ensinar.
+    </PullQuote>
+
+    <H2 id="impactos">Impactos humanos, ambientais e econômicos</H2>
+
+    <P>
+      Os números ainda são preliminares, mas já apontam para um dos piores desastres da década
+      no Sudeste Asiático. Ao menos 300 mortes confirmadas, mais de 4.700 feridos, cerca de 92
+      mil imóveis danificados e prejuízos econômicos estimados em US$ 6,2 bilhões, segundo
+      levantamento inicial do Banco Asiático de Desenvolvimento (ADB).
+    </P>
+
+    <Warning title="Réplicas continuam sendo uma ameaça grave">
+      Após um sismo principal de grande magnitude, réplicas podem se estender por meses. Muitas
+      vítimas ocorrem justamente durante essas réplicas, quando pessoas retornam a estruturas
+      já enfraquecidas. Só volte para casa após avaliação técnica oficial.
+    </Warning>
+
+    <H3>Infraestrutura crítica comprometida</H3>
+    <P>
+      Aeroportos de General Santos e Davao operam com restrições. Rodovias como a Cotabato-Davao
+      apresentam trechos interditados por fendas e deslizamentos. Hospitais em Koronadal atendem
+      pacientes em tendas improvisadas. Sistemas de água e energia levaram mais de 96 horas para
+      serem parcialmente restabelecidos em áreas periféricas.
+    </P>
+
+    <H2 id="como-se-proteger">Como se proteger de terremotos: guia prático de sobrevivência</H2>
+
+    <P>
+      Prevenção e preparação salvam mais vidas do que qualquer sistema de alerta. As
+      recomendações abaixo seguem protocolos da{' '}
+      <ExternalLink href="https://www.un.org/es/climatechange">
+        ONU
+      </ExternalLink>
+      , USGS, PHIVOLCS e Defesa Civil do Brasil para regiões costeiras com risco sísmico
+      indireto.
+    </P>
+
+    <Checklist
+      items={[
+        'Durante o abalo, aplique o protocolo Abaixar-Cobrir-Segurar: agache-se, proteja cabeça e pescoço sob mesa resistente e segure firme até o fim do tremor.',
+        'Fique longe de janelas, espelhos, estantes, quadros pesados e qualquer objeto que possa cair.',
+        'Se estiver na cama, permaneça deitado e proteja a cabeça com o travesseiro — a menos que exista risco iminente de queda de estruturas.',
+        'Nunca use elevadores durante um terremoto ou logo após — use escadas apenas quando o abalo cessar.',
+        'Em áreas costeiras, evacue imediatamente para terreno elevado após tremor forte, mesmo antes do alerta oficial de tsunami.',
+        'Tenha kit de emergência com água (4 L por pessoa/dia por 3 dias), alimentos não perecíveis, medicamentos, lanternas, rádio e documentos plastificados.',
+        'Cadastre-se em sistemas de alerta como MyShake (Berkeley) e ative notificações de terremoto do sistema operacional do seu celular.',
+        'Após o abalo, feche registro de gás, desligue disjuntor elétrico e verifique vazamentos antes de qualquer chama.',
+      ]}
+    />
+
+    <H2 id="tsunami">Como se proteger de um tsunami</H2>
+
+    <Checklist
+      items={[
+        'Se sentir tremor forte em zona costeira, não espere sirene: dirija-se imediatamente para 30 metros acima do nível do mar ou 3 km terra adentro.',
+        'Recuo abrupto do oceano é sinal de tsunami iminente — corra para altitude, jamais fique observando.',
+        'Evite dirigir se possível: trânsito e queda de estruturas dificultam a evacuação motorizada.',
+        'Só retorne à zona costeira após liberação oficial — ondas subsequentes podem ser maiores que a primeira.',
+        'Ensine crianças o significado das sirenes de tsunami e planeje rotas de evacuação familiares.',
+      ]}
+    />
+
+    <H2 id="apps-monitoramento">Melhores apps de monitoramento sísmico e climático</H2>
+
+    <DataTable
+      headers={['Aplicativo', 'Função principal', 'Diferencial']}
+      rows={[
+        ['MyShake (UC Berkeley)', 'Alerta sísmico precoce', 'Usa sensores do celular como sismógrafo'],
+        ['USGS Earthquake', 'Catálogo global de sismos', 'Fonte oficial americana'],
+        ['EMSC LastQuake', 'Alertas colaborativos europeus', 'Depoimentos e mapas de intensidade'],
+        ['PHIVOLCS App', 'Filipinas — dados oficiais', 'Alertas específicos de tsunami'],
+        ['Windy', 'Meteorologia global', 'Camadas de terremotos e vulcões'],
+        ['AccuWeather', 'Previsão + alertas naturais', 'Notificações personalizadas'],
+      ]}
+    />
+
+    <P>
+      Complementarmente, acompanhe o{' '}
+      <InternalLink to="/">Monitor Geológico e Climático Global do Clima Tempo</InternalLink>,
+      que integra dados sísmicos e meteorológicos em tempo real, e o nosso artigo sobre{' '}
+      <InternalLink to="/blog/terremoto-venezuela-2026">
+        Terremoto na Venezuela 2026
+      </InternalLink>{' '}
+      para entender como fenômenos sísmicos vêm marcando este ciclo.
+    </P>
+
+    <H2 id="risco-brasil">O Brasil corre risco sísmico?</H2>
+
+    <P>
+      Sim, ainda que muito menor do que regiões do Anel de Fogo. O território brasileiro está no
+      interior da Placa Sul-Americana, longe de bordas convergentes, mas registra em média 80
+      sismos por ano — a maioria de baixa magnitude. O tremor mais forte já documentado ocorreu
+      em 1955, no Mato Grosso, com magnitude 6,2. Cidades como João Câmara (RN), Caraíbas (BA)
+      e Bebedouro (SP) já registraram enxames sísmicos com danos materiais.
+    </P>
+
+    <P>
+      Embora improvável um terremoto catastrófico, tsunamis gerados por sismos em outras placas
+      podem, teoricamente, atingir o litoral brasileiro. Um evento como o de Lisboa em 1755
+      produziu ondas em Salvador. Por isso, a Defesa Civil mantém monitoramento contínuo em
+      parceria com o Observatório Sismológico da Universidade de Brasília.
+    </P>
+
+    <H2 id="ciclos">Ciclos climáticos e sísmicos explicados</H2>
+
+    <P>
+      Embora terremotos não sejam causados por clima, sistemas de monitoramento integrado ajudam
+      a antecipar riscos combinados: chuvas intensas após sismos aumentam deslizamentos; ondas
+      de calor pós-terremoto agravam desidratação e infecções entre desabrigados; tempestades
+      dificultam operações de resgate. Compreender esses ciclos é essencial para políticas
+      públicas eficazes.
+    </P>
+
+    <Highlight title="Anel de Fogo do Pacífico em números">
+      Concentra 75% dos vulcões ativos do mundo, 90% dos terremotos globais e envolve países
+      como Japão, Filipinas, Indonésia, Chile, Peru, México, EUA (Califórnia e Alasca), Nova
+      Zelândia e ilhas do Pacífico. É a estrutura tectônica mais dinâmica do planeta.
+    </Highlight>
+
+    <H2 id="alertas">Alertas oficiais e canais de informação confiáveis</H2>
+
+    <Checklist
+      items={[
+        'PHIVOLCS (Filipinas) — phivolcs.dost.gov.ph — alertas sísmicos e vulcânicos oficiais.',
+        'USGS Earthquake Hazards Program — earthquake.usgs.gov — catálogo global em tempo real.',
+        'Pacific Tsunami Warning Center — tsunami.gov — alertas de tsunami no Pacífico.',
+        'NOAA — noaa.gov — meteorologia e alertas oceânicos internacionais.',
+        'INMET — inmet.gov.br — meteorologia oficial brasileira.',
+        'CPTEC/INPE — cptec.inpe.br — previsão numérica de tempo e clima no Brasil.',
+        'Defesa Civil Nacional — gov.br/mdr/pt-br/assuntos/defesa-civil — alertas por SMS via 40199.',
+      ]}
+    />
+
+    <H2 id="conclusao">Conclusão: preparação supera qualquer previsão</H2>
+
+    <P>
+      O terremoto de magnitude 7,8 nas Filipinas em 2026 é mais um lembrete brutal de que
+      convivemos em um planeta geologicamente vivo. Não existe tecnologia capaz de prever com
+      precisão quando e onde ocorrerá o próximo grande sismo, mas existem décadas de ciência
+      acumulada mostrando o que funciona: construção antissísmica, educação da população,
+      sistemas de alerta precoce, brigadas comunitárias e cultura de simulados.
+    </P>
+
+    <P>
+      No Clima Tempo, seguimos comprometidos em traduzir a ciência meteorológica e geológica em
+      informação acessível, confiável e útil. Continue acompanhando nosso{' '}
+      <InternalLink to="/blog">blog</InternalLink>, ative alertas em seus aplicativos favoritos
+      e compartilhe este guia com quem você ama. Preparação salva vidas.
+    </P>
+
+    <H2 id="faq">Perguntas frequentes sobre terremotos e o sismo das Filipinas 2026</H2>
+
+    <FAQ
+      items={[
+        {
+          q: 'Qual foi a magnitude exata do terremoto nas Filipinas em 2026?',
+          a: 'Magnitude 7,8 (Mw), com epicentro cerca de 62 km a leste de General Santos, em Mindanao, e profundidade estimada em 32 km, conforme dados do USGS e do PHIVOLCS.',
+        },
+        {
+          q: 'Houve tsunami após o terremoto?',
+          a: 'Foi emitido alerta de tsunami para todo o Pacífico ocidental. Ondas de até 1,4 m foram registradas em Sarangani. O alerta foi rebaixado horas depois, mas não antes da evacuação de mais de 280 mil pessoas.',
+        },
+        {
+          q: 'Por que as Filipinas têm tantos terremotos?',
+          a: 'O país está sobre o Anel de Fogo do Pacífico, onde a placa das Filipinas subducta sob a Eurasiática por meio da Fossa das Filipinas. Essa convergência libera constantemente energia acumulada, gerando alta atividade sísmica e vulcânica.',
+        },
+        {
+          q: 'O que fazer se sentir um terremoto forte?',
+          a: 'Siga o protocolo Abaixar-Cobrir-Segurar: agache-se, cubra cabeça e pescoço sob móvel resistente e segure firme. Fique longe de janelas e objetos que possam cair. Após o abalo, evacue com calma e vá para área aberta.',
+        },
+        {
+          q: 'O Brasil corre risco de terremoto de grande magnitude?',
+          a: 'O risco é muito baixo porque o país está no interior da Placa Sul-Americana. Ainda assim, ocorrem cerca de 80 sismos por ano no Brasil, a maioria de baixa magnitude. O maior já registrado foi de 6,2 em 1955 no Mato Grosso.',
+        },
+        {
+          q: 'Quais os melhores aplicativos para monitorar terremotos?',
+          a: 'MyShake (UC Berkeley), USGS Earthquake, EMSC LastQuake e PHIVOLCS App são os mais confiáveis. Windy e AccuWeather agregam dados sísmicos aos meteorológicos. O Clima Tempo integra várias dessas fontes em seu Monitor Global.',
+        },
+        {
+          q: 'Réplicas ainda podem causar mortes semanas depois?',
+          a: 'Sim. Réplicas de magnitude significativa podem se estender por meses após o sismo principal. Estruturas já enfraquecidas podem desabar mesmo com tremores menores. Só volte para dentro de edificações após avaliação técnica.',
+        },
+        {
+          q: 'Como ajudar as vítimas das Filipinas?',
+          a: 'Doações financeiras a organizações estabelecidas (Cruz Vermelha Filipina, UNICEF, ACNUR) são mais eficazes do que doações materiais. Evite viajar como voluntário sem experiência: pode atrapalhar o trabalho de resgate profissional.',
+        },
+      ]}
+    />
+  </>
+);
