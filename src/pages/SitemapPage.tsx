@@ -24,7 +24,7 @@ const SitemapPage = () => {
     { name: 'Super El Niño 2026', url: '/blog/super-el-nino-2026', icon: BookOpen },
     { name: 'Terremoto na Venezuela 2026', url: '/blog/terremoto-venezuela-2026', icon: BookOpen },
     { name: 'Calor Extremo na Europa 2026', url: '/blog/calor-extremo-europa-2026', icon: BookOpen },
-    { name: 'Vulcões em Erupção em 2026', url: '/blog/vulcoes-erupcao-2026', icon: BookOpen 
+    { name: 'Vulcões em Erupção em 2026', url: '/blog/vulcoes-erupcao-2026', icon: BookOpen }, 
   ];
 
   const legalPages = [
