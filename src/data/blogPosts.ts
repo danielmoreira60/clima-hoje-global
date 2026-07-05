@@ -10,6 +10,10 @@ import pernambucoSecaCover from '@/assets/blog/pernambuco-seca-cover.jpg';
 import pernambucoSecaMid from '@/assets/blog/pernambuco-seca-mid.jpg';
 import tornadosBrasilCover from '@/assets/blog/tornados-brasil-cover.jpg';
 import tornadosBrasilMid from '@/assets/blog/tornados-brasil-mid.jpg';
+import incendiosChileCover from '@/assets/blog/incendios-chile-cover.jpg';
+import incendiosChileMid from '@/assets/blog/incendios-chile-mid.jpg';
+import terremotoFilipinasCover from '@/assets/blog/terremoto-filipinas-cover.jpg';
+import terremotoFilipinasMid from '@/assets/blog/terremoto-filipinas-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -29,6 +33,77 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'incendios-florestais-chile-2026',
+    title: 'Incêndios florestais devastam o Chile em 2026: 480 mil hectares queimados e caos climático',
+    excerpt:
+      'Onda de calor extrema, ventos Puelche e megasseca de mais de uma década alimentam a pior temporada de incêndios florestais da história recente do Chile. Entenda causas, impactos e como se proteger.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-red-500 to-orange-600',
+    date: '05 Jul 2026',
+    dateISO: '2026-07-05',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: incendiosChileCover,
+    midImage: incendiosChileMid,
+    tags: [
+      'incêndios florestais chile 2026',
+      'incêndios chile hoje',
+      'onda de calor chile',
+      'megasseca chile',
+      'ventos puelche chile',
+      'como se proteger de incêndios florestais',
+      'dicas de conforto térmico onda de calor',
+      'melhores apps de monitoramento climático',
+      'qualidade do ar fumaça incêndio',
+      'alertas conaf senapred chile',
+      'ciclos climáticos el niño la niña',
+      'mudanças climáticas américa do sul',
+      'prevenção incêndio florestal',
+      'dados históricos incêndios chile',
+      'incêndio valparaíso biobío maule',
+    ],
+    metaTitle: 'Incêndios Florestais no Chile 2026: 480 Mil Hectares em Chamas',
+    metaDescription:
+      'Chile enfrenta pior temporada de incêndios florestais de 2026: causas climáticas, impactos, apps de monitoramento e como se proteger da fumaça.',
+  },
+  {
+    slug: 'terremoto-filipinas-7-8-2026',
+    title: 'Terremoto de magnitude 7,8 no sul das Filipinas em 2026: Mindanao devastada e alerta de tsunami',
+    excerpt:
+      'Sismo de 7,8 Mw abalou Mindanao em 2026, gerou alerta de tsunami em todo o Pacífico ocidental e provocou centenas de mortes. Análise geológica, dados USGS/PHIVOLCS e guia de proteção.',
+    category: 'Geologia',
+    categoryColor: 'from-amber-500 to-orange-600',
+    date: '04 Jul 2026',
+    dateISO: '2026-07-04',
+    readTime: '13 min',
+    author: 'Equipe Clima Tempo',
+    cover: terremotoFilipinasCover,
+    midImage: terremotoFilipinasMid,
+    tags: [
+      'terremoto filipinas 2026',
+      'terremoto mindanao 7.8',
+      'sismo filipinas hoje',
+      'alerta de tsunami pacífico',
+      'anel de fogo do pacífico',
+      'fossa das filipinas',
+      'placas tectônicas asia',
+      'como se proteger de terremoto',
+      'como se proteger de tsunami',
+      'melhores apps de monitoramento sísmico',
+      'myshake usgs phivolcs app',
+      'terremoto general santos davao',
+      'ciclos sísmicos explicados',
+      'risco de terremoto no brasil',
+      'dados históricos terremotos filipinas',
+      'prevenção e cuidados terremoto',
+      'alertas governamentais tsunami',
+      'placa das filipinas subducção',
+    ],
+    metaTitle: 'Terremoto 7,8 nas Filipinas 2026: Mindanao, Tsunami e Análise',
+    metaDescription:
+      'Terremoto 7,8 Mw sacode Mindanao em 2026: dados USGS, alerta de tsunami, causas geológicas e guia completo de proteção contra sismos.',
+  },
   {
     slug: 'pernambuco-emergencia-seca-75-cidades',
     title: 'Pernambuco decreta emergência em 75 cidades por seca: reservatórios em nível crítico',

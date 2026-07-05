@@ -17,12 +17,14 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Incêndios Florestais no Chile 2026', url: '/blog/incendios-florestais-chile-2026', icon: BookOpen },
+    { name: 'Terremoto 7,8 nas Filipinas 2026', url: '/blog/terremoto-filipinas-7-8-2026', icon: BookOpen },
     { name: 'Pernambuco: Emergência em 75 Cidades', url: '/blog/pernambuco-emergencia-seca-75-cidades', icon: BookOpen },
     { name: 'Corredor de Tornados no Brasil', url: '/blog/segundo-maior-corredor-tornados-brasil', icon: BookOpen },
     { name: 'Super El Niño 2026', url: '/blog/super-el-nino-2026', icon: BookOpen },
     { name: 'Terremoto na Venezuela 2026', url: '/blog/terremoto-venezuela-2026', icon: BookOpen },
     { name: 'Calor Extremo na Europa 2026', url: '/blog/calor-extremo-europa-2026', icon: BookOpen },
-    { name: 'Vulcões em Erupção em 2026', url: '/blog/vulcoes-erupcao-2026', icon: BookOpen },
+    { name: 'Vulcões em Erupção em 2026', url: '/blog/vulcoes-erupcao-2026', icon: BookOpen }, 
   ];
 
   const legalPages = [
