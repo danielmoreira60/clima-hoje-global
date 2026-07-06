@@ -2298,3 +2298,509 @@ export const TerremotoFilipinasArticle: React.FC<{ midImage: string }> = ({ midI
     />
   </>
 );
+
+export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      O gelo marinho do Ártico atingiu em 2026 o menor volume já registrado para o período de inverno,
+      segundo dados divulgados pelo National Snow and Ice Data Center. O recorde negativo reacende o
+      alerta global sobre o ritmo acelerado das mudanças climáticas e o desequilíbrio dos padrões
+      meteorológicos que afetam diretamente a previsão do tempo no Brasil e no mundo.
+    </Lead>
+
+    <P>
+      Em março de 2026, a extensão máxima do gelo marinho ártico ficou 8% abaixo da média histórica
+      calculada entre 1981 e 2010, marcando o pior desempenho invernal em 47 anos de observação por
+      satélite. O volume estimado pelo PIOMAS caiu para menos de 20 mil km³, algo inédito desde o
+      início dos registros. Esse cenário tem impacto direto na circulação atmosférica global, nos
+      padrões de vento, correntes oceânicas e no comportamento das estações do ano.
+    </P>
+
+    <P>
+      Neste guia completo, você vai entender por que o Ártico está perdendo gelo em ritmo acelerado,
+      como esse fenômeno se conecta com ondas de calor, ondas de frio anormais, furacões mais
+      intensos e chuvas extremas, quais são os dados oficiais atualizados de 2026 e como se preparar
+      para as consequências climáticas que já batem à porta do Brasil.
+    </P>
+
+    <H2 id="o-que-esta-acontecendo">O que está acontecendo com o gelo marinho do Ártico em 2026</H2>
+
+    <P>
+      O gelo marinho do Ártico funciona como um espelho gigante que reflete a radiação solar de volta
+      para o espaço, mantendo o planeta refrigerado. Quando ele derrete, a superfície escura do oceano
+      absorve mais calor, o que acelera ainda mais o aquecimento. Esse ciclo é chamado de feedback
+      albedo-gelo e é uma das engrenagens mais críticas do sistema climático global.
+    </P>
+
+    <P>
+      Em 2026, cientistas do{' '}
+      <ExternalLink href="https://nsidc.org/">National Snow and Ice Data Center (NSIDC)</ExternalLink>{' '}
+      registraram máxima invernal de apenas 14,15 milhões de km² — 1,2 milhão de km² abaixo da média
+      de longo prazo. É como se uma área equivalente ao território da Bolívia e do Peru somados
+      simplesmente tivesse deixado de congelar neste inverno. Segundo a{' '}
+      <ExternalLink href="https://climate.nasa.gov/">NASA Climate</ExternalLink>, a espessura média
+      do gelo perene também caiu para 1,4 m, ante 3,0 m nos anos 1980.
+    </P>
+
+    <InfoBox title="Resumo para quem tem pressa">
+      O Ártico perdeu 8% do gelo marinho invernal em 2026, o pior número em 47 anos. Isso intensifica
+      ondas de calor no Hemisfério Norte, altera a rota do jato polar e reforça extremos climáticos
+      no Brasil, como secas na Amazônia e chuvas torrenciais no Sul.
+    </InfoBox>
+
+    <H2 id="causas">As três causas principais do recorde de 2026</H2>
+
+    <H3 id="aquecimento">1. Aquecimento global acelerado</H3>
+    <P>
+      A temperatura média do Ártico aumentou 4 vezes mais rápido do que a média global desde 1979,
+      segundo estudo publicado pela Nature Communications. Em 2026, o inverno ártico registrou dias
+      com temperaturas 20 °C acima do normal em regiões como o Estreito de Fram e o Mar de Barents,
+      dificultando a formação de gelo novo.
+    </P>
+
+    <H3 id="oceano-mais-quente">2. Oceanos mais quentes</H3>
+    <P>
+      O calor absorvido pelos oceanos nas últimas décadas está finalmente aflorando em áreas polares.
+      A intrusão de águas atlânticas quentes no Ártico — fenômeno chamado de "atlantificação" —
+      derrete o gelo pela base, mesmo com o ar frio na superfície. Sensores da Copernicus Marine
+      Service mostram anomalias de +2,3 °C na coluna d'água entre 200 e 400 metros de profundidade.
+    </P>
+
+    <H3 id="jato-polar">3. Alterações no vórtice polar</H3>
+    <P>
+      Um vórtice polar mais fraco e ondulante empurra ar polar para latitudes médias e leva ar
+      subtropical quente para o Ártico. Em janeiro de 2026, uma "quebra súbita estratosférica"
+      levou temperaturas próximas de 0 °C ao Polo Norte, algo raríssimo para pleno inverno.
+    </P>
+
+    <PullQuote>
+      "O que estamos vendo no Ártico em 2026 não é apenas mais um recorde. É um aviso de que o
+      sistema climático está entrando em uma nova fase, com consequências que serão sentidas em
+      todos os continentes." — Dra. Julienne Stroeve, glaciologista do University College London.
+    </PullQuote>
+
+    <img
+      src={midImage}
+      alt="Navio de pesquisa polar cercado por gelo marinho fragmentado do Ártico em 2026"
+      width={1200}
+      height={800}
+      loading="lazy"
+      className="w-full rounded-xl my-8 shadow-lg"
+    />
+
+    <H2 id="dados-historicos">Dados históricos: como 2026 se compara com os últimos 40 anos</H2>
+
+    <DataTable
+      headers={['Ano', 'Máxima Invernal (mi km²)', 'Anomalia vs. média', 'Observação']}
+      rows={[
+        ['1983', '16,52', '+1,17', 'Ártico "saudável" pré-aquecimento acelerado'],
+        ['1996', '15,86', '+0,51', 'Últimos anos de estabilidade relativa'],
+        ['2012', '15,25', '−0,10', 'Início da fase crítica de perda acelerada'],
+        ['2017', '14,42', '−0,93', 'Antigo recorde negativo do inverno'],
+        ['2023', '14,62', '−0,73', 'Redução persistente da espessura'],
+        ['2026', '14,15', '−1,20', 'Novo recorde negativo em 47 anos'],
+      ]}
+    />
+
+    <H2 id="impactos-brasil">Impactos diretos no clima do Brasil</H2>
+
+    <P>
+      Pode parecer distante, mas o que acontece no Ártico influencia diretamente a previsão do tempo
+      no Brasil. A perda de gelo enfraquece o gradiente térmico entre polos e equador, o que
+      desestabiliza a corrente de jato — a "auto-estrada" de ventos que organiza tempestades e
+      frentes frias. O resultado é sentido de várias formas em nosso território.
+    </P>
+
+    <Checklist
+      items={[
+        'Secas mais longas e severas na Amazônia e no Cerrado',
+        'Chuvas torrenciais concentradas no Sul e Sudeste',
+        'Frentes frias mais raras, porém mais intensas quando ocorrem',
+        'Ondas de calor prolongadas no Centro-Oeste e Nordeste',
+        'Ciclones extratropicais mais frequentes no litoral gaúcho e catarinense',
+        'Alterações no padrão de chuvas para agricultura e geração de energia',
+      ]}
+    />
+
+    <Warning>
+      A previsão da <ExternalLink href="https://www.gov.br/inmet/">INMET</ExternalLink> e do{' '}
+      <ExternalLink href="https://www.cptec.inpe.br/">CPTEC/INPE</ExternalLink> para o segundo
+      semestre de 2026 aponta chuvas 25% abaixo da média no Norte do Brasil e temperaturas até 3 °C
+      acima da média climatológica no Sudeste — padrão consistente com o enfraquecimento do vórtice
+      polar registrado no Ártico.
+    </Warning>
+
+    <H2 id="como-se-proteger">Como se proteger dos efeitos climáticos amplificados</H2>
+
+    <H3 id="dicas-conforto">Dicas de conforto térmico e segurança em casa</H3>
+    <Checklist
+      items={[
+        'Mantenha a hidratação constante em dias de calor extremo (mínimo 2 L de água por adulto)',
+        'Use cortinas térmicas ou películas nas janelas para reduzir o ganho de calor',
+        'Ventile a casa nas primeiras horas da manhã e à noite, quando o ar está mais fresco',
+        'Tenha lanternas, rádio a pilha e água potável para eventuais apagões durante tempestades',
+        'Evite atividades físicas ao ar livre entre 10h e 16h em ondas de calor',
+        'Reforce telhados, calhas e drenagens antes da temporada de chuvas',
+      ]}
+    />
+
+    <H3 id="apps">Melhores apps de monitoramento climático em 2026</H3>
+    <DataTable
+      headers={['Aplicativo', 'Melhor para', 'Diferencial']}
+      rows={[
+        ['Windy', 'Ventos, marés e camadas atmosféricas', 'Modelos ECMWF, GFS e ICON em um só app'],
+        ['AccuWeather', 'Previsão minuto a minuto', 'Alertas MinuteCast com precisão local'],
+        ['Climatempo', 'Cobertura nacional detalhada', 'Boletins regionais e alertas de tempestades'],
+        ['INMET Alerta', 'Alertas oficiais do governo', 'Emissão direta pelo órgão federal'],
+        ['NOAA Arctic', 'Dados polares em tempo real', 'Extensão de gelo e temperatura da superfície'],
+      ]}
+    />
+
+    <H2 id="ciclos-climaticos">Ciclos climáticos explicados: por que o Ártico importa tanto</H2>
+
+    <P>
+      O sistema climático é como uma orquestra em que Ártico, oceanos tropicais e florestas
+      trabalham em sincronia. Quando um instrumento desafina, toda a sinfonia é comprometida. Além
+      do feedback albedo-gelo, o derretimento libera metano do permafrost, um gás de efeito estufa
+      até 80 vezes mais potente que o CO₂ em 20 anos, segundo relatório recente do{' '}
+      <ExternalLink href="https://www.unep.org/">UNEP — ONU Meio Ambiente</ExternalLink>.
+    </P>
+
+    <P>
+      Também vale entender que o Ártico funciona como um "ar-condicionado planetário". Sem gelo
+      suficiente, o Hemisfério Norte esquenta mais rápido, o que altera o comportamento das monções
+      asiáticas, dos furacões atlânticos e até das secas na África subsaariana. Essa cascata de
+      efeitos chega ao Brasil por meio de teleconexões atmosféricas — sinais transportados por
+      correntes de ar por milhares de quilômetros.
+    </P>
+
+    <Highlight>
+      Em termos práticos: cada 1 milhão de km² de gelo perdido no Ártico está associado a um
+      aumento médio de 0,3 °C na temperatura do Hemisfério Norte no verão seguinte.
+    </Highlight>
+
+    <H2 id="previsao-futura">O que esperar para o restante de 2026 e para 2027</H2>
+
+    <P>
+      Os modelos climáticos operacionais do ECMWF e do NCEP indicam que o mínimo de verão em
+      setembro de 2026 deve ficar entre 3,7 e 4,0 milhões de km², faixa que se aproxima do recorde
+      histórico de 2012 (3,39 milhões de km²). Se as anomalias oceânicas persistirem, 2027 pode ser
+      o primeiro ano com um "verão ártico praticamente sem gelo" em setores do Oceano Ártico central.
+    </P>
+
+    <P>
+      Para o Brasil, isso reforça a necessidade de acompanhar de perto ferramentas como o{' '}
+      <InternalLink to="/agora">Clima Tempo Agora</InternalLink>,{' '}
+      <InternalLink to="/15-dias">Previsão de 15 Dias</InternalLink> e o{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026</InternalLink>, que se soma ao
+      cenário ártico e amplifica os extremos climáticos previstos.
+    </P>
+
+    <H2 id="alertas-oficiais">Alertas governamentais e monitoramento em tempo real</H2>
+
+    <Checklist
+      items={[
+        'INMET: alertas amarelo, laranja e vermelho para todo o território nacional',
+        'Defesa Civil Nacional: sistema SMS para receber avisos por CEP (envie CEP para 40199)',
+        'CEMADEN: monitoramento de desastres naturais 24 h por dia',
+        'NASA Worldview: visualização diária do gelo marinho por satélite',
+        'Copernicus Climate Change Service: relatórios mensais de anomalias',
+      ]}
+    />
+
+    <FAQ
+      items={[
+        {
+          q: 'O gelo marinho do Ártico pode desaparecer completamente em 2026?',
+          a: 'No inverno, não. Mas no verão de setembro há projeções científicas indicando que, dentro dos próximos anos, o Ártico central pode ficar praticamente sem gelo em algumas semanas do ano.',
+        },
+        {
+          q: 'Por que o degelo do Ártico afeta o clima do Brasil?',
+          a: 'Porque altera a corrente de jato polar, o que interfere na formação de frentes frias, na organização das monções e nos padrões de chuva sobre a América do Sul, provocando secas prolongadas e chuvas extremas.',
+        },
+        {
+          q: 'O aquecimento do Ártico está relacionado ao El Niño?',
+          a: 'Sim. O Ártico e o Pacífico tropical trocam sinais atmosféricos. Em anos de Super El Niño, o degelo tende a se acelerar por causa da reorganização dos ventos e das temperaturas globais.',
+        },
+        {
+          q: 'Qual o impacto do degelo para o nível do mar?',
+          a: 'O gelo marinho já flutua sobre a água, então seu derretimento não eleva diretamente o nível do mar. Porém, o aquecimento associado acelera o degelo da Groenlândia, que sim contribui para a elevação global.',
+        },
+        {
+          q: 'Como monitorar o Ártico em tempo real?',
+          a: 'Use os portais do NSIDC, NASA Worldview, Copernicus e o app Windy com a camada de gelo marinho ativada. Todos oferecem dados atualizados diariamente.',
+        },
+        {
+          q: 'O que posso fazer no dia a dia para ajudar?',
+          a: 'Reduza consumo de energia, prefira transporte coletivo, evite desperdício de alimentos e apoie políticas públicas de descarbonização. Pequenas ações somadas globalmente têm impacto significativo.',
+        },
+        {
+          q: 'Existe risco de "colapso climático" ainda em 2026?',
+          a: 'Não no sentido catastrófico imediato, mas 2026 confirma que o sistema está próximo de pontos de inflexão. Prevenção e adaptação precisam ser tratadas como prioridades urgentes.',
+        },
+      ]}
+    />
+  </>
+);
+
+export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      A Amazônia enfrenta em 2026 a pior seca hidrológica de sua história moderna. Rios inteiros
+      atingiram os menores níveis já registrados, comunidades ribeirinhas ficaram isoladas e a
+      previsão do tempo para os próximos meses indica agravamento do cenário, com impactos globais
+      sobre o clima, a biodiversidade e a economia.
+    </Lead>
+
+    <P>
+      Em julho de 2026, o Rio Negro, medido no porto de Manaus, chegou a 12,68 metros — o menor
+      valor da série histórica iniciada em 1902. O Rio Solimões, o Madeira e o Purus também
+      registraram cotas críticas, deixando mais de 700 mil pessoas em situação de emergência em
+      cinco estados da Amazônia Legal. A crise combina calor extremo, chuvas escassas e o efeito
+      residual do Super El Niño.
+    </P>
+
+    <P>
+      Neste artigo exclusivo, você vai entender as causas científicas dessa seca histórica, quais
+      áreas foram mais impactadas, o que dizem os órgãos oficiais, quais são as previsões para os
+      próximos meses e como se proteger dos efeitos indiretos que já chegam ao restante do Brasil
+      na forma de fumaça, calor e alterações climáticas persistentes.
+    </P>
+
+    <H2 id="o-que-esta-acontecendo">O que está acontecendo com a Amazônia em 2026</H2>
+
+    <P>
+      A floresta amazônica funciona como um sistema hídrico auto-sustentável. As árvores bombeiam
+      cerca de 20 bilhões de toneladas de água por dia para a atmosfera por meio da
+      evapotranspiração, formando os famosos "rios voadores" que abastecem chuvas em toda a América
+      do Sul. Quando esse mecanismo falha, a seca vira uma bola de neve: menos árvores geram menos
+      chuva, e menos chuva mata mais árvores.
+    </P>
+
+    <P>
+      Em 2026, o cenário é agravado por três fatores simultâneos: o efeito residual do Super El
+      Niño 2025-26, o aquecimento anômalo do Atlântico tropical Norte e a redução dos "rios
+      voadores" causada por décadas de desmatamento. Segundo o{' '}
+      <ExternalLink href="https://www.cptec.inpe.br/">CPTEC/INPE</ExternalLink>, o volume de chuvas
+      no primeiro semestre ficou 42% abaixo da média histórica na bacia amazônica.
+    </P>
+
+    <InfoBox title="Resumo para quem tem pressa">
+      Rio Negro atingiu 12,68 m em Manaus (pior marca em 124 anos). Mais de 700 mil pessoas
+      afetadas, milhares de comunidades isoladas. Causas: El Niño, Atlântico quente e desmatamento.
+      Previsão indica agravamento até novembro de 2026.
+    </InfoBox>
+
+    <H2 id="dados-historicos">Dados históricos: comparativo das grandes secas amazônicas</H2>
+
+    <DataTable
+      headers={['Ano', 'Cota mínima Rio Negro (m)', 'População afetada', 'Contexto climático']}
+      rows={[
+        ['1963', '13,64', '~120 mil', 'Seca durante El Niño moderado'],
+        ['2005', '14,75', '~350 mil', 'Atlântico Norte anomalamente quente'],
+        ['2010', '13,63', '~440 mil', 'El Niño e mortandade de árvores'],
+        ['2023', '12,70', '~630 mil', 'El Niño forte + aquecimento oceânico'],
+        ['2026', '12,68', '~700 mil', 'Super El Niño + Atlântico +2,1 °C'],
+      ]}
+    />
+
+    <img
+      src={midImage}
+      alt="Comunidade ribeirinha da Amazônia com barcos encalhados no leito seco do rio em 2026"
+      width={1200}
+      height={800}
+      loading="lazy"
+      className="w-full rounded-xl my-8 shadow-lg"
+    />
+
+    <H2 id="regioes-afetadas">Regiões mais afetadas em 2026</H2>
+
+    <H3 id="amazonas">Amazonas</H3>
+    <P>
+      Estado mais impactado, com 61 dos 62 municípios em situação de emergência. Manaus enfrenta
+      restrição de navegação no porto, e comunidades do Alto Solimões dependem de helicópteros da
+      Marinha para receber água, remédios e alimentos.
+    </P>
+
+    <H3 id="para">Pará</H3>
+    <P>
+      Os rios Tapajós, Xingu e Trombetas registram níveis históricos mínimos. O baixo caudal
+      compromete a operação de hidrelétricas como Belo Monte e Tucuruí, com queda de até 35% na
+      geração de energia elétrica em maio e junho.
+    </P>
+
+    <H3 id="rondonia-acre">Rondônia e Acre</H3>
+    <P>
+      A combinação de seca e queimadas gerou fumaça densa que fechou aeroportos em Porto Velho e
+      Rio Branco por vários dias. O índice de qualidade do ar chegou ao patamar "muito insalubre"
+      em 27 dias consecutivos.
+    </P>
+
+    <PullQuote>
+      "A Amazônia está mostrando sinais claros de que se aproxima de um ponto de não retorno. Se o
+      desmatamento e o aquecimento continuarem, a floresta pode se transformar em savana em algumas
+      décadas." — Dr. Carlos Nobre, climatologista e um dos maiores especialistas mundiais.
+    </PullQuote>
+
+    <H2 id="causas">Causas climáticas explicadas: por que 2026 é tão severo</H2>
+
+    <H3 id="el-nino">Super El Niño residual</H3>
+    <P>
+      Mesmo em fase de enfraquecimento, o Super El Niño de 2025-26 deixou uma "assinatura térmica"
+      no Pacífico tropical que continua alterando a circulação de Walker, responsável pelo
+      transporte de umidade em direção à Amazônia. Sem essa umidade, as chuvas simplesmente não
+      chegam.
+    </P>
+
+    <H3 id="atlantico">Atlântico Norte anomalamente quente</H3>
+    <P>
+      A temperatura do Atlântico Norte tropical está +2,1 °C acima da média, segundo a{' '}
+      <ExternalLink href="https://www.noaa.gov/">NOAA</ExternalLink>. Esse aquecimento desloca a
+      Zona de Convergência Intertropical (ZCIT) para o norte, drenando chuvas que naturalmente
+      alimentariam a bacia amazônica.
+    </P>
+
+    <H3 id="desmatamento">Desmatamento acumulado</H3>
+    <P>
+      A Amazônia já perdeu cerca de 20% de sua cobertura florestal original. Cada árvore removida
+      reduz a evapotranspiração e enfraquece os rios voadores. Segundo estudos do INPE, regiões
+      com desmatamento acima de 40% já apresentam padrão climático de savana.
+    </P>
+
+    <H2 id="como-se-proteger">Como se proteger dos efeitos da seca amazônica</H2>
+
+    <H3 id="fumaca">Como se proteger de fumaça e queimadas</H3>
+    <Checklist
+      items={[
+        'Evite atividades ao ar livre em dias com IQAr "insalubre" ou pior',
+        'Mantenha janelas fechadas e use umidificadores em ambientes internos',
+        'Grupos de risco (crianças, idosos, gestantes, asmáticos) devem usar máscaras PFF2/N95',
+        'Aumente a hidratação para no mínimo 3 L de água por dia',
+        'Instale purificadores de ar com filtro HEPA em quartos de dormir',
+        'Consulte médico ao primeiro sinal de tosse persistente ou falta de ar',
+      ]}
+    />
+
+    <H3 id="dicas-conforto">Dicas de conforto térmico durante ondas de calor associadas</H3>
+    <Checklist
+      items={[
+        'Ventile a casa nas primeiras horas da manhã e ao anoitecer',
+        'Use roupas leves de algodão em cores claras',
+        'Evite exposição direta ao sol entre 10h e 16h',
+        'Prefira refeições leves e frutas ricas em água (melancia, melão, abacaxi)',
+        'Nunca deixe crianças ou animais dentro de veículos fechados',
+      ]}
+    />
+
+    <H2 id="apps">Melhores aplicativos para monitorar seca e qualidade do ar em 2026</H2>
+
+    <DataTable
+      headers={['Aplicativo', 'Função principal', 'Diferencial 2026']}
+      rows={[
+        ['Windy', 'Vento, chuva e qualidade do ar', 'Camada específica de PM2.5 e fumaça'],
+        ['AccuWeather', 'Previsão detalhada', 'Alertas de queimadas em tempo real'],
+        ['Climatempo', 'Cobertura Brasil', 'Boletins da Amazônia e agro'],
+        ['INMET Alerta', 'Alertas oficiais', 'Aviso de estiagem por município'],
+        ['BDQueimadas INPE', 'Focos de incêndio', 'Detecção por satélite em tempo real'],
+        ['IQAir', 'Qualidade do ar', 'IQAr global com histórico'],
+      ]}
+    />
+
+    <Warning>
+      A <ExternalLink href="https://www.gov.br/inmet/">INMET</ExternalLink> emitiu alerta laranja
+      para estiagem prolongada em toda a região Norte até outubro de 2026. Comunidades
+      dependentes de transporte fluvial devem se preparar para possíveis meses de isolamento.
+    </Warning>
+
+    <H2 id="impacto-global">Impacto global: por que a seca da Amazônia afeta o mundo</H2>
+
+    <P>
+      A Amazônia armazena cerca de 123 bilhões de toneladas de carbono. Quando a floresta seca e
+      queima, esse carbono retorna à atmosfera na forma de CO₂, acelerando o aquecimento global.
+      Segundo relatório da <ExternalLink href="https://climate.nasa.gov/">NASA Climate</ExternalLink>,
+      partes do sul da Amazônia já emitem mais carbono do que absorvem — inversão histórica que
+      preocupa cientistas do mundo todo.
+    </P>
+
+    <P>
+      Além disso, os rios voadores amazônicos alimentam chuvas em regiões como Sul e Sudeste
+      brasileiros, além de países vizinhos (Bolívia, Paraguai, Argentina). A quebra desse ciclo
+      pode significar reservatórios mais baixos, agricultura prejudicada e apagões elétricos
+      recorrentes nos próximos anos.
+    </P>
+
+    <Highlight>
+      Cada 1% adicional de desmatamento reduz em cerca de 0,7% as chuvas na Amazônia — um efeito
+      dominó já sentido no regime hídrico do Cerrado e do Pantanal.
+    </Highlight>
+
+    <H2 id="previsao">Previsão do tempo para o restante de 2026</H2>
+
+    <P>
+      Modelos do <ExternalLink href="https://www.ecmwf.int/">ECMWF</ExternalLink> e do CPTEC/INPE
+      indicam que a estiagem deve se prolongar até novembro, com chuvas voltando gradualmente a
+      partir de dezembro. Ainda assim, é provável que o nível dos rios só se recupere plenamente
+      no primeiro trimestre de 2027, o que significa quase um ano completo de crise hídrica.
+    </P>
+
+    <P>
+      Para acompanhamento contínuo, use nossas ferramentas como{' '}
+      <InternalLink to="/agora">Tempo Agora</InternalLink>,{' '}
+      <InternalLink to="/15-dias">Previsão de 15 Dias</InternalLink> e leia também nosso guia sobre{' '}
+      <InternalLink to="/blog/pernambuco-emergencia-seca-75-cidades">
+        Pernambuco em emergência por seca
+      </InternalLink>{' '}
+      e o{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026</InternalLink>.
+    </P>
+
+    <H2 id="alertas-oficiais">Alertas governamentais e onde buscar ajuda</H2>
+
+    <Checklist
+      items={[
+        'Defesa Civil Nacional: 199 (24 horas)',
+        'CEMADEN: monitoramento nacional de desastres',
+        'ANA (Agência Nacional de Águas): boletins hidrológicos semanais',
+        'Marinha do Brasil: capitanias fluviais divulgam calados atualizados',
+        'Ministério da Saúde: campanhas específicas para regiões impactadas por fumaça',
+      ]}
+    />
+
+    <FAQ
+      items={[
+        {
+          q: 'Por que a Amazônia está tão seca em 2026?',
+          a: 'A combinação do Super El Niño residual, do aquecimento anormal do Atlântico Norte e do desmatamento acumulado reduziu drasticamente as chuvas na região. É o pior cenário hidrológico já registrado.',
+        },
+        {
+          q: 'Quando as chuvas devem voltar à Amazônia?',
+          a: 'Modelos indicam retorno gradual das chuvas a partir de dezembro de 2026, mas os rios só devem se recuperar completamente no início de 2027.',
+        },
+        {
+          q: 'A fumaça das queimadas afeta o Sul e Sudeste do Brasil?',
+          a: 'Sim. Ventos podem transportar a fumaça por milhares de quilômetros. Em 2023 e 2024 São Paulo, Curitiba e Porto Alegre já registraram céu escurecido e piora da qualidade do ar por causa da Amazônia.',
+        },
+        {
+          q: 'O que é o "ponto de não retorno" da Amazônia?',
+          a: 'É a hipótese científica de que, se o desmatamento passar de 20-25% aliado ao aquecimento, partes da floresta se transformarão em savana, num processo irreversível em escala humana.',
+        },
+        {
+          q: 'Como me proteger da fumaça em casa?',
+          a: 'Feche janelas, evite atividades ao ar livre, use purificadores com filtro HEPA e máscaras PFF2/N95 se precisar sair. Aumente a hidratação e procure atendimento médico ao menor sinal de sintoma respiratório.',
+        },
+        {
+          q: 'Quais os melhores apps para monitorar a crise?',
+          a: 'Windy, AccuWeather, Climatempo, INMET Alerta, BDQueimadas do INPE e IQAir para qualidade do ar. Todos gratuitos com versões premium opcionais.',
+        },
+        {
+          q: 'Como ajudar comunidades ribeirinhas afetadas?',
+          a: 'Prefira doações financeiras a ONGs estabelecidas como Fundação Amazônia Sustentável, Instituto Socioambiental e Cruz Vermelha Brasileira. Elas conseguem levar ajuda com logística adequada.',
+        },
+        {
+          q: 'A seca da Amazônia afeta a energia elétrica do Brasil?',
+          a: 'Sim. Hidrelétricas como Belo Monte e Tucuruí perdem eficiência. Isso obriga o acionamento de termoelétricas mais caras e pressiona a conta de luz nacional via bandeira tarifária vermelha.',
+        },
+      ]}
+    />
+  </>
+);
