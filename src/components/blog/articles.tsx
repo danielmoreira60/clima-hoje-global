@@ -2350,7 +2350,7 @@ export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) 
 
     <H2 id="causas">As três causas principais do recorde de 2026</H2>
 
-    <H3 id="aquecimento">1. Aquecimento global acelerado</H3>
+    <H3>1. Aquecimento global acelerado</H3>
     <P>
       A temperatura média do Ártico aumentou 4 vezes mais rápido do que a média global desde 1979,
       segundo estudo publicado pela Nature Communications. Em 2026, o inverno ártico registrou dias
@@ -2358,7 +2358,7 @@ export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) 
       dificultando a formação de gelo novo.
     </P>
 
-    <H3 id="oceano-mais-quente">2. Oceanos mais quentes</H3>
+    <H3>2. Oceanos mais quentes</H3>
     <P>
       O calor absorvido pelos oceanos nas últimas décadas está finalmente aflorando em áreas polares.
       A intrusão de águas atlânticas quentes no Ártico — fenômeno chamado de "atlantificação" —
@@ -2366,7 +2366,7 @@ export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) 
       Service mostram anomalias de +2,3 °C na coluna d'água entre 200 e 400 metros de profundidade.
     </P>
 
-    <H3 id="jato-polar">3. Alterações no vórtice polar</H3>
+    <H3>3. Alterações no vórtice polar</H3>
     <P>
       Um vórtice polar mais fraco e ondulante empurra ar polar para latitudes médias e leva ar
       subtropical quente para o Ártico. Em janeiro de 2026, uma "quebra súbita estratosférica"
@@ -2432,7 +2432,7 @@ export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) 
 
     <H2 id="como-se-proteger">Como se proteger dos efeitos climáticos amplificados</H2>
 
-    <H3 id="dicas-conforto">Dicas de conforto térmico e segurança em casa</H3>
+    <H3>Dicas de conforto térmico e segurança em casa</H3>
     <Checklist
       items={[
         'Mantenha a hidratação constante em dias de calor extremo (mínimo 2 L de água por adulto)',
@@ -2444,7 +2444,7 @@ export const ArticoGeloArticle: React.FC<{ midImage: string }> = ({ midImage }) 
       ]}
     />
 
-    <H3 id="apps">Melhores apps de monitoramento climático em 2026</H3>
+    <H3>Melhores apps de monitoramento climático em 2026</H3>
     <DataTable
       headers={['Aplicativo', 'Melhor para', 'Diferencial']}
       rows={[
@@ -2615,21 +2615,21 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
 
     <H2 id="regioes-afetadas">Regiões mais afetadas em 2026</H2>
 
-    <H3 id="amazonas">Amazonas</H3>
+    <H3>Amazonas</H3>
     <P>
       Estado mais impactado, com 61 dos 62 municípios em situação de emergência. Manaus enfrenta
       restrição de navegação no porto, e comunidades do Alto Solimões dependem de helicópteros da
       Marinha para receber água, remédios e alimentos.
     </P>
 
-    <H3 id="para">Pará</H3>
+    <H3>Pará</H3>
     <P>
       Os rios Tapajós, Xingu e Trombetas registram níveis históricos mínimos. O baixo caudal
       compromete a operação de hidrelétricas como Belo Monte e Tucuruí, com queda de até 35% na
       geração de energia elétrica em maio e junho.
     </P>
 
-    <H3 id="rondonia-acre">Rondônia e Acre</H3>
+    <H3>Rondônia e Acre</H3>
     <P>
       A combinação de seca e queimadas gerou fumaça densa que fechou aeroportos em Porto Velho e
       Rio Branco por vários dias. O índice de qualidade do ar chegou ao patamar "muito insalubre"
@@ -2644,7 +2644,7 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
 
     <H2 id="causas">Causas climáticas explicadas: por que 2026 é tão severo</H2>
 
-    <H3 id="el-nino">Super El Niño residual</H3>
+    <H3>Super El Niño residual</H3>
     <P>
       Mesmo em fase de enfraquecimento, o Super El Niño de 2025-26 deixou uma "assinatura térmica"
       no Pacífico tropical que continua alterando a circulação de Walker, responsável pelo
@@ -2652,7 +2652,7 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
       chegam.
     </P>
 
-    <H3 id="atlantico">Atlântico Norte anomalamente quente</H3>
+    <H3>Atlântico Norte anomalamente quente</H3>
     <P>
       A temperatura do Atlântico Norte tropical está +2,1 °C acima da média, segundo a{' '}
       <ExternalLink href="https://www.noaa.gov/">NOAA</ExternalLink>. Esse aquecimento desloca a
@@ -2660,7 +2660,7 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
       alimentariam a bacia amazônica.
     </P>
 
-    <H3 id="desmatamento">Desmatamento acumulado</H3>
+    <H3>Desmatamento acumulado</H3>
     <P>
       A Amazônia já perdeu cerca de 20% de sua cobertura florestal original. Cada árvore removida
       reduz a evapotranspiração e enfraquece os rios voadores. Segundo estudos do INPE, regiões
@@ -2669,7 +2669,7 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
 
     <H2 id="como-se-proteger">Como se proteger dos efeitos da seca amazônica</H2>
 
-    <H3 id="fumaca">Como se proteger de fumaça e queimadas</H3>
+    <H3>Como se proteger de fumaça e queimadas</H3>
     <Checklist
       items={[
         'Evite atividades ao ar livre em dias com IQAr "insalubre" ou pior',
@@ -2681,7 +2681,7 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
       ]}
     />
 
-    <H3 id="dicas-conforto">Dicas de conforto térmico durante ondas de calor associadas</H3>
+    <H3>Dicas de conforto térmico durante ondas de calor associadas</H3>
     <Checklist
       items={[
         'Ventile a casa nas primeiras horas da manhã e ao anoitecer',
