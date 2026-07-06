@@ -14,6 +14,10 @@ import incendiosChileCover from '@/assets/blog/incendios-chile-cover.jpg';
 import incendiosChileMid from '@/assets/blog/incendios-chile-mid.jpg';
 import terremotoFilipinasCover from '@/assets/blog/terremoto-filipinas-cover.jpg';
 import terremotoFilipinasMid from '@/assets/blog/terremoto-filipinas-mid.jpg';
+import articoGeloCover from '@/assets/blog/artico-gelo-cover.jpg';
+import articoGeloMid from '@/assets/blog/artico-gelo-mid.jpg';
+import amazoniaSecaCover from '@/assets/blog/amazonia-seca-cover.jpg';
+import amazoniaSecaMid from '@/assets/blog/amazonia-seca-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -33,6 +37,88 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'gelo-marinho-artico-minimo-historico-2026',
+    title: 'Gelo marinho do Ártico bate mínimo histórico em 2026 e alerta o mundo',
+    excerpt:
+      'O gelo marinho do Ártico atingiu o menor volume invernal em 47 anos de observação por satélite. Entenda as causas, impactos globais, consequências no clima do Brasil e como se proteger.',
+    category: 'Mudanças Climáticas',
+    categoryColor: 'from-cyan-500 to-blue-600',
+    date: '06 Jul 2026',
+    dateISO: '2026-07-06',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: articoGeloCover,
+    midImage: articoGeloMid,
+    tags: [
+      'gelo marinho ártico 2026',
+      'ártico mínimo histórico',
+      'derretimento do ártico',
+      'mudanças climáticas 2026',
+      'vórtice polar 2026',
+      'aquecimento global ártico',
+      'nsidc dados ártico',
+      'copernicus clima 2026',
+      'ondas de calor hemisfério norte',
+      'dicas de conforto térmico',
+      'como se proteger de ondas de calor',
+      'melhores apps de monitoramento climático',
+      'ciclos climáticos explicados',
+      'dados históricos gelo marinho',
+      'alertas governamentais clima',
+      'prevenção e cuidados clima extremo',
+      'jato polar enfraquecido',
+      'metano permafrost',
+      'atlantificação do ártico',
+      'previsão do tempo brasil 2026',
+    ],
+    metaTitle: 'Gelo Marinho do Ártico Atinge Mínimo Histórico em 2026',
+    metaDescription:
+      'Ártico registra menor volume de gelo marinho em 47 anos em 2026. Causas, impactos no Brasil, apps de monitoramento e como se proteger.',
+  },
+  {
+    slug: 'amazonia-seca-historica-2026',
+    title: 'Amazônia enfrenta pior seca histórica em 2026: Rio Negro atinge 12,68 m em Manaus',
+    excerpt:
+      'Rios amazônicos em nível crítico, 700 mil pessoas afetadas e cinco estados em emergência. Análise completa da seca histórica de 2026, causas climáticas e como se proteger.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-red-500 to-orange-600',
+    date: '05 Jul 2026',
+    dateISO: '2026-07-05',
+    readTime: '13 min',
+    author: 'Equipe Clima Tempo',
+    cover: amazoniaSecaCover,
+    midImage: amazoniaSecaMid,
+    tags: [
+      'seca na amazônia 2026',
+      'rio negro nível mínimo',
+      'rio negro 12 metros manaus',
+      'seca hidrológica amazônia',
+      'estiagem amazônia 2026',
+      'queimadas amazônia 2026',
+      'ponto de não retorno amazônia',
+      'rios voadores amazônia',
+      'desmatamento amazônia 2026',
+      'super el niño residual',
+      'atlântico norte quente',
+      'como se proteger da fumaça',
+      'dicas de conforto térmico calor',
+      'melhores apps de monitoramento climático',
+      'qualidade do ar fumaça amazônia',
+      'iqar amazônia',
+      'ciclos climáticos explicados',
+      'dados históricos seca amazônia',
+      'alertas governamentais estiagem',
+      'prevenção e cuidados queimadas',
+      'inpe queimadas monitoramento',
+      'hidrelétricas belo monte tucuruí',
+      'crise energética 2026',
+      'zcit deslocamento',
+    ],
+    metaTitle: 'Amazônia: Pior Seca da História em 2026, Rio Negro em 12,68 m',
+    metaDescription:
+      'Amazônia vive pior seca hidrológica da história em 2026. Rio Negro em 12,68 m, causas do El Niño, apps de monitoramento e como se proteger.',
+  },
   {
     slug: 'incendios-florestais-chile-2026',
     title: 'Incêndios florestais devastam o Chile em 2026: 480 mil hectares queimados e caos climático',
