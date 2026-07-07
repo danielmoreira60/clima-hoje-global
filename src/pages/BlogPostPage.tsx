@@ -16,6 +16,8 @@ import {
   TerremotoFilipinasArticle,
   ArticoGeloArticle,
   AmazoniaSecaArticle,
+  TufaoMaysakArticle,
+  OndaFrioPolarArticle,
 } from '@/components/blog/articles';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -30,6 +32,8 @@ const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, mid
   if (slug === 'terremoto-filipinas-7-8-2026') return <TerremotoFilipinasArticle midImage={midImage} />;
   if (slug === 'gelo-marinho-artico-minimo-historico-2026') return <ArticoGeloArticle midImage={midImage} />;
   if (slug === 'amazonia-seca-historica-2026') return <AmazoniaSecaArticle midImage={midImage} />;
+  if (slug === 'tufao-maysak-china-2026') return <TufaoMaysakArticle midImage={midImage} />;
+  if (slug === 'onda-frio-polar-antartica-brasil-2026') return <OndaFrioPolarArticle midImage={midImage} />;
   return null;
 };
 
