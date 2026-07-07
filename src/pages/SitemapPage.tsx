@@ -17,6 +17,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Tufão Maysak na China 2026', url: '/blog/tufao-maysak-china-2026', icon: BookOpen },
+    { name: 'Onda de Frio Polar Antártica no Brasil 2026', url: '/blog/onda-frio-polar-antartica-brasil-2026', icon: BookOpen },
     { name: 'Gelo Marinho do Ártico Mínimo Histórico 2026', url: '/blog/gelo-marinho-artico-minimo-historico-2026', icon: BookOpen },
     { name: 'Amazônia: Pior Seca Histórica 2026', url: '/blog/amazonia-seca-historica-2026', icon: BookOpen },
     { name: 'Incêndios Florestais no Chile 2026', url: '/blog/incendios-florestais-chile-2026', icon: BookOpen },

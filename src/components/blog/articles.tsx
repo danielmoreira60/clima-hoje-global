@@ -3004,7 +3004,7 @@ export const TufaoMaysakArticle: React.FC<{ midImage: string }> = ({ midImage })
 
     <H3>Durante a passagem</H3>
 
-    <Warning title="Cuidado com o "falso alívio" do olho do tufão">
+    <Warning title="Cuidado com o falso alívio do olho do tufão">
       Quando o olho passa, o vento cessa por 20 a 60 minutos e o céu pode até abrir. É um engano
       perigoso: os ventos retornam do lado oposto com a mesma força ou maior. Nunca saia de casa
       nesse intervalo, mesmo que pareça seguro.
