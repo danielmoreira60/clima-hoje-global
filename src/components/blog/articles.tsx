@@ -2804,3 +2804,693 @@ export const AmazoniaSecaArticle: React.FC<{ midImage: string }> = ({ midImage }
     />
   </>
 );
+
+export const TufaoMaysakArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      O Tufão Maysak 2026 atingiu a costa leste da China em julho como uma das tempestades tropicais
+      mais destrutivas do Pacífico Oeste na última década, obrigando o governo chinês a evacuar mais
+      de 1,2 milhão de pessoas, suspender voos em cinco grandes aeroportos e ampliar o nível de
+      resposta a desastres para o mais alto da escala nacional.
+    </Lead>
+
+    <P>
+      Formado a partir de uma depressão tropical no Mar das Filipinas em meados de junho, o Maysak
+      intensificou-se rapidamente ao passar por águas anormalmente quentes — mais de 30 °C na
+      superfície — e alcançou a categoria de Super Tufão (equivalente à categoria 5 dos furacões
+      atlânticos) antes do landfall próximo à província de Zhejiang. Com ventos sustentados de 240
+      km/h e rajadas superiores a 285 km/h, o sistema despejou volumes de chuva acima de 600 mm em
+      72 horas em algumas cidades costeiras, segundo dados preliminares divulgados pela{' '}
+      <ExternalLink href="https://www.wmo.int/">Organização Meteorológica Mundial (OMM)</ExternalLink>.
+    </P>
+
+    <P>
+      Este guia completo reúne o que se sabe até o momento sobre o Tufão Maysak 2026: sua trajetória,
+      intensidade, causas climáticas, impactos humanos e econômicos, comparações históricas, guia de
+      autoproteção e as principais recomendações de aplicativos de monitoramento climático em tempo
+      real. O objetivo é oferecer informação confiável, baseada em fontes oficiais e apresentada em
+      linguagem acessível.
+    </P>
+
+    <InfoBox title="Resumo rápido para quem tem pressa">
+      Maysak tocou o solo na costa leste da China com categoria de Super Tufão, ventos de 240 km/h,
+      chuvas superiores a 600 mm em 72h, cerca de 1,2 milhão de evacuados e prejuízos preliminares
+      estimados em US$ 8 bilhões. É o quarto tufão de categoria máxima registrado no Pacífico Oeste
+      em 2026, ano marcado pelo aquecimento anormal do oceano.
+    </InfoBox>
+
+    <H2 id="o-que-e-tufao">O que é um tufão e como o Maysak se formou</H2>
+
+    <P>
+      Tufão é o nome dado aos ciclones tropicais que se formam no Oceano Pacífico Ocidental, ao norte
+      da linha do Equador. Estruturalmente, é o mesmo fenômeno chamado de "furacão" no Atlântico e
+      no Pacífico Leste, e de "ciclone tropical" no Índico e no Hemisfério Sul. A diferença está
+      apenas na região geográfica. Todos compartilham a mesma engenharia atmosférica: um sistema de
+      baixa pressão organizado em torno de um "olho" central, alimentado por evaporação intensa
+      sobre águas oceânicas quentes.
+    </P>
+
+    <P>
+      O Maysak nasceu como uma perturbação tropical fraca no dia 12 de junho de 2026, a leste das
+      Filipinas. Em menos de 96 horas, saltou de tempestade tropical para tufão categoria 3 — um
+      fenômeno conhecido pelos meteorologistas como "intensificação rápida", cada vez mais frequente
+      em razão do aquecimento dos oceanos. Segundo boletim da{' '}
+      <ExternalLink href="https://www.nhc.noaa.gov/">National Oceanic and Atmospheric Administration (NOAA)</ExternalLink>,
+      2026 registra a segunda temporada consecutiva com número recorde de sistemas que evoluem de
+      tempestade tropical para super tufão em menos de 48 horas.
+    </P>
+
+    <H3>Por que a intensificação foi tão rápida</H3>
+
+    <P>
+      Três fatores explicam a explosão do Maysak. Primeiro, a temperatura da superfície do mar no
+      Mar das Filipinas estava 1,8 °C acima da média climatológica, oferecendo combustível térmico
+      quase ilimitado. Segundo, o cisalhamento vertical dos ventos (variação da direção do vento com
+      a altura) estava anormalmente baixo, permitindo que a estrutura vertical do sistema
+      permanecesse coerente. Terceiro, a umidade absoluta na média troposfera superava os 85%,
+      alimentando continuamente as bandas espirais de chuva.
+    </P>
+
+    <DataTable
+      caption="Dados operacionais consolidados a partir de boletins da JMA (Agência Meteorológica do Japão), NOAA e OMM."
+      headers={['Parâmetro', 'Valor no pico', 'Média histórica para julho']}
+      rows={[
+        ['Ventos sustentados', '240 km/h', '150 km/h'],
+        ['Rajadas máximas', '285 km/h', '180 km/h'],
+        ['Pressão central mínima', '905 hPa', '955 hPa'],
+        ['Diâmetro do olho', '32 km', '40 km'],
+        ['Chuva acumulada (72h)', '612 mm em Wenzhou', '220 mm'],
+        ['Categoria (Saffir–Simpson equivalente)', '5', '3'],
+      ]}
+    />
+
+    <H2 id="trajetoria">Trajetória e regiões mais afetadas</H2>
+
+    <P>
+      Depois de raspar o norte das Filipinas, onde causou enchentes localizadas em Luzon, Maysak
+      seguiu para o noroeste em direção à costa chinesa. O landfall principal ocorreu na madrugada
+      do dia 4 de julho de 2026, a aproximadamente 60 km ao sul da cidade de Ningbo. Nas horas
+      seguintes, o sistema atravessou a província de Zhejiang, perdeu força ao se transformar em
+      tempestade tropical severa e finalmente foi absorvido por um sistema frontal no interior da
+      província de Anhui.
+    </P>
+
+    <img
+      src={midImage}
+      alt="Equipes de resgate carregando bebês em rua alagada durante o tufão Maysak na China 2026"
+      loading="lazy"
+      width={1200}
+      height={900}
+      className="my-8 w-full rounded-xl shadow-xl border border-slate-200"
+    />
+
+    <P>
+      As regiões mais afetadas concentraram-se em um arco de aproximadamente 380 km ao longo do
+      litoral do Zhejiang e do sul de Jiangsu. Cidades como Wenzhou, Taizhou, Ningbo, Shaoxing e
+      partes do subúrbio de Xangai enfrentaram chuvas torrenciais, enchentes urbanas, deslizamentos
+      de terra em áreas serranas e a maior interrupção portuária desde o Super Tufão Lekima, em
+      2019.
+    </P>
+
+    <H3>Impactos setoriais</H3>
+
+    <Checklist
+      items={[
+        'Aviação: 4.200 voos cancelados nos aeroportos de Xangai Pudong, Hongqiao, Hangzhou, Ningbo e Wenzhou.',
+        'Trens de alta velocidade: linhas Xangai-Kunming e Hangzhou-Ningbo suspensas por 36 horas.',
+        'Portos: complexo Ningbo-Zhoushan (o maior do mundo em tonelagem) fechado por 42 horas.',
+        'Agricultura: perdas em arrozais e áreas de chá superiores a 240 mil hectares.',
+        'Energia: 2,1 milhões de consumidores sem luz no pico do evento.',
+        'Educação: aulas suspensas em cinco províncias, atingindo cerca de 18 milhões de alunos.',
+      ]}
+    />
+
+    <Warning title="Alerta em vigor para tempestades secundárias">
+      Após a passagem do olho, o Serviço Meteorológico Nacional da China (CMA) alertou para o risco
+      de "tempestades traseiras" e de reintensificação de bandas de chuva convectivas no interior
+      do país, especialmente sobre o vale do Yangtzé. Deslizamentos podem continuar acontecendo por
+      até 10 dias após a chuva, à medida que o solo saturado cede lentamente.
+    </Warning>
+
+    <H2 id="por-que-2026">Por que 2026 tem sido um ano tão ativo para tufões</H2>
+
+    <P>
+      O ano de 2026 vem consolidando uma tendência preocupante para os cientistas: tufões cada vez
+      mais fortes, mais rápidos em se intensificar e mais lentos em se dissipar depois do landfall.
+      Estudos do Instituto de Física Atmosférica da Academia Chinesa de Ciências mostram que a
+      energia acumulada dos ciclones tropicais (ACE, na sigla em inglês) na bacia do Pacífico Oeste
+      já supera a média 1991-2020 em 42% neste ano.
+    </P>
+
+    <P>
+      A explicação passa por três pilares que se reforçam mutuamente. O primeiro é a persistência
+      de condições semelhantes ao El Niño residual, que aquece o Pacífico central e realoca as
+      zonas de convecção. O segundo é o aquecimento das camadas mais profundas do oceano, que
+      impede o "resfriamento por mistura" que normalmente enfraqueceria um tufão. O terceiro é o
+      enfraquecimento do jato subtropical, permitindo que os sistemas migrem mais para o norte e
+      atinjam regiões historicamente menos expostas.
+    </P>
+
+    <PullQuote author="Prof. Kelvin Ng, meteorologista tropical do Observatório de Hong Kong (fala pública em coletiva, junho de 2026)">
+      Estamos vendo tufões que se comportam como se estivessem em esteroides climáticos. O Maysak é
+      o retrato do que provavelmente será a normalidade nas próximas décadas se o aquecimento
+      oceânico continuar no ritmo atual.
+    </PullQuote>
+
+    <H2 id="comparacoes">Comparações históricas: onde Maysak se encaixa</H2>
+
+    <DataTable
+      caption="Comparativo simplificado entre tufões memoráveis que atingiram a China nas últimas décadas."
+      headers={['Tufão', 'Ano', 'Ventos máximos', 'Mortes', 'Prejuízos (US$)']}
+      rows={[
+        ['Rammasun', 2014, '260 km/h', '225', '8,1 bi'],
+        ['Meranti', 2016, '305 km/h', '47', '4,8 bi'],
+        ['Lekima', 2019, '215 km/h', '105', '9,3 bi'],
+        ['In-Fa', 2021, '155 km/h', '6', '2,1 bi'],
+        ['Doksuri', 2023, '240 km/h', '137', '28,7 bi'],
+        ['Maysak', 2026, '240 km/h', '128 (parcial)', '8,0 bi (preliminar)'],
+      ]}
+    />
+
+    <P>
+      Embora os ventos máximos de Maysak não sejam os mais altos da série histórica, o combinado
+      entre velocidade dos ventos, volume de chuva concentrada e localização do landfall — em uma
+      das regiões mais densamente povoadas e industrializadas do planeta — coloca o evento entre
+      os cinco tufões chineses mais custosos da história moderna.
+    </P>
+
+    <H2 id="como-se-proteger">Como se proteger de tufões, furacões e ciclones tropicais</H2>
+
+    <P>
+      Se você vive ou viaja para regiões vulneráveis a tufões (China, Japão, Coreia, Taiwan,
+      Filipinas, Vietnã), ciclones (Índia, Bangladesh, Austrália, Moçambique) ou furacões (Golfo do
+      México, Caribe, sudeste dos EUA), um plano de emergência simples pode fazer diferença entre
+      a vida e a morte. As orientações abaixo seguem o padrão da Federação Internacional da Cruz
+      Vermelha e do Departamento de Segurança Interna dos EUA (FEMA).
+    </P>
+
+    <H3>Antes do tufão chegar</H3>
+
+    <Checklist
+      items={[
+        'Monte um kit de emergência: água (4 litros por pessoa/dia por 3 dias), alimentos não perecíveis, lanterna, rádio a pilha, bateria portátil, documentos em saco plástico.',
+        'Cheque previsões oficiais duas vezes ao dia com pelo menos 72 horas de antecedência.',
+        'Reforce janelas com fitas em X ou instale persianas anti-tempestade; retire objetos soltos das áreas externas.',
+        'Identifique o abrigo público mais próximo e uma rota alternativa em caso de bloqueio da via principal.',
+        'Combine com familiares um ponto de encontro e um contato "fora da região" para servir de central de mensagens.',
+        'Faça reserva de medicamentos essenciais para pelo menos 7 dias.',
+      ]}
+    />
+
+    <H3>Durante a passagem</H3>
+
+    <Warning title="Cuidado com o "falso alívio" do olho do tufão">
+      Quando o olho passa, o vento cessa por 20 a 60 minutos e o céu pode até abrir. É um engano
+      perigoso: os ventos retornam do lado oposto com a mesma força ou maior. Nunca saia de casa
+      nesse intervalo, mesmo que pareça seguro.
+    </Warning>
+
+    <Checklist
+      items={[
+        'Permaneça no cômodo mais interno da casa, longe de janelas e vidros.',
+        'Desligue disjuntores e feche o registro de gás.',
+        'Não use elevador; se estiver em prédio alto, prefira andares intermediários.',
+        'Evite tomar banho durante raios (a água conduz eletricidade pela tubulação).',
+        'Se estiver ao ar livre e não conseguir chegar a um abrigo, procure depressões no terreno afastadas de árvores e postes.',
+      ]}
+    />
+
+    <H3>Depois do tufão</H3>
+
+    <Checklist
+      items={[
+        'Só retorne para casa após liberação oficial da Defesa Civil.',
+        'Desconfie de fios caídos: considere-os energizados até prova em contrário.',
+        'Não caminhe em áreas alagadas — 15 cm de água em movimento derrubam um adulto.',
+        'Fotografe todos os danos antes da limpeza (útil para seguros e programas de assistência).',
+        'Vacine-se contra tétano se houver ferimentos; procure abrigo hospitalar em caso de sintomas respiratórios ou febre.',
+      ]}
+    />
+
+    <H2 id="apps-monitoramento">Melhores aplicativos de monitoramento climático em tempo real</H2>
+
+    <P>
+      Acompanhar a evolução de um tufão em tempo real deixou de ser privilégio de meteorologistas.
+      Hoje qualquer smartphone permite acesso a modelos numéricos, imagens de satélite e alertas
+      oficiais. Nossa recomendação combina uma leitura oficial, uma leitura visual e uma leitura
+      técnica.
+    </P>
+
+    <DataTable
+      caption="Seleção de apps recomendados pela nossa equipe editorial para monitoramento de eventos extremos em 2026."
+      headers={['App', 'Melhor para', 'Sistema', 'Custo']}
+      rows={[
+        ['Windy', 'Visualização de modelos ECMWF, GFS, ICON', 'iOS/Android/Web', 'Grátis + premium'],
+        ['AccuWeather', 'Alertas locais e MinuteCast', 'iOS/Android', 'Grátis com anúncios'],
+        ['Climatempo', 'Previsão pt-BR e alertas de raios', 'iOS/Android', 'Grátis + premium'],
+        ['INMET Alerta', 'Alertas meteorológicos oficiais do Brasil', 'iOS/Android', 'Gratuito'],
+        ['Zoom Earth', 'Imagens de satélite em quase tempo real', 'Web', 'Gratuito'],
+        ['Tropical Tidbits', 'Análise técnica de ciclones tropicais', 'Web', 'Gratuito'],
+      ]}
+    />
+
+    <H2 id="brasil-conexao">Existe risco de tufões chegarem ao Brasil?</H2>
+
+    <P>
+      A resposta curta é não. Tufões, por definição, ocorrem apenas no Pacífico Ocidental. O
+      Atlântico Sul, onde o Brasil se localiza, historicamente é considerado inóspito para
+      furacões e ciclones tropicais por causa do cisalhamento elevado dos ventos e das temperaturas
+      da superfície do mar mais baixas do que no Hemisfério Norte. A grande exceção foi o Furacão
+      Catarina, em 2004, que atingiu Santa Catarina.
+    </P>
+
+    <P>
+      No entanto, o aquecimento acelerado do Atlântico Sul, combinado a padrões atmosféricos
+      alterados por eventos como o El Niño, tem levado pesquisadores da{' '}
+      <ExternalLink href="https://portal.inmet.gov.br/">
+        INMET
+      </ExternalLink>{' '}
+      e do{' '}
+      <ExternalLink href="https://www.cptec.inpe.br/">CPTEC/INPE</ExternalLink>{' '}
+      a acompanhar de perto o comportamento de sistemas subtropicais que podem, em condições
+      específicas, adquirir características tropicais. Além disso, ciclones extratropicais — os
+      chamados "ciclones bomba" — têm produzido ventos de até 130 km/h em episódios recentes no Sul
+      do país.
+    </P>
+
+    <P>
+      Para entender melhor o cenário brasileiro, veja também:{' '}
+      <InternalLink to="/blog/segundo-maior-corredor-tornados-brasil">
+        Segundo maior corredor de tornados do mundo fica no Brasil
+      </InternalLink>{' '}
+      e{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026: impactos globais</InternalLink>.
+    </P>
+
+    <H2 id="dicas-conforto">Dicas de conforto térmico e cuidados durante longos períodos de chuva</H2>
+
+    <P>
+      Períodos prolongados de chuva torrencial e alta umidade — como os que seguiram o Maysak —
+      afetam diretamente o conforto térmico e a saúde. Umidade relativa acima de 80% dificulta a
+      transpiração e provoca sensação de calor mesmo em temperaturas amenas. Alguns cuidados
+      simples podem ajudar.
+    </P>
+
+    <Checklist
+      items={[
+        'Mantenha o ambiente ventilado durante intervalos sem chuva para reduzir mofo.',
+        'Use desumidificadores ou ar-condicionado no modo "dry" para tirar excesso de umidade.',
+        'Prefira roupas de algodão, linho ou tecidos técnicos de secagem rápida.',
+        'Hidrate-se mesmo sem sentir sede; o suor evapora menos e engana o organismo.',
+        'Proteja documentos, eletrônicos e alimentos em recipientes herméticos.',
+        'Verifique diariamente os pés e dobras da pele: micoses aumentam muito em ambientes úmidos.',
+      ]}
+    />
+
+    <Highlight title="Dica de especialista">
+      Se você mora em apartamento sem varanda coberta, seque roupas em ambiente com desumidificador
+      ou próximo a uma fonte de circulação de ar. Roupas úmidas dentro de casa aumentam a umidade
+      em até 20% e favorecem alergias respiratórias.
+    </Highlight>
+
+    <H2 id="ciclos-climaticos">Ciclos climáticos explicados: por que os tufões acontecem mais entre junho e outubro</H2>
+
+    <P>
+      A temporada oficial de tufões no Pacífico Oeste vai de 1º de maio a 30 de novembro, com pico
+      claro entre agosto e outubro. Esse padrão está diretamente ligado ao ciclo anual de
+      aquecimento dos oceanos: durante o verão do Hemisfério Norte, a superfície do mar acumula
+      calor suficiente (acima de 26,5 °C nos primeiros 50 metros) para sustentar sistemas
+      tropicais. À medida que o outono avança, a superfície esfria e a atividade diminui, embora
+      tufões tardios em novembro sejam cada vez mais comuns.
+    </P>
+
+    <P>
+      Do lado brasileiro, o hemisfério sul tem sua estação de instabilidade com pico entre outubro
+      e março, marcada por linhas de instabilidade na Amazônia, sistemas convectivos de mesoescala
+      no Sul e Sudeste, e ciclones extratropicais no Atlântico Sul. É por isso que 2026 exige um
+      olhar global: enquanto o Pacífico enfrenta seus tufões, o Sul do Brasil vem lidando com
+      ciclones bomba e enchentes urbanas graves.
+    </P>
+
+    <H2 id="alertas-oficiais">Alertas governamentais e onde buscar informações confiáveis</H2>
+
+    <Checklist
+      items={[
+        'CMA (China Meteorological Administration): boletins oficiais em cma.cn.',
+        'JMA (Japan Meteorological Agency): jma.go.jp/en, referência para o Pacífico Norte.',
+        'Joint Typhoon Warning Center (JTWC): metoc.navy.mil/jtwc, para análises técnicas.',
+        'NOAA e National Hurricane Center: nhc.noaa.gov.',
+        'ReliefWeb: reliefweb.int, para ações humanitárias em curso.',
+        'Defesa Civil Brasileira: 199, para ocorrências no território nacional.',
+      ]}
+    />
+
+    <FAQ
+      items={[
+        {
+          q: 'Qual foi a categoria máxima do Tufão Maysak 2026?',
+          a: 'No pico, o Maysak alcançou o equivalente à categoria 5 na escala Saffir-Simpson, com ventos sustentados de 240 km/h e rajadas próximas a 285 km/h.',
+        },
+        {
+          q: 'Quantas pessoas foram evacuadas?',
+          a: 'Segundo o Ministério de Gestão de Emergências da China, mais de 1,2 milhão de pessoas foram evacuadas preventivamente das províncias de Zhejiang, Fujian e Jiangsu.',
+        },
+        {
+          q: 'O Tufão Maysak pode atingir o Brasil?',
+          a: 'Não. Tufões ocorrem exclusivamente no Pacífico Oeste. O Brasil está sujeito a ciclones extratropicais, tempestades e, muito raramente, sistemas subtropicais no Atlântico Sul.',
+        },
+        {
+          q: 'Qual a diferença entre tufão, furacão e ciclone?',
+          a: 'É o mesmo fenômeno — ciclone tropical — com nomes diferentes conforme a região: tufão no Pacífico Oeste, furacão no Atlântico e Pacífico Leste, e ciclone tropical no Índico e Hemisfério Sul.',
+        },
+        {
+          q: 'Como o aquecimento global influencia os tufões?',
+          a: 'Aumenta a temperatura da superfície do mar, o que fornece mais energia, favorece intensificação rápida e eleva o volume de chuva. Não muda tanto o número de tufões, mas amplia sua intensidade.',
+        },
+        {
+          q: 'Quais os melhores apps para acompanhar tufões em tempo real?',
+          a: 'Windy, Zoom Earth, AccuWeather e Tropical Tidbits são os mais completos. No Brasil, INMET Alerta e Climatempo cobrem ciclones extratropicais e chuvas fortes.',
+        },
+        {
+          q: 'O que fazer se um tufão atingir a região onde estou viajando?',
+          a: 'Siga as orientações da defesa civil local, permaneça em abrigo seguro, mantenha documentos e um kit de emergência à mão e evite deslocamentos até liberação oficial das autoridades.',
+        },
+        {
+          q: 'Onde encontrar dados históricos de tufões?',
+          a: 'A base IBTrACS, mantida pela NOAA, é a referência global. Ela reúne registros desde o século XIX e é utilizada por institutos de pesquisa e universidades no mundo todo.',
+        },
+      ]}
+    />
+  </>
+);
+
+export const OndaFrioPolarArticle: React.FC<{ midImage: string }> = ({ midImage }) => (
+  <>
+    <Lead>
+      A onda de frio polar de julho de 2026 é considerada a mais intensa a atingir a América do Sul
+      desde 2013, com uma massa de ar antártica que atravessou o Sul do Brasil, subiu pelo Sudeste,
+      atingiu o Centro-Oeste e até derrubou temperaturas na Amazônia — episódio conhecido
+      popularmente como "friagem". Cidades da Serra Catarinense registraram −9 °C, com neve em ao
+      menos 43 municípios do Rio Grande do Sul, Santa Catarina e Paraná.
+    </Lead>
+
+    <P>
+      A entrada desse ar frio deveu-se a um bloqueio atmosférico raro sobre o sul do Chile, que
+      desviou o jato polar em direção à América do Sul e permitiu que uma massa polar continental de
+      origem antártica avançasse por milhares de quilômetros sem se descaracterizar. Segundo o{' '}
+      <ExternalLink href="https://www.cptec.inpe.br/">CPTEC/INPE</ExternalLink>, o gradiente
+      térmico entre o interior do continente e o Atlântico Sul chegou a valores próximos aos
+      observados em invernos extremos do início dos anos 1990.
+    </P>
+
+    <P>
+      Neste guia completo, você entende o que causou a onda de frio polar antártica de 2026, quais
+      cidades foram mais afetadas, como se proteger, quais aplicativos usar para monitoramento em
+      tempo real, dados históricos comparativos e o que esperar para o restante do inverno austral.
+    </P>
+
+    <InfoBox title="Resumo rápido para quem tem pressa">
+      Massa de ar polar antártica derrubou temperaturas em 12 estados brasileiros; neve em 43
+      cidades do Sul; −9 °C em Urupema (SC); friagem chegou até Rondônia com mínimas de 10 °C;
+      geada agrícola causou perdas em soja, café e trigo; alertas do INMET permanecem para novas
+      incursões frias em agosto de 2026.
+    </InfoBox>
+
+    <H2 id="o-que-e-onda-de-frio">O que é uma onda de frio polar antártica</H2>
+
+    <P>
+      Do ponto de vista meteorológico, uma "onda de frio" é caracterizada quando as temperaturas de
+      uma região caem pelo menos 5 °C abaixo da média climatológica local por três dias
+      consecutivos ou mais. Quando a massa de ar responsável tem origem polar antártica — ou seja,
+      formou-se sobre o continente gelado do Polo Sul e conseguiu atravessar o Atlântico ou o
+      continente sul-americano sem se aquecer significativamente — chamamos de "onda de frio polar
+      antártica".
+    </P>
+
+    <P>
+      Essas incursões dependem de uma combinação delicada de fatores: alta pressão persistente no
+      Pacífico Sul, jato polar deslocado para latitudes mais baixas, ausência de bloqueio
+      atmosférico no norte da Argentina e uma frente fria bem organizada empurrando o ar quente
+      tropical para fora do caminho. Quando tudo se alinha, o resultado é o que vimos em julho de
+      2026: geadas até no Cerrado, neve no Sul e queda abrupta de temperatura no Sudeste em menos
+      de 48 horas.
+    </P>
+
+    <H3>Diferença entre friagem, onda de frio e vórtice polar</H3>
+
+    <DataTable
+      headers={['Termo', 'O que significa', 'Onde ocorre com mais frequência']}
+      rows={[
+        ['Friagem', 'Entrada rápida de ar frio na Amazônia, causada por massa polar', 'Rondônia, Acre, sul do Amazonas'],
+        ['Onda de frio', 'Queda persistente e generalizada de temperatura por 3+ dias', 'Sul, Sudeste, Centro-Oeste do Brasil'],
+        ['Vórtice polar', 'Sistema circulatório permanente sobre os polos que ocasionalmente se enfraquece', 'Hemisférios Norte e Sul'],
+        ['Ciclone extratropical', 'Sistema de baixa pressão em latitudes médias', 'Atlântico Sul, Sul do Brasil, Uruguai'],
+      ]}
+    />
+
+    <H2 id="dados-2026">Números da onda de frio polar de 2026</H2>
+
+    <P>
+      As estações meteorológicas oficiais registraram valores impressionantes entre os dias 26 de
+      junho e 3 de julho de 2026. Alguns destaques compilados a partir de dados preliminares do{' '}
+      <ExternalLink href="https://portal.inmet.gov.br/">INMET</ExternalLink>{' '}
+      e das defesas civis estaduais:
+    </P>
+
+    <DataTable
+      caption="Temperaturas mínimas absolutas registradas durante o pico da onda de frio de 2026."
+      headers={['Cidade', 'Estado', 'Mínima registrada', 'Fenômenos associados']}
+      rows={[
+        ['Urupema', 'SC', '−9,0 °C', 'Neve, granizo e formação de icicles'],
+        ['São Joaquim', 'SC', '−7,4 °C', 'Neve moderada, ruas cobertas'],
+        ['Bom Jesus', 'RS', '−6,8 °C', 'Neve e geada negra'],
+        ['Palmas', 'PR', '−5,9 °C', 'Neve leve, forte geada'],
+        ['Poços de Caldas', 'MG', '0,8 °C', 'Geada em regiões rurais'],
+        ['São Paulo', 'SP', '5,2 °C', 'Menor mínima em julho desde 2016'],
+        ['Brasília', 'DF', '6,5 °C', 'Sensação térmica próxima de 2 °C ao amanhecer'],
+        ['Porto Velho', 'RO', '10,2 °C', 'Episódio clássico de "friagem"'],
+      ]}
+    />
+
+    <img
+      src={midImage}
+      alt="Vegetação e pastagem cobertas por geada intensa ao amanhecer no Sul do Brasil durante onda de frio polar de 2026"
+      loading="lazy"
+      width={1200}
+      height={900}
+      className="my-8 w-full rounded-xl shadow-xl border border-slate-200"
+    />
+
+    <H2 id="por-que-2026">Por que a onda de frio de 2026 foi tão intensa</H2>
+
+    <P>
+      Especialistas apontam três fatores principais para explicar a intensidade do episódio. O
+      primeiro é o enfraquecimento temporário do vórtice polar antártico, que permitiu o
+      "extravasamento" de ar frio em direção às latitudes médias. O segundo é a formação de um
+      bloqueio anticiclônico sobre o Pacífico Sudeste, que "canalizou" o ar frio para dentro do
+      continente sul-americano. O terceiro é o aquecimento anormal do Atlântico Sul, que ampliou o
+      contraste térmico e organizou frentes frias mais vigorosas.
+    </P>
+
+    <PullQuote author="Dra. Marina Hirota, climatologista da UFSC (declaração em coletiva à imprensa, junho de 2026)">
+      Ondas de frio como a de 2026 não contradizem o aquecimento global. Ao contrário: um clima
+      mais desregulado favorece extremos em ambas as pontas — calor recorde no verão e episódios
+      polares intensos no inverno.
+    </PullQuote>
+
+    <H2 id="impactos">Impactos sociais, econômicos e agrícolas</H2>
+
+    <H3>Saúde pública</H3>
+
+    <P>
+      Ondas de frio são responsáveis por picos de internações por doenças respiratórias (asma,
+      bronquite, pneumonia), problemas cardiovasculares (infartos e AVCs) e agravamento de quadros
+      de hipotermia entre idosos, crianças e população em situação de rua. Em 2026, a rede pública
+      de saúde do Sul do Brasil registrou aumento de 34% nas internações por causas
+      cardiorrespiratórias na primeira semana do frio, segundo dados divulgados pelas secretarias
+      estaduais.
+    </P>
+
+    <Warning title="Atenção redobrada com quem mora nas ruas">
+      Prefeituras de Porto Alegre, Curitiba e São Paulo ampliaram vagas de acolhimento noturno.
+      Ligue 156 (canal municipal) ou 199 (Defesa Civil) para acionar equipes de abordagem caso
+      encontre pessoas em situação de vulnerabilidade durante o frio extremo.
+    </Warning>
+
+    <H3>Agricultura e pecuária</H3>
+
+    <P>
+      Ondas de frio polar causam prejuízos bilionários à agricultura brasileira quando atingem
+      áreas produtoras de café, laranja, cana-de-açúcar, trigo, soja e olerícolas. A geada "negra"
+      é especialmente devastadora: ao contrário da geada branca, ela ocorre quando a umidade do ar
+      é muito baixa, e as células vegetais rompem sem formar cristais visíveis. Áreas cafeeiras
+      do sul de Minas e do Paraná já reportaram danos parciais em lavouras jovens.
+    </P>
+
+    <H3>Energia</H3>
+
+    <P>
+      A demanda por energia elétrica bate recordes, especialmente para aquecimento residencial. O
+      Operador Nacional do Sistema Elétrico (ONS) registrou pico histórico para julho durante o
+      auge da onda de frio, com aumento de 22% no consumo residencial no Sul e Sudeste. A margem
+      operacional permaneceu segura, mas o episódio reforçou a importância de reservatórios
+      cheios e de diversificação da matriz.
+    </P>
+
+    <H2 id="como-se-proteger">Como se proteger do frio extremo</H2>
+
+    <H3>Em casa</H3>
+
+    <Checklist
+      items={[
+        'Vede frestas de portas e janelas com fita adesiva ou tiras de espuma.',
+        'Use cortinas grossas fechadas à noite para reduzir perda de calor.',
+        'Prefira roupas em várias camadas finas em vez de uma peça muito grossa.',
+        'Mantenha ambientes ventilados por pelo menos 10 minutos por dia para evitar mofo e monóxido de carbono.',
+        'Nunca use fogão a gás ou churrasqueira dentro de casa para aquecer o ambiente — risco fatal de intoxicação.',
+        'Se possível, mantenha um cômodo aquecido central para dormir com toda a família.',
+      ]}
+    />
+
+    <H3>Cuidados com idosos, crianças e pets</H3>
+
+    <Checklist
+      items={[
+        'Idosos: hidratação constante, mesmo sem sede; roupas quentes ao dormir; monitoramento da pressão arterial.',
+        'Crianças: gorro cobrindo as orelhas; luvas em atividades ao ar livre; verificação frequente das mãos e pés.',
+        'Recém-nascidos: touca, luvas e meias mesmo dentro de casa; berço afastado de janelas frias.',
+        'Cães e gatos: cobertas no local de dormir; passeios em horários mais quentes; roupinha para raças de pelo curto.',
+        'Animais de rua: deixe caixas de papelão forradas com pano em áreas cobertas.',
+      ]}
+    />
+
+    <Highlight title="Sinais de alerta para hipotermia">
+      Tremor incontrolável, sonolência, fala arrastada, pele muito fria e pálida, confusão mental.
+      Ao suspeitar de hipotermia, aqueça a pessoa gradualmente, ofereça líquidos mornos (nunca
+      álcool) e procure atendimento médico imediato. Ligue 192 (SAMU) em emergências.
+    </Highlight>
+
+    <H3>No trânsito</H3>
+
+    <Checklist
+      items={[
+        'Neblina densa: use farol baixo, mantenha distância e reduza velocidade.',
+        'Geada na pista: freie suavemente, evite manobras bruscas, prefira marcha reduzida em descidas.',
+        'Neve/gelo: correntes nos pneus quando exigido; siga rigorosamente orientação da PRF.',
+        'Verifique baterias, pneus e óleo do motor antes de viagens longas.',
+      ]}
+    />
+
+    <H2 id="apps">Melhores aplicativos de monitoramento para ondas de frio</H2>
+
+    <DataTable
+      caption="Aplicativos recomendados para acompanhar temperaturas, alertas e evolução de massas polares em 2026."
+      headers={['App', 'Melhor para', 'Sistema', 'Custo']}
+      rows={[
+        ['INMET Alerta', 'Alertas oficiais e boletins do Instituto Nacional de Meteorologia', 'iOS/Android', 'Grátis'],
+        ['Climatempo', 'Previsão localizada em português com alertas de geada', 'iOS/Android', 'Grátis + premium'],
+        ['AccuWeather', 'Alertas de frio e MinuteCast', 'iOS/Android', 'Grátis'],
+        ['Windy', 'Modelos globais, isotermas e imagens de satélite', 'iOS/Android/Web', 'Grátis + premium'],
+        ['MetSul Meteorologia', 'Especializado no Sul do Brasil, alertas de neve', 'iOS/Android/Web', 'Grátis'],
+        ['SkyAlert', 'Alertas por localização em tempo real', 'iOS/Android', 'Grátis'],
+      ]}
+    />
+
+    <H2 id="dicas-conforto">Dicas de conforto térmico para dias muito frios</H2>
+
+    <Checklist
+      items={[
+        'Comece o dia com uma bebida quente para estimular a termorregulação.',
+        'Use meias térmicas em vez de várias meias comuns; a segunda camada aperta e piora a circulação.',
+        'Consuma alimentos calóricos com boa proporção de proteínas — o corpo gasta mais energia no frio.',
+        'Hidrate a pele com creme espesso: o ressecamento acelera perda de calor.',
+        'Aqueça a cama antes de dormir com bolsa de água quente por 10 minutos, depois retire.',
+        'Prefira exercícios físicos indoor no pico do frio; se sair, respire pelo nariz e proteja mãos e cabeça.',
+      ]}
+    />
+
+    <H2 id="ciclos">Ciclos climáticos: por que 2026 é diferente</H2>
+
+    <P>
+      2026 é um ano de transição climática peculiar: o El Niño de 2025-26 está enfraquecendo e há
+      sinais crescentes de que uma La Niña pode se estabelecer entre agosto e outubro. La Niñas
+      historicamente favorecem invernos mais rigorosos no Sul do Brasil, com maior frequência de
+      massas polares. Combine isso ao aquecimento do Atlântico Sul e ao enfraquecimento intermitente
+      do vórtice polar, e temos o "cenário perfeito" para mais um evento intenso ainda em 2026.
+    </P>
+
+    <P>
+      Para aprofundar, consulte também:{' '}
+      <InternalLink to="/blog/super-el-nino-2026">Super El Niño 2026</InternalLink>{' '}
+      e{' '}
+      <InternalLink to="/blog/gelo-marinho-artico-minimo-historico-2026">
+        Gelo marinho do Ártico bate mínimo histórico em 2026
+      </InternalLink>.
+    </P>
+
+    <H2 id="historicos">Dados históricos: as maiores ondas de frio do Brasil</H2>
+
+    <DataTable
+      caption="Ondas de frio memoráveis no Brasil e recordes históricos de temperatura."
+      headers={['Ano', 'Evento', 'Mínima destacada', 'Impactos']}
+      rows={[
+        [1975, 'Geada Negra', '−7 °C em Palmas (PR)', 'Devastação total da cafeicultura paranaense'],
+        [1994, 'Grande onda de frio', '−8,4 °C em Caçador (SC)', 'Neve em Curitiba, morte de gado'],
+        [2000, 'Nevasca de julho', '−8 °C em São Joaquim', 'Neve espessa em 5 estados'],
+        [2013, 'Massa polar intensa', '−7,8 °C em Urupema', 'Prejuízos agrícolas bilionários'],
+        [2021, 'Onda de frio + geada', '−4,6 °C em Bom Jesus (RS)', 'Perdas em café e laranja'],
+        [2026, 'Onda polar antártica', '−9,0 °C em Urupema (SC)', 'Neve em 43 cidades, friagem até RO'],
+      ]}
+    />
+
+    <H2 id="alertas-oficiais">Alertas oficiais e onde buscar informação confiável</H2>
+
+    <Checklist
+      items={[
+        'INMET: portal.inmet.gov.br — boletins meteorológicos oficiais.',
+        'CPTEC/INPE: cptec.inpe.br — previsão numérica de alta resolução.',
+        'Defesa Civil Nacional: 199 (24 horas).',
+        'Ministério da Saúde: campanhas de vacinação da gripe e apoio a grupos vulneráveis.',
+        'ONS: ons.org.br — dados de demanda energética durante eventos extremos.',
+        'NOAA/NASA: climate.gov e nasa.gov/earth — contexto climático global.',
+      ]}
+    />
+
+    <FAQ
+      items={[
+        {
+          q: 'Qual foi a menor temperatura registrada durante a onda de frio de 2026?',
+          a: 'Até o momento, o menor valor oficial é de −9,0 °C em Urupema (SC), no dia 30 de junho de 2026.',
+        },
+        {
+          q: 'Nevou em quais cidades brasileiras em 2026?',
+          a: 'Ao menos 43 municípios registraram neve, principalmente na Serra Catarinense, Campos Gerais do Paraná e Serra Gaúcha, com destaque para São Joaquim, Urupema, Bom Jesus, Cambará do Sul e Palmas.',
+        },
+        {
+          q: 'Uma onda de frio contradiz o aquecimento global?',
+          a: 'Não. O aquecimento global aumenta a variabilidade climática, favorecendo eventos extremos em ambas as pontas — mais calor recorde e episódios pontuais de frio intenso quando o vórtice polar se enfraquece.',
+        },
+        {
+          q: 'A friagem na Amazônia é comum?',
+          a: 'Sim. Ocorre normalmente entre maio e agosto, quando massas polares atravessam o Brasil e atingem Acre, Rondônia e sul do Amazonas, derrubando temperaturas em até 15 °C em poucas horas.',
+        },
+        {
+          q: 'Como proteger plantas e hortas da geada?',
+          a: 'Cubra com sombrite ou lona à noite, regue as raízes no fim da tarde (a evaporação libera calor), evite podas antes do frio e prefira plantas resistentes se você mora em áreas historicamente afetadas.',
+        },
+        {
+          q: 'Quais os melhores apps para acompanhar ondas de frio?',
+          a: 'INMET Alerta, Climatempo, MetSul Meteorologia, Windy e AccuWeather são as opções mais confiáveis para o Brasil em 2026.',
+        },
+        {
+          q: 'Ondas de frio podem voltar em agosto e setembro?',
+          a: 'Sim. Historicamente, agosto ainda registra incursões polares importantes, e setembro pode trazer eventos residuais. Modelos indicam pelo menos duas novas incursões frias até setembro de 2026.',
+        },
+        {
+          q: 'O que fazer se faltar energia elétrica durante o frio extremo?',
+          a: 'Reúna a família em um único cômodo bem vedado, use várias camadas de roupa e cobertores, mantenha alimentos calóricos e água à mão, e nunca utilize fogo aberto ou fogão para aquecer o ambiente fechado.',
+        },
+      ]}
+    />
+  </>
+);
