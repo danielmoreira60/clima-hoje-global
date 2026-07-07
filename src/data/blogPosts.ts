@@ -18,6 +18,10 @@ import articoGeloCover from '@/assets/blog/artico-gelo-cover.jpg';
 import articoGeloMid from '@/assets/blog/artico-gelo-mid.jpg';
 import amazoniaSecaCover from '@/assets/blog/amazonia-seca-cover.jpg';
 import amazoniaSecaMid from '@/assets/blog/amazonia-seca-mid.jpg';
+import tufaoMaysakCover from '@/assets/blog/tufao-maysak-cover.jpg';
+import tufaoMaysakMid from '@/assets/blog/tufao-maysak-mid.jpg';
+import ondaFrioPolarCover from '@/assets/blog/onda-frio-polar-cover.jpg';
+import ondaFrioPolarMid from '@/assets/blog/onda-frio-polar-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -37,6 +41,88 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'tufao-maysak-china-2026',
+    title: 'Tufão Maysak 2026: super tufão atinge a China com ventos de 240 km/h e mais de 1 milhão de evacuados',
+    excerpt:
+      'Análise completa do Tufão Maysak que atingiu a costa leste da China em julho de 2026: intensidade, trajetória, impactos, comparações históricas e guia de proteção.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-cyan-500 to-blue-600',
+    date: '07 Jul 2026',
+    dateISO: '2026-07-07',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: tufaoMaysakCover,
+    midImage: tufaoMaysakMid,
+    tags: [
+      'tufão maysak 2026',
+      'tufão china 2026',
+      'super tufão pacífico oeste',
+      'landfall zhejiang ningbo',
+      'evacuação china tufão',
+      'ciclones tropicais 2026',
+      'furacão vs tufão vs ciclone',
+      'temporada de tufões pacífico',
+      'previsão de tufões 2026',
+      'como se proteger de tufão',
+      'como se proteger de furacão',
+      'melhores apps de monitoramento climático',
+      'windy accuweather climatempo',
+      'ciclos climáticos explicados',
+      'dados históricos tufões china',
+      'alertas governamentais china',
+      'prevenção e cuidados ciclone tropical',
+      'intensificação rápida tufão',
+      'aquecimento oceânico ciclones',
+      'ciclone bomba brasil 2026',
+      'furacão catarina 2004',
+      'dicas de conforto térmico chuva',
+    ],
+    metaTitle: 'Tufão Maysak 2026 na China: 240 km/h, Trajetória e Impactos',
+    metaDescription:
+      'Super Tufão Maysak atinge China em julho de 2026 com ventos de 240 km/h. Dados, trajetória, apps de monitoramento e guia de proteção.',
+  },
+  {
+    slug: 'onda-frio-polar-antartica-brasil-2026',
+    title: 'Onda de frio polar antártica no Brasil em 2026: neve em 43 cidades e −9 °C em Santa Catarina',
+    excerpt:
+      'A maior onda de frio desde 2013 atingiu o Brasil em julho de 2026, com neve em 43 cidades, friagem na Amazônia e prejuízos agrícolas. Entenda causas, impactos e como se proteger.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-sky-500 to-indigo-600',
+    date: '07 Jul 2026',
+    dateISO: '2026-07-07',
+    readTime: '13 min',
+    author: 'Equipe Clima Tempo',
+    cover: ondaFrioPolarCover,
+    midImage: ondaFrioPolarMid,
+    tags: [
+      'onda de frio brasil 2026',
+      'massa polar antártica 2026',
+      'neve no sul do brasil 2026',
+      'friagem amazônia 2026',
+      'geada 2026 café soja',
+      'urupema são joaquim -9 graus',
+      'menor temperatura brasil 2026',
+      'como se proteger do frio extremo',
+      'dicas de conforto térmico frio',
+      'melhores apps de monitoramento climático',
+      'inmet climatempo metsul',
+      'ciclos climáticos la niña',
+      'la niña 2026 brasil',
+      'dados históricos ondas de frio',
+      'alertas governamentais frio',
+      'prevenção e cuidados hipotermia',
+      'vórtice polar antártico',
+      'jato polar deslocado',
+      'geada negra café paraná',
+      'demanda energia elétrica ons',
+      'saúde pública frio idosos crianças',
+      'proteção pets frio extremo',
+    ],
+    metaTitle: 'Onda de Frio Polar 2026 no Brasil: Neve, -9 °C e Alertas',
+    metaDescription:
+      'Onda de frio polar antártica atinge Brasil em julho de 2026: neve em 43 cidades, -9°C em SC, friagem na Amazônia e como se proteger.',
+  },
   {
     slug: 'gelo-marinho-artico-minimo-historico-2026',
     title: 'Gelo marinho do Ártico bate mínimo histórico em 2026 e alerta o mundo',
