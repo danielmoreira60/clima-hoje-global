@@ -7,7 +7,6 @@ import CitySearch from "@/components/CitySearch";
 import NaturalEventsMonitor from "@/components/NaturalEventsMonitor";
 import BlogSection from "@/components/BlogSection";
 import useWeather from "@/hooks/useWeather";
-import weatherBanner from "@/assets/weather-banner.jpg";
 import SEO from '@/components/SEO';
 import { 
   MapPin, 
@@ -45,15 +44,18 @@ const Index = () => {
       <SEO title="Clima Tempo - Previsão do Tempo Hoje e 15 Dias" description="Previsão do tempo detalhada para todo o Brasil: temperatura agora, chuva, clima para hoje, amanhã e próximos 15 dias." path="/" />
       <main className="container mx-auto px-4 py-8">
         {/* Hero Section */}
-        <section 
-          className="relative text-center mb-12 animate-fade-in py-20 px-8 rounded-2xl overflow-hidden"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url(${weatherBanner})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <section className="relative text-center mb-12 animate-fade-in py-20 px-8 rounded-2xl overflow-hidden min-h-[420px]">
+          <img
+            src="/weather-banner.jpg"
+            alt="Panorama do céu com nuvens dramáticas representando a previsão do tempo no Brasil"
+            width="1474"
+            height="554"
+            fetchPriority="high"
+            loading="eager"
+            decoding="async"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60" aria-hidden="true" />
           <div className="relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-scale-in drop-shadow-2xl">
               Clima Tempo — Previsão do tempo precisa e monitoramento global
