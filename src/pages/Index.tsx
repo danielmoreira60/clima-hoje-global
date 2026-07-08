@@ -7,7 +7,6 @@ import CitySearch from "@/components/CitySearch";
 import NaturalEventsMonitor from "@/components/NaturalEventsMonitor";
 import BlogSection from "@/components/BlogSection";
 import useWeather from "@/hooks/useWeather";
-import weatherBanner from "@/assets/weather-banner.jpg";
 import SEO from '@/components/SEO';
 import { 
   MapPin, 
