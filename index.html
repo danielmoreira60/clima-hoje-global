@@ -24,6 +24,35 @@
     <meta name="twitter:title" content="Clima Tempo - Previsão do Tempo Hoje e 15 Dias" />
     <meta name="twitter:description" content="Previsão do tempo detalhada para todo o Brasil: temperatura agora, chuva, clima para hoje, amanhã e próximos 15 dias." />
     <meta name="twitter:image" content="https://clima-hoje-global.lovable.app/weather-banner.jpg" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://clima-hoje-global.lovable.app/#organization",
+          "name": "Clima Tempo",
+          "url": "https://clima-hoje-global.lovable.app/",
+          "logo": "https://clima-hoje-global.lovable.app/favicon.png"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://clima-hoje-global.lovable.app/#website",
+          "url": "https://clima-hoje-global.lovable.app/",
+          "name": "Clima Tempo",
+          "description": "Previsão do tempo hoje, amanhã e 15 dias para o Brasil.",
+          "inLanguage": "pt-BR",
+          "publisher": { "@id": "https://clima-hoje-global.lovable.app/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://clima-hoje-global.lovable.app/previsao/{search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

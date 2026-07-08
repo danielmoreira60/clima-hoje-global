@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Map, Home, Cloud, Sun, Calendar, Phone, FileText, BookOpen, Globe } from 'lucide-react';
+import { Map, Home, Cloud, Sun, Calendar, Phone, FileText, BookOpen, Globe, MapPin } from 'lucide-react';
 import SEO from '@/components/SEO';
 
 const SitemapPage = () => {
@@ -11,6 +11,7 @@ const SitemapPage = () => {
     { name: 'Previsão Amanhã', url: '/amanha', icon: Sun },
     { name: 'Fim de Semana', url: '/fim-de-semana', icon: Calendar },
     { name: 'Próximos 15 Dias', url: '/15-dias', icon: Calendar },
+    { name: 'Clima em São Paulo', url: '/previsao/sao-paulo', icon: MapPin },
     { name: 'Contato', url: '/contato', icon: Phone },
   ];
 
