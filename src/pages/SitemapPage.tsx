@@ -56,7 +56,7 @@ const SitemapPage = () => {
               >
                 <Icon className="h-4 w-4" />
                 <span>{page.name}</span>
-                <span className="text-xs text-muted-foreground/60 ml-auto">{page.url}</span>
+                <span className="text-xs text-muted-foreground ml-auto">{page.url}</span>
               </Link>
             </li>
           );
