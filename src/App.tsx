@@ -14,6 +14,7 @@ import FimDeSemanaPage from "./pages/FimDeSemanaPage";
 import QuinzeDiasPage from "./pages/QuinzeDiasPage";
 import ContatoPage from "./pages/ContatoPage";
 import SitemapPage from "./pages/SitemapPage";
+import PrevisaoSaoPauloPage from "./pages/PrevisaoSaoPauloPage";
 import SobrePage from "./pages/SobrePage";
 import BlogPage from "./pages/BlogPage";
 import BlogPostPage from "./pages/BlogPostPage";
@@ -43,6 +44,7 @@ const App = () => (
               <Route path="/fim-de-semana" element={<FimDeSemanaPage />} />
               <Route path="/15-dias" element={<QuinzeDiasPage />} />
               <Route path="/contato" element={<ContatoPage />} />
+              <Route path="/previsao/sao-paulo" element={<PrevisaoSaoPauloPage />} />
               <Route path="/sobre" element={<SobrePage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/blog/:slug" element={<BlogPostPage />} />
