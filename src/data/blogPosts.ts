@@ -22,6 +22,10 @@ import tufaoMaysakCover from '@/assets/blog/tufao-maysak-cover.jpg';
 import tufaoMaysakMid from '@/assets/blog/tufao-maysak-mid.jpg';
 import ondaFrioPolarCover from '@/assets/blog/onda-frio-polar-cover.jpg';
 import ondaFrioPolarMid from '@/assets/blog/onda-frio-polar-mid.jpg';
+import enchentesRsCover from '@/assets/blog/enchentes-rs-cover.jpg';
+import enchentesRsMid from '@/assets/blog/enchentes-rs-mid.jpg';
+import incendiosEuropaEuaCover from '@/assets/blog/incendios-europa-eua-cover.jpg';
+import incendiosEuropaEuaMid from '@/assets/blog/incendios-europa-eua-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -41,6 +45,82 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'chuvas-intensas-enchentes-rio-grande-do-sul-2026',
+    title: 'Chuvas intensas e enchentes no Rio Grande do Sul em 2026: bloqueio atmosférico deixa o estado em emergência',
+    excerpt:
+      'Bloqueio atmosférico trava frentes frias sobre o Sul e provoca chuvas extremas, enxurradas e cheia prolongada do Guaíba em agosto de 2026. Causas, impactos e guia completo de proteção.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-blue-500 to-cyan-600',
+    date: '06 Ago 2026',
+    dateISO: '2026-08-06',
+    readTime: '13 min',
+    author: 'Equipe Clima Tempo',
+    cover: enchentesRsCover,
+    midImage: enchentesRsMid,
+    tags: [
+      'enchentes rio grande do sul 2026',
+      'chuvas intensas rs 2026',
+      'nível do guaíba hoje',
+      'cheia vale do taquari',
+      'bloqueio atmosférico brasil',
+      'jato de baixos níveis umidade',
+      'defesa civil rs alertas',
+      'como se proteger de enchente',
+      'mochila de emergência enchente',
+      'leptospirose após enchente',
+      'melhores apps de monitoramento climático',
+      'inmet metsul climatempo',
+      'nível de rios cprm tempo real',
+      'deslizamentos serra gaúcha',
+      'previsão do tempo porto alegre',
+      'mudanças climáticas chuvas extremas',
+      'planície de inundação urbana',
+      'vento sul lagoa dos patos',
+      'prevenção e cuidados alagamento',
+      'dados históricos enchentes 1941 2024',
+    ],
+    metaTitle: 'Enchentes no Rio Grande do Sul 2026: Causas e Como se Proteger',
+    metaDescription:
+      'Chuvas extremas e enchentes no RS em agosto de 2026: bloqueio atmosférico, cheia do Guaíba, impactos e guia prático de proteção.',
+  },
+  {
+    slug: 'incendios-florestais-europa-eua-2026',
+    title: 'Incêndios florestais na Europa e nos EUA em 2026: a temporada de fogo mais severa do Hemisfério Norte',
+    excerpt:
+      'Calor extremo, vegetação seca e ventos fortes alimentam megaincêndios simultâneos no Mediterrâneo e no oeste americano. Entenda causas, o efeito da fumaça e como se proteger.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-orange-500 to-red-600',
+    date: '06 Ago 2026',
+    dateISO: '2026-08-06',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: incendiosEuropaEuaCover,
+    midImage: incendiosEuropaEuaMid,
+    tags: [
+      'incêndios florestais europa 2026',
+      'incêndios estados unidos 2026',
+      'megaincêndios mediterrâneo',
+      'incêndio de sexta geração',
+      'pirocumulonimbo',
+      'onda de calor europa 2026',
+      'ventos santa ana diablo',
+      'interface urbano-florestal wui',
+      'qualidade do ar pm2.5 fumaça',
+      'como se proteger da fumaça de incêndio',
+      'máscara pff2 n95 fumaça',
+      'espaço defensável casa',
+      'queima prescrita manejo de combustível',
+      'nasa firms copernicus effis',
+      'watch duty inciweb',
+      'melhores apps de monitoramento climático',
+      'mudanças climáticas incêndios florestais',
+      'prevenção e cuidados incêndio',
+    ],
+    metaTitle: 'Incêndios na Europa e EUA 2026: Megaincêndios e Proteção',
+    metaDescription:
+      'Temporada de incêndios florestais de 2026 na Europa e nos EUA: causas climáticas, risco da fumaça, apps de monitoramento e como se proteger.',
+  },
   {
     slug: 'tufao-maysak-china-2026',
     title: 'Tufão Maysak 2026: super tufão atinge a China com ventos de 240 km/h e mais de 1 milhão de evacuados',
