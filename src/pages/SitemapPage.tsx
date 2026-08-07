@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Enchentes no Rio Grande do Sul 2026', url: '/blog/chuvas-intensas-enchentes-rio-grande-do-sul-2026', icon: BookOpen },
+    { name: 'Incêndios Florestais na Europa e EUA 2026', url: '/blog/incendios-florestais-europa-eua-2026', icon: BookOpen },
     { name: 'Tufão Maysak na China 2026', url: '/blog/tufao-maysak-china-2026', icon: BookOpen },
     { name: 'Onda de Frio Polar Antártica no Brasil 2026', url: '/blog/onda-frio-polar-antartica-brasil-2026', icon: BookOpen },
     { name: 'Gelo Marinho do Ártico Mínimo Histórico 2026', url: '/blog/gelo-marinho-artico-minimo-historico-2026', icon: BookOpen },

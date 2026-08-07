@@ -19,6 +19,7 @@ import {
   TufaoMaysakArticle,
   OndaFrioPolarArticle,
 } from '@/components/blog/articles';
+import { EnchentesRSArticle, IncendiosEuropaEuaArticle } from '@/components/blog/articles2';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
@@ -34,6 +35,8 @@ const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, mid
   if (slug === 'amazonia-seca-historica-2026') return <AmazoniaSecaArticle midImage={midImage} />;
   if (slug === 'tufao-maysak-china-2026') return <TufaoMaysakArticle midImage={midImage} />;
   if (slug === 'onda-frio-polar-antartica-brasil-2026') return <OndaFrioPolarArticle midImage={midImage} />;
+  if (slug === 'chuvas-intensas-enchentes-rio-grande-do-sul-2026') return <EnchentesRSArticle midImage={midImage} />;
+  if (slug === 'incendios-florestais-europa-eua-2026') return <IncendiosEuropaEuaArticle midImage={midImage} />;
   return null;
 };
 
