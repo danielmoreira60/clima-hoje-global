@@ -20,9 +20,12 @@ import {
   OndaFrioPolarArticle,
 } from '@/components/blog/articles';
 import { EnchentesRSArticle, IncendiosEuropaEuaArticle } from '@/components/blog/articles2';
+import { CicloneBombaArticle, OndaCalorAsiaArticle } from '@/components/blog/articles3';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
+  if (slug === 'ciclone-bomba-brasil-agosto-2026') return <CicloneBombaArticle midImage={midImage} />;
+  if (slug === 'onda-calor-recorde-leste-asia-2026') return <OndaCalorAsiaArticle midImage={midImage} />;
   if (slug === 'super-el-nino-2026') return <SuperElNinoArticle midImage={midImage} />;
   if (slug === 'terremoto-venezuela-2026') return <TerremotoVenezuelaArticle midImage={midImage} />;
   if (slug === 'calor-extremo-europa-2026') return <CalorEuropaArticle midImage={midImage} />;
