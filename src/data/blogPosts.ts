@@ -26,6 +26,10 @@ import enchentesRsCover from '@/assets/blog/enchentes-rs-cover.jpg';
 import enchentesRsMid from '@/assets/blog/enchentes-rs-mid.jpg';
 import incendiosEuropaEuaCover from '@/assets/blog/incendios-europa-eua-cover.jpg';
 import incendiosEuropaEuaMid from '@/assets/blog/incendios-europa-eua-mid.jpg';
+import cicloneBombaCover from '@/assets/blog/ciclone-bomba-cover.jpg';
+import cicloneBombaMid from '@/assets/blog/ciclone-bomba-mid.jpg';
+import ondaCalorAsiaCover from '@/assets/blog/onda-calor-asia-cover.jpg';
+import ondaCalorAsiaMid from '@/assets/blog/onda-calor-asia-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -45,6 +49,98 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'ciclone-bomba-brasil-agosto-2026',
+    title: 'Ciclone-bomba atinge o Sul e o Sudeste do Brasil em agosto de 2026: ventos de 120 km/h, tornado e 294 mil sem energia',
+    excerpt:
+      'Ciclogênese explosiva no Atlântico Sul gera rajadas acima de 120 km/h, tornado no Rio Grande do Sul e apagão em massa. Entenda a física do fenômeno, os impactos e como se proteger.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-indigo-500 to-blue-600',
+    date: '08 Ago 2026',
+    dateISO: '2026-08-08',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: cicloneBombaCover,
+    midImage: cicloneBombaMid,
+    tags: [
+      'ciclone bomba brasil 2026',
+      'ciclone bomba hoje',
+      'ciclogênese explosiva',
+      'bombogênese explicada',
+      'tornado pedro osório rs',
+      'ventos 120 km/h porto alegre',
+      'rajada de vento santos 109 km/h',
+      'defesa civil rs alerta vermelho',
+      'inmet alerta de perigo vento',
+      'como se proteger de ciclone bomba',
+      'como se proteger de vento forte',
+      'melhores apps de monitoramento climático',
+      'windy climatempo accuweather inmet',
+      'ciclos climáticos explicados',
+      'dados históricos ciclones brasil',
+      'furacão catarina 2004',
+      'alertas governamentais defesa civil 199',
+      'prevenção e cuidados temporal',
+      'dicas de conforto térmico frio',
+      'apagão 294 mil imóveis rs',
+      'ressaca ondas 3 metros litoral',
+      'kit de emergência tempestade',
+      'diferença ciclone e furacão',
+      'mudanças climáticas ciclones intensos',
+      'supercélula tempestade sul do brasil',
+      'previsão do tempo porto alegre',
+      'previsão do tempo são paulo litoral',
+    ],
+    metaTitle: 'Ciclone-Bomba no Brasil 2026: Ventos de 120 km/h e Alertas',
+    metaDescription:
+      'Ciclone-bomba castiga o Sul e Sudeste em agosto de 2026: ventos de 120 km/h, tornado no RS, apagão e guia completo de como se proteger.',
+  },
+  {
+    slug: 'onda-calor-recorde-leste-asia-2026',
+    title: 'Onda de calor recorde no Leste da Ásia em 2026: 40,3 °C no Japão, mortes na Coreia do Sul e o limite do corpo humano',
+    excerpt:
+      'Cúpula de calor persistente leva o Japão a 40,3 °C pela primeira vez em Kumamoto e mata ao menos 16 pessoas na Coreia do Sul. Causas, índice de calor, riscos e guia de proteção.',
+    category: 'Clima Extremo',
+    categoryColor: 'from-amber-500 to-red-600',
+    date: '08 Ago 2026',
+    dateISO: '2026-08-08',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: ondaCalorAsiaCover,
+    midImage: ondaCalorAsiaMid,
+    tags: [
+      'onda de calor ásia 2026',
+      'onda de calor japão 2026',
+      'onda de calor coreia do sul 2026',
+      'recorde 40 graus kumamoto',
+      'cúpula de calor heat dome',
+      'noite tropical nettaiya',
+      'índice de calor sensação térmica',
+      'temperatura de bulbo úmido',
+      'como se proteger de onda de calor',
+      'dicas de conforto térmico calor',
+      'sintomas de insolação e o que fazer',
+      'exaustão por calor primeiros socorros',
+      'melhores apps de monitoramento climático',
+      'accuweather realfeel windy iqair',
+      'ciclos climáticos explicados',
+      'el niño 2026 temperatura global',
+      'dados históricos ondas de calor ásia',
+      'alertas governamentais jma kma inmet',
+      'prevenção e cuidados calor extremo',
+      'ilha de calor urbana seul tóquio',
+      'grupos de risco calor idosos',
+      'hidratação em onda de calor',
+      'ar condicionado economia energia calor',
+      'terremoto kumamoto 7.1 abrigos',
+      'mudanças climáticas ondas de calor',
+      'risco composto desastres',
+      'onda de calor no brasil inmet',
+    ],
+    metaTitle: 'Onda de Calor Recorde na Ásia 2026: 40,3 °C e 16 Mortes',
+    metaDescription:
+      'Onda de calor histórica no Japão e nas Coreias em 2026: 40,3 °C em Kumamoto, 16 mortes, causas do heat dome e como se proteger do calor extremo.',
+  },
   {
     slug: 'chuvas-intensas-enchentes-rio-grande-do-sul-2026',
     title: 'Chuvas intensas e enchentes no Rio Grande do Sul em 2026: bloqueio atmosférico deixa o estado em emergência',
