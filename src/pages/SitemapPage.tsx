@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Terremoto na Colômbia Magnitude 7,4 (2026)', url: '/blog/terremoto-colombia-magnitude-7-4-2026', icon: BookOpen },
+    { name: 'Placas Tectônicas: Colômbia, Venezuela e os Maiores Terremotos', url: '/blog/placas-tectonicas-colombia-venezuela-maiores-terremotos', icon: BookOpen },
     { name: 'Ciclone-Bomba no Brasil — Agosto 2026', url: '/blog/ciclone-bomba-brasil-agosto-2026', icon: BookOpen },
     { name: 'Onda de Calor Recorde no Leste da Ásia 2026', url: '/blog/onda-calor-recorde-leste-asia-2026', icon: BookOpen },
     { name: 'Enchentes no Rio Grande do Sul 2026', url: '/blog/chuvas-intensas-enchentes-rio-grande-do-sul-2026', icon: BookOpen },

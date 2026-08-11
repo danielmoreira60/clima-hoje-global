@@ -30,6 +30,10 @@ import cicloneBombaCover from '@/assets/blog/ciclone-bomba-cover.jpg';
 import cicloneBombaMid from '@/assets/blog/ciclone-bomba-mid.jpg';
 import ondaCalorAsiaCover from '@/assets/blog/onda-calor-asia-cover.jpg';
 import ondaCalorAsiaMid from '@/assets/blog/onda-calor-asia-mid.jpg';
+import terremotoColombiaCover from '@/assets/blog/terremoto-colombia-cover.jpg';
+import terremotoColombiaMid from '@/assets/blog/terremoto-colombia-mid.jpg';
+import placasAndesCover from '@/assets/blog/placas-andes-cover.jpg';
+import placasAndesMid from '@/assets/blog/placas-andes-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -49,6 +53,104 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'terremoto-colombia-magnitude-7-4-2026',
+    title: 'Terremoto na Colômbia de magnitude 7,4: o mais forte da última década',
+    excerpt:
+      'Sismo de magnitude 7,4 sacode os Andes colombianos e é sentido na Venezuela, no Equador e no Panamá. Entenda a geologia, os dados históricos e o guia completo de como se proteger.',
+    category: 'Geologia',
+    categoryColor: 'from-orange-500 to-red-600',
+    date: '11 Ago 2026',
+    dateISO: '2026-08-11',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: terremotoColombiaCover,
+    midImage: terremotoColombiaMid,
+    tags: [
+      'terremoto na colombia 2026',
+      'terremoto colombia magnitude 7.4',
+      'terremoto colombia hoje',
+      'sismo colombia bogota medellin',
+      'placa de nazca subducção',
+      'placa do caribe colombia',
+      'nido sismico de bucaramanga',
+      'falha de romeral',
+      'como se proteger de terremoto',
+      'o que fazer durante um terremoto',
+      'kit de emergência terremoto',
+      'dados históricos de terremotos na colombia',
+      'terremoto armenia 1999',
+      'terremoto popayan 1983',
+      'terremoto tumaco 1979 tsunami',
+      'alertas governamentais usgs',
+      'servicio geologico colombiano alerta',
+      'melhores apps de monitoramento climático',
+      'app myshake alerta de terremoto',
+      'windy accuweather climatempo inmet',
+      'ciclos climáticos explicados',
+      'prevenção e cuidados terremoto',
+      'dicas de conforto térmico abrigo',
+      'réplicas de terremoto quanto tempo duram',
+      'escala de magnitude de momento',
+      'diferença magnitude e intensidade',
+      'risco de terremoto no brasil',
+      'terremoto pode gerar tsunami',
+      'cinturão de fogo do pacífico',
+      'engenharia sísmica construção antissísmica',
+    ],
+    metaTitle: 'Terremoto na Colômbia 2026: Magnitude 7,4, o Maior da Década',
+    metaDescription:
+      'Terremoto de magnitude 7,4 na Colômbia em 2026: o mais forte da década. Veja causas tectônicas, histórico, alertas oficiais e como se proteger.',
+  },
+  {
+    slug: 'placas-tectonicas-colombia-venezuela-maiores-terremotos',
+    title: 'A conexão tectônica entre Colômbia e Venezuela: por que a região concentra os maiores terremotos da história',
+    excerpt:
+      'Nazca, Caribe e América do Sul se encontram no norte do continente. Entenda a ligação entre os sismos da Colômbia e da Venezuela e conheça os maiores terremotos já registrados na região, de Valdívia 1960 a Caracas 1812.',
+    category: 'Geologia',
+    categoryColor: 'from-amber-500 to-orange-600',
+    date: '11 Ago 2026',
+    dateISO: '2026-08-11',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: placasAndesCover,
+    midImage: placasAndesMid,
+    tags: [
+      'placas tectonicas colombia venezuela',
+      'ligação terremoto colombia venezuela',
+      'borda de placa tectonica america do sul',
+      'placa do caribe placa sul-americana',
+      'placa de nazca andes',
+      'falha de boconó venezuela',
+      'falha de oca ancón',
+      'bloco andino do norte',
+      'maiores terremotos da história',
+      'terremoto de valdivia 1960 magnitude 9.5',
+      'terremoto do chile 2010 maule',
+      'terremoto caracas 1812',
+      'terremoto caracas 1967',
+      'terremoto equador colombia 1906',
+      'terremoto ancash peru 1970',
+      'cinturão de fogo do pacífico explicado',
+      'zona de subducção o que é',
+      'transferência de tensão de coulomb',
+      'diferença tsunami maremoto terremoto',
+      'como se proteger de tsunami',
+      'alerta natural de tsunami litoral',
+      'dados históricos de terremotos américa do sul',
+      'monitoramento gps insar placas',
+      'sistema de alerta precoce de terremoto',
+      'alertas governamentais noaa usgs',
+      'melhores apps de monitoramento climático',
+      'ciclos climáticos explicados',
+      'prevenção e cuidados zona sísmica',
+      'dicas de conforto térmico evacuação',
+      'mudanças climáticas causam terremotos',
+    ],
+    metaTitle: 'Placas Tectônicas Colômbia e Venezuela: Maiores Terremotos',
+    metaDescription:
+      'Entenda a ligação tectônica entre os terremotos da Colômbia e da Venezuela e conheça os maiores sismos da história andina e caribenha.',
+  },
   {
     slug: 'ciclone-bomba-brasil-agosto-2026',
     title: 'Ciclone-bomba atinge o Sul e o Sudeste do Brasil em agosto de 2026: ventos de 120 km/h, tornado e 294 mil sem energia',
