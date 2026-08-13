@@ -22,9 +22,12 @@ import {
 import { EnchentesRSArticle, IncendiosEuropaEuaArticle } from '@/components/blog/articles2';
 import { CicloneBombaArticle, OndaCalorAsiaArticle } from '@/components/blog/articles3';
 import { TerremotoColombiaArticle, PlacasAndesArticle } from '@/components/blog/articles4';
+import { LaNina2026Article, CoraisOceanos2026Article } from '@/components/blog/articles5';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
+  if (slug === 'la-nina-2026-impactos-brasil-previsao') return <LaNina2026Article midImage={midImage} />;
+  if (slug === 'ondas-calor-marinhas-branqueamento-corais-2026') return <CoraisOceanos2026Article midImage={midImage} />;
   if (slug === 'terremoto-colombia-magnitude-7-4-2026') return <TerremotoColombiaArticle midImage={midImage} />;
   if (slug === 'placas-tectonicas-colombia-venezuela-maiores-terremotos') return <PlacasAndesArticle midImage={midImage} />;
   if (slug === 'ciclone-bomba-brasil-agosto-2026') return <CicloneBombaArticle midImage={midImage} />;
