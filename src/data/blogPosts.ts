@@ -34,6 +34,10 @@ import terremotoColombiaCover from '@/assets/blog/terremoto-colombia-cover.jpg';
 import terremotoColombiaMid from '@/assets/blog/terremoto-colombia-mid.jpg';
 import placasAndesCover from '@/assets/blog/placas-andes-cover.jpg';
 import placasAndesMid from '@/assets/blog/placas-andes-mid.jpg';
+import laNinaCover from '@/assets/blog/la-nina-2026-cover.jpg';
+import laNinaMid from '@/assets/blog/la-nina-2026-mid.jpg';
+import coraisCover from '@/assets/blog/corais-2026-cover.jpg';
+import coraisMid from '@/assets/blog/corais-2026-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
