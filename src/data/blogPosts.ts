@@ -34,6 +34,10 @@ import terremotoColombiaCover from '@/assets/blog/terremoto-colombia-cover.jpg';
 import terremotoColombiaMid from '@/assets/blog/terremoto-colombia-mid.jpg';
 import placasAndesCover from '@/assets/blog/placas-andes-cover.jpg';
 import placasAndesMid from '@/assets/blog/placas-andes-mid.jpg';
+import laNinaCover from '@/assets/blog/la-nina-2026-cover.jpg';
+import laNinaMid from '@/assets/blog/la-nina-2026-mid.jpg';
+import coraisCover from '@/assets/blog/corais-2026-cover.jpg';
+import coraisMid from '@/assets/blog/corais-2026-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -53,6 +57,104 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'la-nina-2026-impactos-brasil-previsao',
+    title: 'La Niña 2026: o Pacífico esfria e redesenha o clima do Brasil e do mundo',
+    excerpt:
+      'Depois do Super El Niño, o Pacífico virou o jogo. Entenda como a La Niña 2026 muda chuvas, secas, ondas de frio e a temporada de furacões — e como se preparar região por região.',
+    category: 'Ciclos Climáticos',
+    categoryColor: 'from-sky-500 to-cyan-600',
+    date: '13 Ago 2026',
+    dateISO: '2026-08-13',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: laNinaCover,
+    midImage: laNinaMid,
+    tags: [
+      'la nina 2026',
+      'la nina 2026 brasil',
+      'o que é la nina',
+      'la nina impactos no brasil',
+      'ciclos climáticos explicados',
+      'enos el nino oscilacao sul',
+      'indice nino 3.4',
+      'indice de oscilacao sul',
+      'la nina previsao do tempo',
+      'la nina chuvas nordeste',
+      'la nina seca no sul do brasil',
+      'veranico agricultura la nina',
+      'la nina temporada de furacoes atlantico',
+      'la nina inverno mais frio',
+      'como se proteger de estiagem',
+      'como se proteger de temporal',
+      'dicas de conforto térmico tempo seco',
+      'kit de emergência defesa civil',
+      'alertas governamentais inmet defesa civil 199',
+      'sms 40199 alerta defesa civil',
+      'dados históricos de la nina',
+      'la nina 2020 2023 triple dip',
+      'melhores apps de monitoramento climático',
+      'windy climatempo accuweather inmet cptec',
+      'boletim cptec inpe enos',
+      'noaa climate prediction center la nina',
+      'diferença entre el nino e la nina',
+      'la nina e mudanças climáticas',
+      'previsão sazonal brasil 2026',
+      'prevenção e cuidados estação chuvosa',
+    ],
+    metaTitle: 'La Niña 2026: Impactos no Brasil, Chuvas, Secas e Alertas',
+    metaDescription:
+      'La Niña 2026 esfria o Pacífico e muda o clima: veja impactos por região no Brasil, dados históricos, alertas oficiais e como se proteger dos extremos.',
+  },
+  {
+    slug: 'ondas-calor-marinhas-branqueamento-corais-2026',
+    title: 'Ondas de calor marinhas em 2026: o branqueamento global de corais que ninguém vê',
+    excerpt:
+      'O oceano absorveu o calor do planeta e agora devolve a conta. Entenda as ondas de calor marinhas de 2026, o branqueamento de corais, os recifes brasileiros em risco e o efeito direto nas ressacas e tempestades do litoral.',
+    category: 'Oceanos',
+    categoryColor: 'from-cyan-500 to-blue-600',
+    date: '13 Ago 2026',
+    dateISO: '2026-08-13',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: coraisCover,
+    midImage: coraisMid,
+    tags: [
+      'ondas de calor marinhas 2026',
+      'branqueamento de corais 2026',
+      'aquecimento dos oceanos 2026',
+      'temperatura da superfície do mar recorde',
+      'o que é onda de calor marinha',
+      'por que os corais ficam brancos',
+      'zooxantelas simbiose coral',
+      'degree heating weeks dhw',
+      'noaa coral reef watch alerta',
+      'recifes de coral no brasil abrolhos',
+      'atol das rocas parcel de manuel luis',
+      'corais de porto de galinhas maragogi',
+      'mussismilia coral endêmico brasileiro',
+      'como proteger os corais no mergulho',
+      'protetor solar sem oxibenzona recife',
+      'recifes protegem a costa de ressaca',
+      'erosão costeira e recifes degradados',
+      'pesca artesanal e recifes de coral',
+      'dados históricos de branqueamento de corais',
+      'evento global de branqueamento 1998 2010 2016',
+      'alertas governamentais inmet cptec ressaca',
+      'melhores apps de monitoramento climático',
+      'windy temperatura da água do mar',
+      'climatempo accuweather previsão litoral',
+      'ciclos climáticos explicados oceano',
+      'dicas de conforto térmico no litoral',
+      'como se proteger de onda de calor no litoral',
+      'restauração de corais jardinagem submarina',
+      'refúgios térmicos de corais',
+      'mudanças climáticas e oceanos onu meio ambiente',
+    ],
+    metaTitle: 'Ondas de Calor Marinhas 2026 e o Branqueamento dos Corais',
+    metaDescription:
+      'Ondas de calor marinhas de 2026 provocam branqueamento global de corais. Veja causas, recifes brasileiros em risco, alertas oficiais e como ajudar.',
+  },
   {
     slug: 'terremoto-colombia-magnitude-7-4-2026',
     title: 'Terremoto na Colômbia de magnitude 7,4: o mais forte da última década',

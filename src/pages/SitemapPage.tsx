@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'La Niña 2026: Impactos no Brasil', url: '/blog/la-nina-2026-impactos-brasil-previsao', icon: BookOpen },
+    { name: 'Ondas de Calor Marinhas e Branqueamento de Corais 2026', url: '/blog/ondas-calor-marinhas-branqueamento-corais-2026', icon: BookOpen },
     { name: 'Terremoto na Colômbia Magnitude 7,4 (2026)', url: '/blog/terremoto-colombia-magnitude-7-4-2026', icon: BookOpen },
     { name: 'Placas Tectônicas: Colômbia, Venezuela e os Maiores Terremotos', url: '/blog/placas-tectonicas-colombia-venezuela-maiores-terremotos', icon: BookOpen },
     { name: 'Ciclone-Bomba no Brasil — Agosto 2026', url: '/blog/ciclone-bomba-brasil-agosto-2026', icon: BookOpen },
