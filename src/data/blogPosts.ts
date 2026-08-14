@@ -38,6 +38,10 @@ import laNinaCover from '@/assets/blog/la-nina-2026-cover.jpg';
 import laNinaMid from '@/assets/blog/la-nina-2026-mid.jpg';
 import coraisCover from '@/assets/blog/corais-2026-cover.jpg';
 import coraisMid from '@/assets/blog/corais-2026-mid.jpg';
+import raiosCover from '@/assets/blog/raios-brasil-cover.jpg';
+import raiosMid from '@/assets/blog/raios-brasil-mid.jpg';
+import saaraCover from '@/assets/blog/poeira-saara-cover.jpg';
+import saaraMid from '@/assets/blog/poeira-saara-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -57,6 +61,104 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'raios-tempestades-eletricas-brasil-2026',
+    title: 'Raios no Brasil 2026: por que o país lidera o ranking mundial de descargas elétricas',
+    excerpt:
+      'São cerca de 78 milhões de raios por ano. Entenda por que o Brasil é o país mais atingido do mundo, onde e quando as descargas se concentram e o guia completo de proteção em três tempos.',
+    category: 'Tempestades',
+    categoryColor: 'from-violet-500 to-indigo-600',
+    date: '14 Ago 2026',
+    dateISO: '2026-08-14',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: raiosCover,
+    midImage: raiosMid,
+    tags: [
+      'raios no brasil 2026',
+      'tempestades eletricas brasil',
+      'descargas atmosfericas inpe',
+      'como se proteger de raios',
+      'o que fazer durante tempestade com raios',
+      'regra dos 30 minutos raio',
+      'trovao distancia como calcular',
+      'brasil campeao mundial de raios',
+      'quantos raios caem no brasil por ano',
+      'raio pode cair duas vezes no mesmo lugar',
+      'para raios spda residencial',
+      'protetor contra surto de tensao',
+      'raio queima eletronicos como evitar',
+      'seguranca em campo aberto tempestade',
+      'raio em area rural prevencao',
+      'primeiros socorros vitima de raio',
+      'tensao de passo raio',
+      'melhores apps de monitoramento climático',
+      'windy climatempo accuweather inmet',
+      'alertas governamentais inmet defesa civil 199',
+      'sms 40199 alerta defesa civil',
+      'dados históricos de raios no brasil',
+      'mortes por raio no brasil estatisticas',
+      'ciclos climáticos explicados el nino la nina raios',
+      'zona de convergencia do atlantico sul',
+      'dicas de conforto térmico dias abafados',
+      'prevenção e cuidados tempestade de verao',
+      'nuvem cumulonimbus formacao',
+      'queda de energia por raio',
+      'raio em aeroporto atraso de voos',
+    ],
+    metaTitle: 'Raios no Brasil 2026: Riscos, Mapa e Como se Proteger',
+    metaDescription:
+      'O Brasil lidera o ranking mundial de raios. Veja onde e quando caem mais descargas, dados históricos, alertas oficiais e o guia prático de proteção.',
+  },
+  {
+    slug: 'poeira-do-saara-brasil-2026',
+    title: 'Poeira do Saara em 2026: a nuvem de areia que atravessa o Atlântico e aduba a Amazônia',
+    excerpt:
+      'Até 180 milhões de toneladas de areia cruzam o oceano todo ano. Entenda como a poeira do Saara fertiliza a Amazônia, segura furacões, deixa o céu leitoso e afeta a qualidade do ar no Brasil.',
+    category: 'Atmosfera',
+    categoryColor: 'from-amber-500 to-yellow-600',
+    date: '14 Ago 2026',
+    dateISO: '2026-08-14',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: saaraCover,
+    midImage: saaraMid,
+    tags: [
+      'poeira do saara 2026',
+      'poeira do saara no brasil',
+      'camada de ar saariana',
+      'nuvem de areia atlantico',
+      'poeira do saara amazonia fosforo',
+      'depressao de bodele chade',
+      'tempestade de areia deserto do saara',
+      'poeira do saara furacoes atlantico',
+      'qualidade do ar material particulado pm2.5',
+      'como se proteger de poeira em suspensao',
+      'ceu alaranjado poeira do saara',
+      'baixa umidade do ar cuidados',
+      'lavagem nasal soro fisiologico ar seco',
+      'mascara pff2 qualidade do ar',
+      'asma rinite poeira do saara',
+      'melhores apps de monitoramento climático',
+      'windy camada de poeira pm2.5',
+      'nasa worldview imagens de satelite poeira',
+      'climatempo accuweather inmet qualidade do ar',
+      'alertas governamentais inmet cptec',
+      'dados históricos de poeira do saara',
+      'pluma godzilla poeira 2020',
+      'ciclos climáticos explicados alisios zcit',
+      'zona de convergencia intertropical zcit',
+      'desertificacao sahel onu meio ambiente',
+      'fertilizacao do oceano por ferro',
+      'dicas de conforto térmico ar seco',
+      'prevenção e cuidados qualidade do ar',
+      'mudancas climaticas e poeira mineral',
+      'visibilidade reduzida haze atmosferico',
+    ],
+    metaTitle: 'Poeira do Saara 2026: Efeitos no Brasil e na Amazônia',
+    metaDescription:
+      'Poeira do Saara 2026 cruza o Atlântico, aduba a Amazônia e piora o ar. Veja rotas, dados históricos, efeitos na saúde e como se proteger dos episódios.',
+  },
   {
     slug: 'la-nina-2026-impactos-brasil-previsao',
     title: 'La Niña 2026: o Pacífico esfria e redesenha o clima do Brasil e do mundo',
