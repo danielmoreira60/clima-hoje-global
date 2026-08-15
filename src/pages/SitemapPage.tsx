@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Terremoto 7,7 na Indonésia 2026: Alerta de Tsunami', url: '/blog/terremoto-indonesia-7-7-mar-de-banda-2026', icon: BookOpen },
+    { name: 'Temporada de Furacões no Atlântico 2026: Guia Completo', url: '/blog/temporada-furacoes-atlantico-2026', icon: BookOpen },
     { name: 'Raios no Brasil 2026: Ranking Mundial de Descargas', url: '/blog/raios-tempestades-eletricas-brasil-2026', icon: BookOpen },
     { name: 'Poeira do Saara 2026: A Nuvem que Aduba a Amazônia', url: '/blog/poeira-do-saara-brasil-2026', icon: BookOpen },
     { name: 'La Niña 2026: Impactos no Brasil', url: '/blog/la-nina-2026-impactos-brasil-previsao', icon: BookOpen },

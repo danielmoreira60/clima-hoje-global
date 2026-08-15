@@ -42,6 +42,10 @@ import raiosCover from '@/assets/blog/raios-brasil-cover.jpg';
 import raiosMid from '@/assets/blog/raios-brasil-mid.jpg';
 import saaraCover from '@/assets/blog/poeira-saara-cover.jpg';
 import saaraMid from '@/assets/blog/poeira-saara-mid.jpg';
+import indonesiaCover from '@/assets/blog/terremoto-indonesia-cover.jpg';
+import indonesiaMid from '@/assets/blog/terremoto-indonesia-mid.jpg';
+import furacoesCover from '@/assets/blog/furacoes-atlantico-cover.jpg';
+import furacoesMid from '@/assets/blog/furacoes-atlantico-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
