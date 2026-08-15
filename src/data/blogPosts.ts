@@ -42,6 +42,10 @@ import raiosCover from '@/assets/blog/raios-brasil-cover.jpg';
 import raiosMid from '@/assets/blog/raios-brasil-mid.jpg';
 import saaraCover from '@/assets/blog/poeira-saara-cover.jpg';
 import saaraMid from '@/assets/blog/poeira-saara-mid.jpg';
+import indonesiaCover from '@/assets/blog/terremoto-indonesia-cover.jpg';
+import indonesiaMid from '@/assets/blog/terremoto-indonesia-mid.jpg';
+import furacoesCover from '@/assets/blog/furacoes-atlantico-cover.jpg';
+import furacoesMid from '@/assets/blog/furacoes-atlantico-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -61,6 +65,104 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'terremoto-indonesia-7-7-mar-de-banda-2026',
+    title: 'Terremoto de magnitude 7,7 na Indonésia: tremor sacode Sonda Oriental, Timor-Leste e norte da Austrália',
+    excerpt:
+      'Registrado em 14 de agosto de 2026 no arco de Sonda Oriental, o terremoto de 7,7 disparou alerta de tsunami e evacuações costeiras. Entenda a tectônica do Mar de Banda, os dados históricos e o guia completo de proteção.',
+    category: 'Terremotos',
+    categoryColor: 'from-red-500 to-orange-600',
+    date: '15 Ago 2026',
+    dateISO: '2026-08-15',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: indonesiaCover,
+    midImage: indonesiaMid,
+    tags: [
+      'terremoto indonesia 2026',
+      'terremoto 7.7 indonesia',
+      'terremoto mar de banda',
+      'sonda oriental indonesia terremoto',
+      'alerta de tsunami indonesia 2026',
+      'terremoto timor leste australia',
+      'anel de fogo do pacifico',
+      'placa indo australiana subduccao',
+      'como se proteger de terremoto',
+      'o que fazer durante um terremoto',
+      'abaixe-se proteja-se e segure-se',
+      'sinais naturais de alerta de tsunami',
+      'como se proteger de tsunami',
+      'kit de emergência 72 horas',
+      'dados históricos de terremotos na indonesia',
+      'terremoto sumatra 2004 tsunami',
+      'terremoto palu sulawesi 2018 liquefacao',
+      'escala de magnitude de momento explicada',
+      'profundidade do foco sismico',
+      'replicas de terremoto quanto tempo duram',
+      'alertas governamentais defesa civil 199',
+      'sms 40199 alerta defesa civil',
+      'melhores apps de monitoramento climático',
+      'windy climatempo accuweather inmet',
+      'usgs terremotos em tempo real',
+      'ciclos climáticos explicados el nino la nina',
+      'dicas de conforto térmico em abrigo',
+      'prevenção e cuidados pos terremoto',
+      'deslizamento de terra apos terremoto e chuva',
+      'terremoto no brasil e possivel',
+    ],
+    metaTitle: 'Terremoto 7,7 na Indonésia: Alerta de Tsunami em 2026',
+    metaDescription:
+      'Terremoto de magnitude 7,7 atinge a Indonésia em 14/08/2026 e dispara alerta de tsunami. Veja a tectônica, o histórico e como se proteger passo a passo.',
+  },
+  {
+    slug: 'temporada-furacoes-atlantico-2026',
+    title: 'Temporada de furacões no Atlântico 2026: por que agosto e setembro concentram os sistemas mais perigosos',
+    excerpt:
+      'Água quente, pouco cisalhamento e ondas africanas: o Atlântico entra no pico da temporada. Entenda como nasce um furacão, o que a escala Saffir-Simpson não mede e o plano completo de prevenção em quatro fases.',
+    category: 'Furacões',
+    categoryColor: 'from-blue-500 to-indigo-600',
+    date: '15 Ago 2026',
+    dateISO: '2026-08-15',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: furacoesCover,
+    midImage: furacoesMid,
+    tags: [
+      'temporada de furacoes 2026',
+      'furacoes no atlantico 2026',
+      'quando é a temporada de furacoes',
+      'como se proteger de furacao',
+      'escala saffir simpson categorias',
+      'mare de tempestade o que é',
+      'intensificacao rapida furacao',
+      'diferenca entre furacao tufao e ciclone',
+      'como se forma um furacao',
+      'olho do furacao explicacao',
+      'ondas de leste africanas',
+      'cisalhamento do vento furacao',
+      'temperatura da superficie do mar 26.5 graus',
+      'dados históricos de furacoes no atlantico',
+      'furacao katrina maria dorian andrew',
+      'nomes de furacoes aposentados',
+      'kit de emergência furacao 72 horas',
+      'plano de evacuacao costeira',
+      'prevenção e cuidados temporada de furacoes',
+      'dicas de conforto térmico apagao',
+      'melhores apps de monitoramento climático',
+      'windy accuweather climatempo inmet',
+      'alertas governamentais inmet cptec ressaca',
+      'ciclos climáticos explicados la nina furacoes',
+      'mudancas climaticas e furacoes mais fortes',
+      'furacao pode atingir o brasil',
+      'furacao catarina 2004',
+      'ciclone extratropical sul do brasil',
+      'gerador monoxido de carbono seguranca',
+      'nao dirigir em agua em movimento',
+    ],
+    metaTitle: 'Temporada de Furacões no Atlântico 2026: Guia e Riscos',
+    metaDescription:
+      'Temporada de furacões 2026 chega ao pico: veja como se formam, o que a escala não mede, dados históricos, alertas oficiais e o plano de proteção completo.',
+  },
   {
     slug: 'raios-tempestades-eletricas-brasil-2026',
     title: 'Raios no Brasil 2026: por que o país lidera o ranking mundial de descargas elétricas',
