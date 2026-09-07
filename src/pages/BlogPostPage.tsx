@@ -25,9 +25,12 @@ import { TerremotoColombiaArticle, PlacasAndesArticle } from '@/components/blog/
 import { LaNina2026Article, CoraisOceanos2026Article } from '@/components/blog/articles5';
 import { RaiosBrasil2026Article, PoeiraSaara2026Article } from '@/components/blog/articles6';
 import { TerremotoIndonesia2026Article, FuracoesAtlantico2026Article } from '@/components/blog/articles7';
+import { AvalancheNepal2026Article, TresFuracoesPacifico2026Article } from '@/components/blog/articles8';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
+  if (slug === 'avalanche-nepal-himalaia-2026') return <AvalancheNepal2026Article midImage={midImage} />;
+  if (slug === 'tres-furacoes-simultaneos-oceano-pacifico-2026') return <TresFuracoesPacifico2026Article midImage={midImage} />;
   if (slug === 'terremoto-indonesia-7-7-mar-de-banda-2026') return <TerremotoIndonesia2026Article midImage={midImage} />;
   if (slug === 'temporada-furacoes-atlantico-2026') return <FuracoesAtlantico2026Article midImage={midImage} />;
   if (slug === 'raios-tempestades-eletricas-brasil-2026') return <RaiosBrasil2026Article midImage={midImage} />;

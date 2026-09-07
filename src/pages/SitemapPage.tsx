@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Avalanche no Nepal 2026: Causas e Como se Proteger', url: '/blog/avalanche-nepal-himalaia-2026', icon: BookOpen },
+    { name: 'Três Furacões ao Mesmo Tempo no Pacífico 2026', url: '/blog/tres-furacoes-simultaneos-oceano-pacifico-2026', icon: BookOpen },
     { name: 'Terremoto 7,7 na Indonésia 2026: Alerta de Tsunami', url: '/blog/terremoto-indonesia-7-7-mar-de-banda-2026', icon: BookOpen },
     { name: 'Temporada de Furacões no Atlântico 2026: Guia Completo', url: '/blog/temporada-furacoes-atlantico-2026', icon: BookOpen },
     { name: 'Raios no Brasil 2026: Ranking Mundial de Descargas', url: '/blog/raios-tempestades-eletricas-brasil-2026', icon: BookOpen },
