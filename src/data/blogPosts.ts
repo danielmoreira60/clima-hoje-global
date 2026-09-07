@@ -46,6 +46,10 @@ import indonesiaCover from '@/assets/blog/terremoto-indonesia-cover.jpg';
 import indonesiaMid from '@/assets/blog/terremoto-indonesia-mid.jpg';
 import furacoesCover from '@/assets/blog/furacoes-atlantico-cover.jpg';
 import furacoesMid from '@/assets/blog/furacoes-atlantico-mid.jpg';
+import avalancheNepalCover from '@/assets/blog/avalanche-nepal-cover.jpg';
+import avalancheNepalMid from '@/assets/blog/avalanche-nepal-mid.jpg';
+import tresFuracoesCover from '@/assets/blog/tres-furacoes-pacifico-cover.jpg';
+import tresFuracoesMid from '@/assets/blog/tres-furacoes-pacifico-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -65,6 +69,104 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'avalanche-nepal-himalaia-2026',
+    title: 'Avalanche no Nepal 2026: o que a nevasca fora de época revela sobre o risco no Himalaia',
+    excerpt:
+      'Uma nevasca tardia de monção desencadeou avalanche em altitude no Himalaia nepalês. Entenda a física das placas de neve, os dados históricos, o que a previsão antecipa e o protocolo completo de proteção.',
+    category: 'Montanha',
+    categoryColor: 'from-sky-500 to-blue-700',
+    date: '06 Set 2026',
+    dateISO: '2026-09-06',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: avalancheNepalCover,
+    midImage: avalancheNepalMid,
+    tags: [
+      'avalanche no nepal 2026',
+      'avalanche himalaia 2026',
+      'como se proteger de avalanche',
+      'o que fazer se for pego por avalanche',
+      'nevasca fora de epoca no nepal',
+      'previsao do tempo himalaia',
+      'risco de avalanche escala de cinco niveis',
+      'placa de vento neve instavel',
+      'camada fraca manto de neve',
+      'transceptor de avalanche pa e sonda',
+      'regra dos 15 minutos resgate avalanche',
+      'dados historicos de avalanches no nepal',
+      'annapurna nevasca 2014 trekkers',
+      'everest avalanche terremoto 2015',
+      'manaslu serac 2012',
+      'melhores apps de monitoramento climatico',
+      'windy accuweather climatempo inmet',
+      'dicas de conforto termico em alta montanha',
+      'sistema de tres camadas roupa montanha',
+      'hipotermia sintomas e prevencao',
+      'ciclos climaticos explicados moncao asiatica',
+      'perturbacoes ocidentais himalaia',
+      'alertas governamentais defesa civil montanha',
+      'prevencao e cuidados em trilhas de altitude',
+      'derretimento do permafrost queda de rochas',
+      'lagos glaciais inundacao repentina',
+      'mudancas climaticas e avalanches',
+      'inclinacao de encosta 30 a 45 graus',
+      'kit de emergencia trekking himalaia',
+      'trekking seguro nepal alta temporada',
+    ],
+    metaTitle: 'Avalanche no Nepal 2026: Causas e Como se Proteger',
+    metaDescription:
+      'Avalanche no Himalaia nepalês em 2026: entenda a nevasca fora de época, os sinais de perigo, os dados históricos e o protocolo completo de proteção.',
+  },
+  {
+    slug: 'tres-furacoes-simultaneos-oceano-pacifico-2026',
+    title: 'Três furacões ao mesmo tempo no Pacífico: por que o oceano produz ciclones em série em 2026',
+    excerpt:
+      'Imagens de satélite mostram três furacões girando simultaneamente sobre o Pacífico. Entenda como nascem, o efeito Fujiwhara, o que a escala Saffir-Simpson não mede e o plano de proteção em quatro fases.',
+    category: 'Furacões',
+    categoryColor: 'from-indigo-500 to-cyan-600',
+    date: '06 Set 2026',
+    dateISO: '2026-09-06',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: tresFuracoesCover,
+    midImage: tresFuracoesMid,
+    tags: [
+      'tres furacoes ao mesmo tempo pacifico',
+      'furacoes simultaneos 2026',
+      'temporada de furacoes no pacifico 2026',
+      'como se proteger de furacao',
+      'efeito fujiwhara entre ciclones',
+      'diferenca entre furacao tufao e ciclone',
+      'como se forma um furacao',
+      'escala saffir simpson categorias',
+      'mare de tempestade o que e',
+      'intensificacao rapida furacao',
+      'olho do furacao nunca saia',
+      'parede do olho ventos maximos',
+      'dados historicos de furacoes no pacifico',
+      'furacao patricia 2015 recorde',
+      'tufao haiyan filipinas 2013',
+      'furacao otis acapulco intensificacao',
+      'ciclone catarina 2004 brasil',
+      'ciclos climaticos explicados el nino la nina furacoes',
+      'oscilacao madden julian ciclones',
+      'temperatura do mar 26.5 graus furacao',
+      'cisalhamento do vento e ciclones',
+      'kit de emergencia 72 horas furacao',
+      'plano de evacuacao costeira',
+      'dicas de conforto termico durante apagao',
+      'melhores apps de monitoramento climatico',
+      'windy accuweather climatempo inmet',
+      'alertas governamentais noaa inmet cptec',
+      'prevencao e cuidados pos furacao',
+      'monoxido de carbono gerador seguranca',
+      'nao dirigir em agua em movimento',
+    ],
+    metaTitle: 'Três Furacões no Pacífico em 2026: Guia Completo',
+    metaDescription:
+      'Três furacões simultâneos no Pacífico em 2026: como se formam, o efeito Fujiwhara, histórico, alertas oficiais e o plano de proteção completo.',
+  },
   {
     slug: 'terremoto-indonesia-7-7-mar-de-banda-2026',
     title: 'Terremoto de magnitude 7,7 na Indonésia: tremor sacode Sonda Oriental, Timor-Leste e norte da Austrália',
