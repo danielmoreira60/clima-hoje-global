@@ -26,6 +26,7 @@ import { LaNina2026Article, CoraisOceanos2026Article } from '@/components/blog/a
 import { RaiosBrasil2026Article, PoeiraSaara2026Article } from '@/components/blog/articles6';
 import { TerremotoIndonesia2026Article, FuracoesAtlantico2026Article } from '@/components/blog/articles7';
 import { AvalancheNepal2026Article, TresFuracoesPacifico2026Article } from '@/components/blog/articles8';
+import { SargacoAtlantico2026Article, SaaraAmazonia2026Article } from '@/components/blog/articles9';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
