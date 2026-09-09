@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Cinturão de Algas no Atlântico: Sargaço no Litoral Brasileiro', url: '/blog/cinturao-algas-sargaco-atlantico-brasil-2026', icon: BookOpen },
+    { name: 'A Poeira do Saara Fertiliza Mesmo a Amazônia?', url: '/blog/poeira-do-saara-fertiliza-amazonia-verdade-2026', icon: BookOpen },
     { name: 'Avalanche no Nepal 2026: Causas e Como se Proteger', url: '/blog/avalanche-nepal-himalaia-2026', icon: BookOpen },
     { name: 'Três Furacões ao Mesmo Tempo no Pacífico 2026', url: '/blog/tres-furacoes-simultaneos-oceano-pacifico-2026', icon: BookOpen },
     { name: 'Terremoto 7,7 na Indonésia 2026: Alerta de Tsunami', url: '/blog/terremoto-indonesia-7-7-mar-de-banda-2026', icon: BookOpen },
