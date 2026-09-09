@@ -50,6 +50,10 @@ import avalancheNepalCover from '@/assets/blog/avalanche-nepal-cover.jpg';
 import avalancheNepalMid from '@/assets/blog/avalanche-nepal-mid.jpg';
 import tresFuracoesCover from '@/assets/blog/tres-furacoes-pacifico-cover.jpg';
 import tresFuracoesMid from '@/assets/blog/tres-furacoes-pacifico-mid.jpg';
+import sargacoCover from '@/assets/blog/sargaco-atlantico-cover.jpg';
+import sargacoMid from '@/assets/blog/sargaco-atlantico-mid.jpg';
+import saaraAmazoniaCover from '@/assets/blog/saara-amazonia-cover.jpg';
+import saaraAmazoniaMid from '@/assets/blog/saara-amazonia-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
