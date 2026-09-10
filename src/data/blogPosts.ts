@@ -54,6 +54,8 @@ import sargacoCover from '@/assets/blog/sargaco-atlantico-cover.jpg';
 import sargacoMid from '@/assets/blog/sargaco-atlantico-mid.jpg';
 import saaraAmazoniaCover from '@/assets/blog/saara-amazonia-cover.jpg';
 import saaraAmazoniaMid from '@/assets/blog/saara-amazonia-mid.jpg';
+import anakKrakatoaCover from '@/assets/blog/anak-krakatoa-cover.jpg';
+import anakKrakatoaMid from '@/assets/blog/anak-krakatoa-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;

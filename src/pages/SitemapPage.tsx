@@ -18,6 +18,7 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Erupção do Anak Krakatoa 2026', url: '/blog/erupcao-anak-krakatoa-2026', icon: BookOpen },
     { name: 'Cinturão de Algas no Atlântico: Sargaço no Litoral Brasileiro', url: '/blog/cinturao-algas-sargaco-atlantico-brasil-2026', icon: BookOpen },
     { name: 'A Poeira do Saara Fertiliza Mesmo a Amazônia?', url: '/blog/poeira-do-saara-fertiliza-amazonia-verdade-2026', icon: BookOpen },
     { name: 'Avalanche no Nepal 2026: Causas e Como se Proteger', url: '/blog/avalanche-nepal-himalaia-2026', icon: BookOpen },
