@@ -81,7 +81,7 @@ const BlogPostPage = () => {
     datePublished: post.dateISO,
     author: { '@type': 'Organization', name: post.author },
     publisher: { '@type': 'Organization', name: 'Clima Tempo' },
-    keywords: post.tags.join(', '),
+    keywords: post.tags.slice(0, 6).join(', '),
   };
 
   return (
@@ -144,7 +144,7 @@ const BlogPostPage = () => {
           <div className="mt-12 pt-8 border-t border-slate-200">
             <div className="flex items-start gap-2 flex-wrap">
               <Tag className="h-4 w-4 text-slate-500 mt-1" />
-              {post.tags.map((t) => (
+              {post.tags.slice(0, 6).map((t) => (
                 <Badge key={t} variant="secondary" className="bg-slate-100 text-slate-700 hover:bg-slate-200">
                   {t}
                 </Badge>
