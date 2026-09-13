@@ -56,6 +56,10 @@ import saaraAmazoniaCover from '@/assets/blog/saara-amazonia-cover.jpg';
 import saaraAmazoniaMid from '@/assets/blog/saara-amazonia-mid.jpg';
 import anakKrakatoaCover from '@/assets/blog/anak-krakatoa-cover.jpg';
 import anakKrakatoaMid from '@/assets/blog/anak-krakatoa-mid.jpg';
+import enchenteGlacialNepalCover from '@/assets/blog/enchente-glacial-nepal-cover.jpg';
+import enchenteGlacialNepalMid from '@/assets/blog/enchente-glacial-nepal-mid.jpg';
+import ciclonesFilipinasCover from '@/assets/blog/ciclones-filipinas-cover.jpg';
+import ciclonesFilipinasMid from '@/assets/blog/ciclones-filipinas-mid.jpg';
 
 export interface BlogPostMeta {
   slug: string;
@@ -75,6 +79,80 @@ export interface BlogPostMeta {
 }
 
 export const blogPosts: BlogPostMeta[] = [
+  {
+    slug: 'enchente-glacial-nepal-himalaia-2026',
+    title: 'Enchente glacial no Nepal 2026: o que são os GLOFs e por que o Himalaia derrete mais rápido',
+    excerpt:
+      'O rompimento de lagos glaciais no Himalaia provocou cheias repentinas devastadoras no Nepal. Entenda como se formam os GLOFs, os alertas oficiais e como comunidades se protegem.',
+    category: 'Enchentes',
+    categoryColor: 'from-sky-500 to-blue-700',
+    date: '12 Set 2026',
+    dateISO: '2026-09-12',
+    readTime: '11 min',
+    author: 'Equipe Clima Tempo',
+    cover: enchenteGlacialNepalCover,
+    midImage: enchenteGlacialNepalMid,
+    tags: [
+      'enchente glacial nepal 2026',
+      'GLOF rompimento lago glacial',
+      'himalaia derretimento geleiras',
+      'cheia repentina montanha',
+      'como se proteger de enchente',
+      'alertas governamentais enchentes',
+      'dados históricos de GLOFs',
+      'mudanças climáticas himalaia',
+      'lagos glaciais perigo',
+      'prevenção e cuidados em enchentes',
+      'melhores apps de monitoramento climático',
+      'ciclos climáticos explicados monção',
+      'aquecimento global geleiras',
+      'rios glaciais asia agua',
+      'previsão de enchentes tempo real',
+      'dicas de segurança em cheias',
+      'desastres naturais 2026',
+      'clima de montanha riscos',
+    ],
+    metaTitle: 'Enchente Glacial no Nepal 2026: GLOFs no Himalaia',
+    metaDescription:
+      'O rompimento de lagos glaciais no Himalaia causou enchentes repentinas no Nepal em 2026. Veja causas, alertas oficiais e como se proteger de GLOFs.',
+  },
+  {
+    slug: 'ciclones-tufao-filipinas-setembro-2026',
+    title: 'Ciclone atinge as Filipinas em setembro de 2026: chuvas fortes, ventos extremos e alerta máximo',
+    excerpt:
+      'Um ciclone tropical intenso atingiu o arquipélago filipino com ventos destrutivos e chuvas torrenciais. Entenda a formação, os impactos, os alertas e as dicas de segurança.',
+    category: 'Ciclones',
+    categoryColor: 'from-orange-500 to-red-600',
+    date: '12 Set 2026',
+    dateISO: '2026-09-12',
+    readTime: '12 min',
+    author: 'Equipe Clima Tempo',
+    cover: ciclonesFilipinasCover,
+    midImage: ciclonesFilipinasMid,
+    tags: [
+      'ciclone filipinas 2026',
+      'tufao no pacifico setembro 2026',
+      'chuvas fortes filipinas',
+      'ventos extremos ciclone tropical',
+      'como se proteger de tufão',
+      'alertas governamentais ciclone',
+      'dados históricos de tufões',
+      'temporada de ciclones 2026',
+      'pacífico ocidental ciclones',
+      'prevenção e cuidados tempestades',
+      'melhores apps de monitoramento climático',
+      'ciclos climáticos explicados ciclones',
+      'diferença ciclone tufão furacão',
+      'chuva torrencial enchentes',
+      'evacuação ciclone segurança',
+      'previsão de tempestades tempo real',
+      'mudanças climáticas ciclones intensos',
+      'oceano quente intensificação rápida',
+    ],
+    metaTitle: 'Ciclone nas Filipinas 2026: Chuvas Fortes e Alerta Máximo',
+    metaDescription:
+      'Ciclone tropical atinge as Filipinas em setembro de 2026 com chuvas torrenciais e ventos extremos. Veja impactos, alertas oficiais e dicas de segurança.',
+  },
   {
     slug: 'cinturao-algas-sargaco-atlantico-brasil-2026',
     title: 'Cinturão de algas no Atlântico: o sargaço que ameaça ecossistemas, economia e o litoral brasileiro',
