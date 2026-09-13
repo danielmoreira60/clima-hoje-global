@@ -18,6 +18,8 @@ const SitemapPage = () => {
   const institutionalPages = [
     { name: 'Sobre Nós', url: '/sobre', icon: Globe },
     { name: 'Blog', url: '/blog', icon: BookOpen },
+    { name: 'Enchente Glacial no Nepal 2026: GLOFs no Himalaia', url: '/blog/enchente-glacial-nepal-himalaia-2026', icon: BookOpen },
+    { name: 'Ciclone nas Filipinas 2026: Chuvas Fortes e Alerta Máximo', url: '/blog/ciclones-tufao-filipinas-setembro-2026', icon: BookOpen },
     { name: 'Erupção do Anak Krakatoa 2026', url: '/blog/erupcao-anak-krakatoa-2026', icon: BookOpen },
     { name: 'Cinturão de Algas no Atlântico: Sargaço no Litoral Brasileiro', url: '/blog/cinturao-algas-sargaco-atlantico-brasil-2026', icon: BookOpen },
     { name: 'A Poeira do Saara Fertiliza Mesmo a Amazônia?', url: '/blog/poeira-do-saara-fertiliza-amazonia-verdade-2026', icon: BookOpen },
