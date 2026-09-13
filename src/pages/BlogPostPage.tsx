@@ -28,9 +28,12 @@ import { TerremotoIndonesia2026Article, FuracoesAtlantico2026Article } from '@/c
 import { AvalancheNepal2026Article, TresFuracoesPacifico2026Article } from '@/components/blog/articles8';
 import { SargacoAtlantico2026Article, SaaraAmazonia2026Article } from '@/components/blog/articles9';
 import { AnakKrakatoa2026Article } from '@/components/blog/articles10';
+import { EnchenteGlacialNepal2026Article, CiclonesFilipinas2026Article } from '@/components/blog/articles11';
 import { Card, CardContent } from '@/components/ui/card';
 
 const ArticleBySlug: React.FC<{ slug: string; midImage: string }> = ({ slug, midImage }) => {
+  if (slug === 'enchente-glacial-nepal-himalaia-2026') return <EnchenteGlacialNepal2026Article midImage={midImage} />;
+  if (slug === 'ciclones-tufao-filipinas-setembro-2026') return <CiclonesFilipinas2026Article midImage={midImage} />;
   if (slug === 'erupcao-anak-krakatoa-2026') return <AnakKrakatoa2026Article midImage={midImage} />;
   if (slug === 'cinturao-algas-sargaco-atlantico-brasil-2026') return <SargacoAtlantico2026Article midImage={midImage} />;
   if (slug === 'poeira-do-saara-fertiliza-amazonia-verdade-2026') return <SaaraAmazonia2026Article midImage={midImage} />;

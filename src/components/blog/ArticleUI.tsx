@@ -17,8 +17,8 @@ export const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h3 className="text-2xl font-semibold text-slate-900 mt-8 mb-3">{children}</h3>
 );
 
-export const P: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-  <p className="text-base md:text-lg leading-[1.85] text-slate-700 mb-5">{children}</p>
+export const P: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className }) => (
+  <p className={`text-base md:text-lg leading-[1.85] text-slate-700 mb-5 ${className ?? ''}`}>{children}</p>
 );
 
 export const Highlight: React.FC<{ title?: string; children: React.ReactNode }> = ({ title, children }) => (
